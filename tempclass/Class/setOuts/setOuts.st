@@ -134,7 +134,6 @@ FUNCTION VIRTUAL GLOBAL setOuts::RtWork
     00:
       Client.Write(0);
       Client0.Write(0);
-
   end_case;
 
 	state := READY;
