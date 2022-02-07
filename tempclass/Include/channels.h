@@ -136,11 +136,6 @@ TYPE
     dData : DINT;
     pCmd : ^DSComm;
   END_STRUCT;
-  CltChCmd_DSComm_Eventjournal : STRUCT
-    pCh : ^SvrChCmd_DINT;
-    dData : DINT;
-    pCmd : ^DSComm_Eventjournal;
-  END_STRUCT;
   CltChCmd_DSComm_Interface : STRUCT
     pCh : ^SvrChCmd_DINT;
     dData : DINT;

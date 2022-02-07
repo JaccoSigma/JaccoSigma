@@ -189,13 +189,6 @@ typedef struct CltChCmd_DSComm
     DSComm *pCmd;
   } CltChCmd_DSComm;
 
-typedef struct CltChCmd_DSComm_Eventjournal 
-  {
-    struct SvrChCmd_DINT *pCh;
-    DINT dData;
-    DSComm_Eventjournal *pCmd;
-  } CltChCmd_DSComm_Eventjournal;
-
 typedef struct CltChCmd_DSComm_Interface 
   {
     struct SvrChCmd_DINT *pCh;

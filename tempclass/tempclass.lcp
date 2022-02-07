@@ -130,7 +130,6 @@
 		<File Path=".\Class\StringInternal\StringInternal.st"/>
 		<File Path=".\Class\VirtualBaseInit\VirtualBaseInit.st"/>
 		<File Path=".\Class\DSComm_Eventjournal\DSComm_Eventjournal.st"/>
-		<File Path=".\Class\Send_Message\Send_Message.st"/>
 		<File Path=".\Class\AI043\AI043.st"/>
 		<File Path=".\Class\BusInterfaceSdias\BusInterfaceSdias.st"/>
 		<File Path=".\Class\BusInterfaceSDIASInternal\BusInterfaceSDIASInternal.st"/>
@@ -182,9 +181,6 @@
 		<File Path=".\Class\setOuts\setOuts.st"/>
 		<File Path=".\Class\_Grafix\_Grafix.st"/>
 	</ClassFiles>
-	<NetworkFiles>
-		<File Path=".\Network\HW_Network\HW_Network.lcn"/>
-	</NetworkFiles>
 	<ObjectFiles>
 		<File Path=".\Loader\Source\Loader.lob" Downloadable="false"/>
 	</ObjectFiles>

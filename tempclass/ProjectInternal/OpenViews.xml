@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <OpenViews>
-	<View Key="Send_Message" Type="2" LineNr="1"/>
-	<View Key="HW_Network" Type="0"/>
-	<View Key="Send_Message" Type="2" LineNr="1"/>
+	<View Key="setOuts" Type="2" LineNr="25"/>
+	<View Key="setOuts" Type="2" LineNr="25"/>
 	<Setting Variable="OutputDebugger" Value="0"/>
 </OpenViews>

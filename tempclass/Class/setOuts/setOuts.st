@@ -137,7 +137,6 @@ FUNCTION VIRTUAL GLOBAL setOuts::RtWork
 
   end_case;
 
-
 	state := READY;
 
 END_FUNCTION
