@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="24576" SubModuleID="0" ModType="CANOpen" Desc="Class for FDD3000 CANOpen Drive">
+    <Types>
+      <Device Name="FDD3000_CanOpen" ClassName="FDD3000_CanOpen" DisplayGroup="Axis;FDD3000" />
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0">
+        <VisualModule ImgPath=".\Varan\SDD Ober-Unterseite.xaml" Width="74" Height="200">
+          <VisualConnectors>
+            <VisualConnector Angle="90" ImgPath=".\Connectors\4-polige Buchse schwarz SDD1000.xaml" Width="6.71" Height="13.96" Left="28.13" Top="189.45">
+              <ConnectorPin Description="CAN connect" TypeId="2" DataString="CANOpen-INTERFACE::00" />
+              <ConnectorPin TypeId="0" />
+              <ConnectorPin TypeId="0" />
+              <ConnectorPin TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="FDD3000_CanOpen">
+    <Uplink Name="MasterDevice" BusType="CANOpen-INTERFACE" PlaceName="Place" />
+    <Downlink Name="Hardwarealarme" Channel="DeviceState" Port="0" BusType="Hardwarealarme" Sort="0" Desc="Hardwarealarme" />
+    <!-- General Settings -->
+    <Property Name="Index" Channel="Index" Desc="Set priority index as init value.&#xD;&#xA;&gt;= 0 Priority in which order the _CanOpenBasicDS301 Object will be called from Manager. Lower value equals higher priority.&#xD;&#xA;-1 - No priority defined. The object will be called after objects with priority defined. The order objects with no priority are called is not defined." IsConfig="false" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" />
+    <!-- General -->
+    <IOComment Name="---------------------- General -----------------------" Desc="" />
+    <IOState Name="Device State" Channel="DeviceState" Desc="Shows the state of the Master/Mng." />
+    <Output Name="Error Quit" Channel="ErrorQuit" Type="Digital" Desc="Quit error with write methode of this server, if DeviceState is in an error state&#xD;&#xA;0/1 .. quit general communication errors on class&#xD;&#xA;2 .. call of ResetCom() function&#xD;&#xA;3 .. call of ReinitObject() function&#xD;&#xA;4 .. Send of NMT command &quot;Reset Communication&quot; (0x82) &#xD;&#xA;5 .. Send of NMT command &quot;Reset Node&quot; (0x81)" />
+    <IOState Name="CAN disabled" Channel="CanDisabled" Desc="Shows the state of can&#xD;&#xA;0..Can communication is ok &#xD;&#xA;1..Can communication is not ok" />
+    <IOState Name="Data ready" Channel="DataReady" Desc="Shows the state of Pdo communication&#xD;&#xA;0 .. no Pdo data has been received&#xD;&#xA;1 .. Pdo data has been received" />
+    <IOState Name="Async state" Channel="AsyncState" Desc="Shows the state of asynchronous SDO data tranfer." />
+    <Input Name="Error SDO" Channel="ErrorSDO" Type="Analog" Desc="Shows how many SDO transmissions were faulty.&#xD;&#xA;For further information on the last sdo error, the function GetComSDOData() must be called." />
+    <IOState Name="Error Alloc" Channel="ErrorAlloc" Desc="Error allocating memory for user SDO handling" />
+    <IOState Name="Emcy Obj Byte 0-3" Channel="EmcyStatusByte0_3" Desc="Result of the emergency object byte 0 - 3" />
+    <IOState Name="Emcy Obj Byte 4-7" Channel="EmcyStatusByte4_7" Desc="Result of the emergency object byte 4 - 7" />
+    <!-- DS402 -->
+    <IOComment Name="---------------------- General Drive -----------------------" Desc="" />
+    <IOState Name="Act Drive Mode" Channel="ActDriveMode" Desc="Actual drive mode" />
+    <Input Name="State Word" Channel="StatusWord" Type="Analog" Desc="Statusword with DS402 Standard:&#xD;&#xA;&#xD;&#xA;Bit00..ReadytoSwitchOn&#xD;&#xA;Bit01..SwitchedOn&#xD;&#xA;Bit02..OperationalEnabled&#xD;&#xA;Bit03..Fault&#xD;&#xA;Bit04..VoltageDisabled&#xD;&#xA;Bit05..QuickStop&#xD;&#xA;Bit06..SwitchOnDisabled&#xD;&#xA;Bit07..Warning&#xD;&#xA;Bit08..ManufactureSpecific1&#xD;&#xA;Bit09..Remote&#xD;&#xA;Bit10..TargetReached&#xD;&#xA;Bit11..InternalLimitActive&#xD;&#xA;Bit12..OperationalModeSpecific1&#xD;&#xA;Bit13..OperationalModespecific2&#xD;&#xA;Bit14..Manufacture Specific2&#xD;&#xA;Bit15..Manufacture Specific3" />
+    <Output Name="Control Word" Channel="ControlWord" Type="Analog" Desc="Controlword with DS402 Standard:&#xD;&#xA;Bit00..SwitchOn&#xD;&#xA;Bit01..DisableVoltage&#xD;&#xA;Bit02..QuickStop&#xD;&#xA;Bit03..EnableOperation&#xD;&#xA;Bit04..OperationModeSpecific1&#xD;&#xA;Bit05..OperationModeSpecific2&#xD;&#xA;Bit06..OperationModeSpecific3&#xD;&#xA;Bit07..ResetFault&#xD;&#xA;Bit08..Halt&#xD;&#xA;Bit09..Reserved1&#xD;&#xA;Bit10..Reserved2&#xD;&#xA;Bit11..Manufacture Specific1&#xD;&#xA;Bit12..Manufacture Specific2&#xD;&#xA;Bit13..Manufacture Specific3&#xD;&#xA;Bit14..Manufacture Specific4&#xD;&#xA;Bit15..Manufacture Specific5" />
+    <IOState Name="Drive Error" Channel="DriveError" Desc="General Error Information (0..no error, 1..error)" />
+    <IOState Name="Drive Error Code" Channel="DriveErrorStatus" Desc="Drive error code" />
+    <Output Name="Enable" Channel="Enable" Type="Digital" Desc="Set Drive to enable&#xD;&#xA;0..Disable&#xD;&#xA;1..Enable" />
+    <Output Name="Set Speed" Channel="Speed" Type="Analog" Desc="Speed setpoint for Velocity Mode as [rpm] (DS402, PV-Mode)" />
+    <Input Name="Act Speed" Channel="ActSpeed" Type="Analog" Desc="Shows Actual Speed as [rpm]." />
+    <Output Name="Stop" Channel="Stop" Type="Analog" Desc="Stop movement (DS402)" />
+    <!-- Drive Info -->
+    <IOComment Name="---------------------- Drive Info -----------------------" Desc="" />
+    <Input Name="STO Inputs" Channel="STOInput" Type="Digital" Desc="Displays the combined state of safe torque off channels 1 and 2" />
+    <IOState Name="Online" Channel="Online" Type="Digital" Desc="Shows whether the drive is ready for operation." />
+    <IOState Name="Product Code Drive" Channel="ProductCodeDrive" IsInfo="true" Type="" Desc="Shows the product code of the drive as string." />
+    <IOState Name="Serial Number Drive" Channel="SerialNoDrive" IsInfo="true" Type="" Desc="Shows the serial number of the drive as string." />
+    <IOState Name="Firmware Version Drive" Channel="FwVersionDrive" IsInfo="true" Type="" Desc="Parameter 11.029  Firmware Version &#xD;&#xA;Short description: Displays the fimware version in the drive.&#xD;&#xA;Displays the drive control board firmware version in the format major.minor.version.build (ww.xx.yy.zz)." />
+    <IOState Name="Firmware Version Comm Module" Channel="FwVersionComm" IsInfo="true" Type="" Desc="Parameter 15.002  Firmware Version &#xD;&#xA;Short description: Displays the fimware version in the drive.&#xD;&#xA;Displays the drive control board firmware version in the format major.minor.version.build (ww.xx.yy.zz)." />
+    <IOState Name="Hardware Version Comm Module" Channel="HwVersionComm" IsInfo="true" Type="" Desc="Parameter 15.003  Hardware Version &#xD;&#xA;Short description: Displays the hardware version in the drive.&#xD;&#xA;Displays the drive control board Hardware version in the format major.minor (xx.yy)." />
+    <Output Name="Operation Mode of Drive" Channel="OPModeDrive" Type="Analog" Desc="Parameter 11.084 Operation Mode of Drive &#xD;&#xA;Short description: Defines and displays the current drive mode" />
+    <!-- Drive Motor Parameter -->
+    <IOComment Name="---------------------- Drive Motor Parameter -----------------------" Desc="" />
+    <Output Name="Maximum Reference Clamp" Channel="MaxRefClamp" Type="Analog" Desc="Parameter 01.006  Maximum Reference Clamp &#xD;&#xA;Short description: Defines the maximum value for the reference&#xD;&#xA;Value Range: 0.00 to 550.00 Hz" />
+    <Output Name="Minimum Reference Clamp" Channel="MinRefClamp" Type="Analog" Desc="Parameter 01.007  Minimum Reference Clamp &#xD;&#xA;Short description: Defines the minimum value for the reference&#xD;&#xA;Value Range: 0.00 to 550.00 Hz" />
+    <Output Name="Acceleration Rate" Channel="AccRate" Type="Analog" Desc="Parameter 02.011  Acceleration Rate 1 &#xD;&#xA;Short description: Defines the acceleration rate present in acceleration rate 1&#xD;&#xA;Value Range: 0.0 to 32000.0 s" />
+    <Output Name="Deceleration Rate" Channel="DecRate" Type="Analog" Desc="Parameter 02.021  Deceleration Rate 1 &#xD;&#xA;Short description: Defines the deceleration rate present in deceleration rate 1&#xD;&#xA;Value Range: 0.0 to 32000.0 s" />
+    <Output Name="Motor Rated Current" Channel="MotorRatedCurrent" Type="Analog" Desc="Parameter 05.007  Motor Rated Current &#xD;&#xA;Short description: Set to the rated current rated of the motor&#xD;&#xA;Value Range: 0.00 to Drive Rating A" />
+    <Output Name="Motor Rated Speed" Channel="MotorRatedSpeed" Type="Analog" Desc="Parameter 05.008  Motor Rated Speed &#xD;&#xA;Short description: Set to the rated speed of the motor&#xD;&#xA;Value Range: 0.0 to 33000.0 rpm" />
+    <Output Name="Motor Rated Voltage" Channel="MotorRatedVoltage" Type="Analog" Desc="Parameter 05.009  Motor Rated Voltage &#xD;&#xA;Short description: Set to the rated voltage of the motor&#xD;&#xA;Value Range: 0 to 765 V" />
+    <Output Name="Motor Rated Power Factor" Channel="MotorRatedPowerFactor" Type="Analog" Desc="Parameter 05.010  Motor Rated Power Factor &#xD;&#xA;Short description: Set to the rated power factor of the motor. This value can be measured by the drive during a rotating autotune&#xD;&#xA;Value Range: 0.00 to 1.00" />
+    <Output Name="Motor Rated Frequency" Channel="MotorRatedFrequency" Type="Analog" Desc="Parameter 05.006  Motor Rated Frequency &#xD;&#xA;Short description: Set to the rated frequency of the motor&#xD;&#xA;Value Range: 0.00 to 550.00 Hz" />
+    <Output Name="Low Frequency Voltage Boost" Channel="LowFrequencyVoltageBoost" Type="Analog" Desc="Parameter 05.015  Low Frequency Voltage Boost &#xD;&#xA;Short description: Defines the level of voltage boost at 0Hz when using a fixed V to F relationship&#xD;&#xA;Value Range: 0.0 to 25.0 %" />
+    <!-- Drive Parameter Openloop / RFC-A -->
+    <IOComment Name="---------------------- OpenLoop / RFC-A Parameter -----------------------" Desc="" />
+    <Output Name="Stator Resistance" Channel="StatorResistance" Type="Analog" Desc="OpenLoop / RFC-A Stator Resistance 05.017&#xD;&#xA;Short description: Defines the resistance of the motor stator as [0.0000 ohm]&#xD;&#xA;Value Range: 0.0000 to 99.9999 ohm" />
+    <Output Name="Transient Inductance" Channel="TransientInductance" Type="Analog" Desc="OpenLoop / RFC-A Transient Inductance 05.024&#xD;&#xA;Short description: Defines the inducatance of the transient components in the motor stator as [0.000 mH]&#xD;&#xA;Value Range: 0.000 to 500.000 mH" />
+    <Output Name="Stator Inductance" Channel="StatorInductance" Type="Analog" Desc="OpenLoop / RFC-A Stator Inductance 05.025&#xD;&#xA;Short description: Defines the inductance of the motor stator as [0.00 mH]&#xD;&#xA;Value Range: 0.00 to 5000.00 mH" />
+    <!-- Drive Parameter Openloop-->
+    <IOComment Name="---------------------- OpenLoop Parameter -----------------------" Desc="" />
+    <Input Name="Maximum Dead Time Compensation" Channel="MaximumDeadTimeComp" Type="Analog" Desc="OpenLoop Maximum Deadtime compensation 05.059&#xD;&#xA;Read Only&#xD;&#xA;Short description: Maximum Deadtime Compensation  as [0.000 µs]" />
+    <Input Name="Current At Maximum Dead Time Compensation" Channel="CurrentAtMaximumDeadTime" Type="Analog" Desc="OpenLoop Current At Maximum Deadtime Compensation (05.060)&#xD;&#xA;Read Only&#xD;&#xA;Short description Current at which maximum deadtime compensation is applied as [0.00 %]." />
+    <!-- Drive Parameter RFC-A -->
+    <IOComment Name="---------------------- RFC-A Parameter -----------------------" Desc="" />
+    <Output Name="Current Loop KP Gain" Channel="CurrentLoopKPGain" Type="Analog" Desc="RFC-A Current Loop Gains 04.013&#xD;&#xA;Short description: Defines the current loop controller proportional gain as [0.00]&#xD;&#xA;Value Range: 0.00 to 40.00" />
+    <Output Name="Current Loop Ki Gain" Channel="CurrentLoopKiGain" Type="Analog" Desc="RFC-A Current Loop Gains 04.014&#xD;&#xA;Short description: Defines the current loop controller integral gain as [0.000]&#xD;&#xA;Value Range: 0.000 to 600.000" />
+    <Output Name="Saturation Breakpoint 1" Channel="SaturationBreakpoint1" Type="Analog" Desc="RFC-A motor saturation breakpoints Pr 05.029&#xD;&#xA;Short description: Defines Saturation Breakpoint 1 within the saturation characteristic as [0.0 %].&#xD;&#xA;Value Range: 0.0 to 100.0 %" />
+    <Output Name="Saturation Breakpoint 3" Channel="SaturationBreakpoint3" Type="Analog" Desc="RFC-A motor saturation breakpoints Pr 05.030&#xD;&#xA;Short description: Defines Saturation Breakpoint 3 within the saturation characteristic as [0.0 %].&#xD;&#xA;Value Range: 0.0 to 100.0 %" />
+    <Output Name="Saturation Breakpoint 2" Channel="SaturationBreakpoint2" Type="Analog" Desc="RFC-A motor saturation breakpoints Pr 05.062&#xD;&#xA;Short description: Defines Saturation Breakpoint 2 within the saturation characteristic as [0.0 %].&#xD;&#xA;Value Range: 0.0 to 100.0 %" />
+    <Output Name="Saturation Breakpoint 4" Channel="SaturationBreakpoint4" Type="Analog" Desc="RFC-A motor saturation breakpoints Pr 05.063&#xD;&#xA;Short description: Defines Saturation Breakpoint 4 within the saturation characteristic as [0.0 %].&#xD;&#xA;Value Range: 0.0 to 100.0 %" />
+  </Class>
+</HWClassInfo>

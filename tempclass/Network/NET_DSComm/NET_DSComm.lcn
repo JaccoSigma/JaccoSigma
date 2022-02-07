@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="NET_DSComm" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "DSComm1"
+			GUID       = "{F917AAED-E7CC-47F9-96CD-29B5954773D2}"
+			Class      = "DSComm"
+			Position   = "(510,90)"
+			Visualized = "false"
+			CyclicTime = "20 ms">
+			<Channels>
+				<Server Name="ClassState"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="DS_BuildNo"/>
+				<Server Name="DS_Version"/>
+				<Server Name="ErrorReceive"/>
+				<Server Name="ErrorSend"/>
+				<Server Name="MaxReconnectTime"/>
+				<Server Name="Online"/>
+				<Server Name="Taskname"/>
+				<Client Name="cIPaddr"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="ThreadName" GUID="{C013145F-4F54-4279-8C05-18CBC4BB97DC}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DSComm_Eventjournal1"
+			GUID       = "{71A5D51B-AFEA-4E0C-921C-5ED8E0284D65}"
+			Class      = "DSComm_Eventjournal"
+			Position   = "(2400,90)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="DSComm_Interface"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "DSComm_Interface1"
+			GUID           = "{AAA7CA83-96F5-47A9-8756-8FA8AEDD4C5C}"
+			Class          = "DSComm_Interface"
+			Position       = "(1470,90)"
+			Visualized     = "false"
+			BackgroundTime = "10 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="DSComm"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "Send_message1"
+			GUID           = "{2E74F7F5-5408-42D0-A4A9-776EE7BFE236}"
+			Class          = "Send_message"
+			Position       = "(3150,90)"
+			Visualized     = "false"
+			BackgroundTime = "1000 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="DSComm"/>
+				<Client Name="Link_E"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "String1"
+			GUID       = "{CE349D6B-A41B-4179-9E3B-A21F44842EB6}"
+			Class      = "String"
+			Position   = "(60,90)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data" Value="&quot;127.0.0.1&quot;"/>
+				<Client Name="SingleRealloc" Value="1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="DSComm1.cIPaddr" Destination="String1.Data" Vertices="(510,180),(376,180),"/>
+		<Connection Source="DSComm_Interface1.DSComm" Destination="DSComm1.ClassSvr" Vertices="(1470,180),(1306,180),"/>
+		<Connection Source="DSComm_Eventjournal1.DSComm_Interface" Destination="DSComm_Interface1.ClassSvr" Vertices="(2400,180),(2266,180),"/>
+		<Connection Source="Send_message1.Link_E" Destination="DSComm_Eventjournal1.ClassSvr" Vertices="(3150,180),(3014,180),"/>
+		<Connection Source="Send_message1.DSComm" Destination="DSComm1.ClassSvr" Vertices="(3150,300),(1306,180),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

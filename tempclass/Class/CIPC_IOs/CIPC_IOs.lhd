@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="0" SubModuleID="0" ModType="OnboardIO">
+    <Types>
+      <Device Name="CIPC IOs" ClassName="CIPC_IOs" DisplayGroup="Control Systems;Industrial PCs" Desc="CIPC IOs">      
+      </Device>
+    </Types>
+  </HWDevice>
+  <Class Name="CIPC_IOs" >
+    <!-- Uplinks and Downlinks -->
+    <Uplink   Name="HwControl"  Channel="To_HwControl" BusType="OnBoardIO"/>    
+    <!-- Interfaces for CPU_IOs Classes -->
+    <Downlink Name="USB_1_Connect"    	BusType="USB-INTERFACE"            Port="0" Sort="1"  Desc="Connects a USB communication class" />
+    <Downlink Name="Ethernet_1_Connect" BusType="ETHERNET"                 Port="0" Sort="2"  Desc="Connects an ETHERNET communication class" />
+    <Downlink Name="CAN_1_Connect"    	BusType="CAN-INTERFACE"            Port="1" Sort="3"  Desc="Connects a CAN communication class" />
+    <Downlink Name="CAN_2_Connect"    	BusType="CAN-INTERFACE"            Port="2" Sort="4"  Desc="Connects a CAN communication class" />
+    <Downlink Name="COM_1_Connect"    	BusType="SERIAL-INTERFACE"         Port="1" Sort="5"  Desc="Connects a serial communication class" />
+    <Downlink Name="COM_2_Connect"    	BusType="SERIAL-INTERFACE"         Port="2" Sort="6"  Desc="Connects a serial communication class" />
+    
+    <IOState Name="Class State"           Channel="ClassState"        	  Type="Digital" Desc="State of class&#13;&#10;&#13;&#10;0 ... No error"/>
+  </Class>
+</HWClassInfo>

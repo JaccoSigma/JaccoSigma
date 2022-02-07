@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1187" SubModuleID="0" Revision="1.4" ModType="VARAN" Desc="VARAN-SDIAS Bus Interface, 1 x Varan Out" OrderNr="20-003-021">
+    <Types>
+      <Device Name="VI021" ClassName="VI021" DisplayGroup="Extension Modules;SDIAS Bus" PowerLoss="2500">
+        <Power Voltage="5000" Supply="1600" Drain="0"/>
+        <Power Voltage="24000" Supply="1600" Drain="0"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.62" Height="102.07">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="VI 021" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="LI" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.85" Height="2.65" Left="0.26" Top="33.34" />
+            <VisualText Text="AC" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="36.51" />
+            <VisualText Text="VI" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="39.69" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="LI" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.85" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="AC" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="VO" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="55.03" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.65" Height="2.65" Left="0.26" Top="85.72" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.65" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Sync" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="VI021.State" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Reset" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278190335">
+                <Activator TypeId="3" DataString="VI021.State" Negate="true" Value="0" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <VisualLed Description="Link" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="34.66">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="VI021.Online" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Active" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="37.84">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="VI021.Online" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X2-->
+            <VisualLed Description="Link" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="50.01">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Active" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="53.18">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X3-->
+            <VisualLed Description="DC OK" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="80.7">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="VI021.Online" Value="1" />
+              </Behaviour>
+            </VisualLed>
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS VARAN Tyco.xaml" Width="8.62" Height="12.24" Left="3.7" Top="32.28">
+              <ConnectorPin Description="VARAN Uplink" TypeId="2" DataString="VARAN::00" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS VARAN Tyco.xaml" Width="8.62" Height="12.24" Left="3.7" Top="47.62">
+              <ConnectorPin Description="VARAN Downlink" TypeId="3" DataString="VARAN::00" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.58" Top="78.32">
+              <ConnectorPin DataString="" Description="+24V Power Supply" TypeId="0" />
+              <ConnectorPin DataString="" Description="+24V Power Supply" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="VI021" Path="ExtensionModules">
+    <!-- UpLinks, Downlinks -->
+    <Uplink Name="VaranIn" BusType="VARAN" TransparentClient="Transparent" />
+    <Downlink Name="VaranOut_1" BusType="VARAN" Port="0" />
+    <Downlink Name="SdiasOut_1" BusType="SDIAS" />
+  <Downlink Name="State" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General Settings -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" />
+    <Property Name="Serial Number Validation" Channel="SerNoValidation" Type="Digital" Desc="This server shows the actual state of the respective digital input.&#13;&#10;&#13;&#10;0 .. input is inactive&#13;&#10;1 .. input is active" Editor="Combo:0=Serial number of varan client does not matter; 1=Serial number of varan client has to  be validated, to use the module"/>
+    <Property Name="Transparent" Channel="Transparent" Desc="0=Object is used as VARAN client, 1=Object is not used as VARAN client" Editor="Combo:0=Object is used as VARAN client;1=Object is not used as VARAN client"/>
+    <!-- General State -->
+    <IOState Name="Online" Channel="Online" Desc="Shows the online state of the class.&#13;&#10;0..Not Online.&#13;&#10;1..Online" EditorColor="0=B(255,0,0);0=T(255,255,255)" />
+    <IOState Name="State" Channel="State" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred "/>     
+    <IOState Name="Release" Channel="Release" Format="V{5-12}.{1-4}" IsInfo="true" Type="" Desc="FPGA - Version"/>
+    <IOState Name="Device Address" Channel="DeviceAddress" IsInfo="true" Desc="Device address of hardware module" Type="" />
+    <IOState Name="Vendor ID" Channel="VendorID" IsInfo="true" Desc="This server contains the vendor ID of the hardware module." Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module"/>
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module"/>
+    <IOState Name="Validate Serial Number" Channel="ValidateSerNo" Type="" Desc="If the validation of the serial number is activated (SerNoValidation=1) &#13;&#10; The serial number of the actual module can be validated by writing to this server &#13;&#10;&#13;&#10; this server shows also the state of validation; &#13;&#10; -2, validation not activated &#13;&#10; -1.. no module validated on this position &#13;&#10; 0...module is not the validated one &#13;&#10; 1.. module is the validated one"/>
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Retry counter of varan module" Type="" />
+    <IOState Name="VARAN Protocol Version" Channel="ProtocolVersion" Format="V{13-16}{9-12}.{5-8}.{1-4}" IsInfo="true" Desc="Shows the VARAN Client Protocol version" />
+    <IOState Name="Sdias Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Desc="Shows the version of the SDIAS Manager firmware" />
+    <IOState Name="Sdias Manager Protocol Version" Channel="ManagerProtocolVersion" Format="V{13-16}{9-12}.{5-8}.{1-4}" IsInfo="true" Desc="Shows the SDIAS Manager Protocol version" />
+    <!-- Module State -->
+    <IOState Name="Sdias State" Channel="SdiasState" Desc="This server shows the status of the sdias manager. If the state is not equal than _ClassOK, an error has occurred "/> 
+    <IOState Name="Sdias Retry Counter" Channel="SdiasRetryCounter" Type="Analog" Desc="Retry counter of Sdias bus" />    
+    <IOState Name="Sdias Iso Wr Task Duration" Channel="IsoWrTaskDuration" Desc="Shows the time measurement of last iso write task at SDIAS in [µs]" />
+    <IOState Name="Sdias Iso Wr Task Duration Max" Channel="IsoWrTaskMaxDuration" Desc="Shows the maximal time measurement of iso write task at SDIAS in [µs]" />
+    <IOState Name="Sdias Iso Rd Task Duration" Channel="IsoRdTaskDuration" Desc="Shows the time measurement of last iso read task at SDIAS in [µs]&#13;&#10;The measured time could be higher then the calculated time according to bit 4 of the manager option bits (0 .. with preprocessor time, 1 .. only execution time)." />
+    <IOState Name="Sdias Iso Rd Task Duration Max" Channel="IsoRdTaskMaxDuration" Desc="Shows the maximal time measurement of iso read task at SDIAS in [µs]&#13;&#10;The measured time could be higher then the calculated time according to bit 4 of the manager option bits (0 .. with preprocessor time, 1 .. only execution time)." />
+    <IOState Name="Sdias Manager Option Bits" Channel="ManagerOptionBits" Type="Analog" Desc="Shows the option bits of SDIAS Manager&#13;&#10;Bit 1: Interrupts supported&#13;&#10;Bit 2: Half duplex (SDIAS S2), bus scan required&#13;&#10;Bit 3: Far Memory access supported&#13;&#10;Bit 4: Status wait supported (to differ TimeSliceError and TimeSliceErrorIRQ)&#13;&#10;Bit 5: Execution time selection supported 1&#13;&#10;Bit 6: Task interruption detection supported&#13;&#10;Bit 7: Execution time selection supported 2" />
+
+    <Script Name="VI021">
+      <Parameter Name="CableLength" Type="Variable" Channel="CableLength" Desc="Length of cable connected to &quot;VARAN In&quot; [m]&#xD;&#xA;Default length 1m" Editor="Range:0..100" DefValue="1" />
+      <Parameter DisplayName="Transparent" Name="Transparent" Type="Client" Channel="Transparent" Desc="" />
+<Code>
+def compPost_VI021(element, parameters): 
+  def computeSimpleObjects(input):
+    output = {'Rd':[],'Wr':[],'WrDyn':[],'RdDyn':[],'RdSDIASBurst':[],'WrSDIASBurst':[]}
+    AddEntry=[0]
+    tmpLength = 0
+    for dataobjects in input: 
+      #for read dataobjects sdias
+      if dataobjects.has_key('Rd'):
+        dataobjects['Rd'] = map(int, dataobjects['Rd'])
+        output['Rd'] += dataobjects['Rd']
+        #add datalength for calculating burst length (burst1, burst2, burst3, burst4 ....)
+        for i in xrange(len(dataobjects['Rd'])):
+          if i >= (len(output['RdSDIASBurst'])):
+            output['RdSDIASBurst'] += AddEntry 
+          output['RdSDIASBurst'][i] += int(dataobjects['Rd'][i])
+      #for write dataobjects sdias
+      if dataobjects.has_key('Wr'):
+        dataobjects['Wr'] = map(int, dataobjects['Wr'])
+        output['Wr'] += dataobjects['Wr']
+        #add datalength for calculating burst length (burst1, burst2, burst3, burst4 ....)
+        for i in xrange(len(dataobjects['Wr'])):
+          if i >= (len(output['WrSDIASBurst'])):
+            output['WrSDIASBurst'] += AddEntry 
+          output['WrSDIASBurst'][i] += int(dataobjects['Wr'][i])
+      #for read dynamic dataobjects sdias
+      if dataobjects.has_key('RdDyn'):
+        dataobjects['RdDyn'] = map(int, dataobjects['RdDyn'])
+        output['RdDyn'] += dataobjects['RdDyn']
+        #add datalength for calculating burst length (burst1, burst2, burst3, burst4 ....)
+        for i in xrange(len(dataobjects['RdDyn'])):
+          tmpLength = i #+len(dataobjects['Rd'])
+          if tmpLength >= (len(output['RdSDIASBurst'])):
+            output['RdSDIASBurst'] += AddEntry 
+          output['RdSDIASBurst'][tmpLength] += int(dataobjects['RdDyn'][i])
+      #for write dynamic dataobjects sdias
+      if dataobjects.has_key('WrDyn'):
+        dataobjects['WrDyn'] = map(int, dataobjects['WrDyn'])
+        output['WrDyn'] += dataobjects['WrDyn']
+        #add datalength for calculating burst length (burst1, burst2, burst3, burst4 ....)
+        for i in xrange(len(dataobjects['WrDyn'])):
+          tmpLength = i #+len(dataobjects['Wr'])
+          if tmpLength >= (len(output['WrSDIASBurst'])):
+            output['WrSDIASBurst'] += AddEntry 
+          output['WrSDIASBurst'][tmpLength] += int(dataobjects['WrDyn'][i])
+    return output 
+  
+# calculating varan memory ---------------------------------------------------------------------------------------------------- 
+  def computeVaranMem(input):
+    output = {'IsoRdBytes':0, 'IsoWrBytes':0}    
+    
+    output['IsoRdBytes'] = 0
+    output['IsoRdBytes'] += sum(input['Rd'])    + (len(input['Rd'])    - input['Rd'].count(0))     # Add Rd PDO    + State Bytes
+    output['IsoRdBytes'] += sum(input['RdDyn']) + (len(input['RdDyn']) - input['RdDyn'].count(0))  # Add RdDyn PDO + State Bytes
+    output['IsoRdBytes'] += len(input['Wr'])    - input['Wr'].count(0)                             # Add Wr PDO State Bytes (-count(0) to removes data with 0 byte length)
+    output['IsoRdBytes'] += len(input['WrDyn']) - input['WrDyn'].count(0)                          # Add WrDyn PDO State Bytes (-count(0) to removes with data 0 byte length)
+    
+    output['IsoWrBytes'] = 0
+    output['IsoWrBytes'] += sum(input['Wr'])      + (len(input['Wr'])     - input['Wr'].count(0))        # Add Wr PDO    + Control Bytes
+    output['IsoWrBytes'] += sum(input['WrDyn'])   + ((len(input['WrDyn']) - input['WrDyn'].count(0))*4)  # Add WrDyn PDO + Control Bytes + 3 Additional Bytes
+    output['IsoWrBytes'] += (len(input['Rd'])     - input['Rd'].count(0))                                # Add Rd PDO Control Bytes (-count(0) to removes data with 0 byte length)
+    output['IsoWrBytes'] += ((len(input['RdDyn']) - input['RdDyn'].count(0))*4)                          # Add RdDyn PDO Control Bytes + 3 Additional Bytes (-count(0) to removes data with 0 byte length)
+    
+    #Only if sdias modules are behind VI
+    if output['IsoWrBytes'] != 0:
+      SDIAS_TRIGGER_UNIT_BYTE_SIZE = 2                                       # take our special access usage and add the usage according to the µC as well as 2 bytes for the trigger unit activation
+      output['IsoWrBytes'] += SDIAS_TRIGGER_UNIT_BYTE_SIZE + 3               # 3 Byte: 1 Byte Watchdog, 2 Byte TaskInfo
+      
+    return output 
+
+# calculating sdias memory ---------------------------------------------------------------------------------------------------- 
+  def computeSDIASMem(input):
+    output = {'IsoRdBytes':0, 'IsoWrBytes':0}    
+    
+    output['IsoRdBytes'] = 0
+    output['IsoRdBytes'] += sum(input['Rd'])    + (len(input['Rd'])    - input['Rd'].count(0))     # Add Rd PDO    + State Bytes
+    output['IsoRdBytes'] += sum(input['RdDyn']) + (len(input['RdDyn']) - input['RdDyn'].count(0))  # Add RdDyn PDO + State Bytes
+    output['IsoRdBytes'] += len(input['Wr'])    - input['Wr'].count(0)                             # Add Wr PDO State Bytes (-count(0) to removes data with 0 byte length)
+    output['IsoRdBytes'] += len(input['WrDyn']) - input['WrDyn'].count(0)                          # Add WrDyn PDO State Bytes (-count(0) to removes data with 0 byte length)
+    
+    output['IsoWrBytes'] = 0
+    output['IsoWrBytes'] += sum(input['Wr'])      + (len(input['Wr'])     - input['Wr'].count(0))        # Add Wr PDO    + Control Bytes
+    output['IsoWrBytes'] += sum(input['WrDyn'])   + ((len(input['WrDyn']) - input['WrDyn'].count(0))*4)  # Add WrDyn PDO + Control Bytes + 3 Additional Bytes
+    output['IsoWrBytes'] += (len(input['Rd'])     - input['Rd'].count(0))                                # Add Rd PDO Control Bytes (-count(0) to removes data with 0 byte length)
+    output['IsoWrBytes'] += ((len(input['RdDyn']) - input['RdDyn'].count(0))*4)                          # Add RdDyn PDO Control Bytes + 3 Additional Bytes (-count(0) to removes data with 0 byte length)
+    return output 
+    
+
+# calculating sdias time ----------------------------------------------------------------------------------------------------    
+  def computeSDIASTime(input, RdSDIASBurst, WrSDIASBurst):
+    output = {'IsoTimeRd':0, 'IsoTimeWr':0}    
+    AddEntry=[0]
+    tmpLength = 0
+    #variable to calculate time from SDIAS design spec 8.11.2
+    ArrayPreprocessing = 400  #ns
+    DataObjectFetching = 400  #ns
+    GeneralBurstTime = ArrayPreprocessing+DataObjectFetching
+    
+    # calculate read time ----------------------------------------------------------------------------------------------------
+    output['IsoTimeRd'] = 0
+    #calculate read bursts (burst1, burst2, burst3, burst4 ....)
+    for BurstCounter in xrange(len(RdSDIASBurst)):
+      BurstRdByte = []
+      NodeCnt = 0
+      for dataobjects in input:
+        #for read dataobjects sdias
+        if dataobjects.has_key('Rd'):
+          dataobjects['Rd'] = map(int, dataobjects['Rd'])
+          #add datalength for calculating burst length 
+          if len(dataobjects['Rd']) > BurstCounter:
+            if NodeCnt >= len(BurstRdByte)-1:
+              BurstRdByte += AddEntry
+            BurstRdByte[NodeCnt] = dataobjects['Rd'][BurstCounter]
+          else:
+            #add empty entry because node has no data to transmit
+            BurstRdByte += AddEntry
+        #for read dynamic dataobjects sdias
+        if dataobjects.has_key('RdDyn'):
+          dataobjects['RdDyn'] = map(int, dataobjects['RdDyn'])
+          if len(dataobjects['RdDyn']) > BurstCounter:
+            dataobjects['RdDyn'] = map(int, dataobjects['RdDyn'])
+            BurstRdByte[NodeCnt] += dataobjects['RdDyn'][BurstCounter]
+        NodeCnt += 1  
+        
+      SearchLastNode  = len(BurstRdByte)-1 
+      LastNode  = 0
+      while SearchLastNode > 1:
+        if 0 != BurstRdByte[SearchLastNode]:
+          LastNode = SearchLastNode+1
+          break
+        SearchLastNode -= 1
+        
+      FirstNode = 1
+      #add time for every burst
+      SumActiveNodes       = len(BurstRdByte) - BurstRdByte.count(0) 
+      TxPathDelay          = 100 * (LastNode)  #ns
+      TransmitFirstRequest = (FirstNode*8)*80
+      ReceiveData          = (SumActiveNodes*7+sum(BurstRdByte))*80
+      RxPathDelay          = TxPathDelay
+      StoreLastRecData     = BurstRdByte[LastNode-1] * 40
+      ListPostProcessing   = SumActiveNodes * 400
+      ActTimeAdd           = int((GeneralBurstTime + TxPathDelay + TransmitFirstRequest + ReceiveData + RxPathDelay + StoreLastRecData + ListPostProcessing))
+      output['IsoTimeRd'] += ActTimeAdd
+      
+    # calculate write time ----------------------------------------------------------------------------------------------------
+    output['IsoTimeWr'] = 0
+    #calculate read bursts (burst1, burst2, burst3, burst4 ....)
+    for BurstCounter in xrange(len(WrSDIASBurst)):
+      BurstWrByte = []
+      NodeCnt = 0
+      for dataobjects in input:
+        #for read dataobjects sdias
+        if dataobjects.has_key('Wr'):
+          dataobjects['Wr'] = map(int, dataobjects['Wr'])
+          #add datalength for calculating burst length 
+          if len(dataobjects['Wr']) > BurstCounter:
+            if NodeCnt >= len(BurstWrByte)-1:
+              BurstWrByte += AddEntry
+            BurstWrByte[NodeCnt] = dataobjects['Wr'][BurstCounter]
+          else:
+            #add empty entry because node has no data to transmit
+            BurstWrByte += AddEntry
+        #for read dynamic dataobjects sdias
+        if dataobjects.has_key('WrDyn'):
+          dataobjects['WrDyn'] = map(int, dataobjects['WrDyn'])
+          if len(dataobjects['WrDyn']) > BurstCounter:
+            dataobjects['WrDyn'] = map(int, dataobjects['WrDyn'])
+            BurstWrByte[NodeCnt] += dataobjects['WrDyn'][BurstCounter]
+        NodeCnt += 1
+        
+      SearchLastNode  = len(BurstRdByte)-1 
+      LastNode  = 0
+      while SearchLastNode > 1:
+        if 0 != BurstWrByte[SearchLastNode]:
+          LastNode = SearchLastNode+1
+          break
+        SearchLastNode -= 1
+          
+      FirstNode = 1    
+      #add time for every burst
+      SumActiveNodes       = len(BurstWrByte) - BurstWrByte.count(0) 
+      TxPathDelay          = 100 * (LastNode)  #ns
+      TransmitData         = (SumActiveNodes*8+sum(BurstWrByte))*80
+      StoreDataInLastNode  = sum(BurstWrByte) * 40
+      RxPathDelay          = TxPathDelay
+      ReceiveLastAck       = (FirstNode*6)*80
+      ListPostProcessing   = SumActiveNodes * 400
+      ActTimeAdd           = int((GeneralBurstTime + TxPathDelay + TransmitData + StoreDataInLastNode + RxPathDelay + ReceiveLastAck + ListPostProcessing))
+      output['IsoTimeWr'] += ActTimeAdd
+    
+    # round up + 1 extra µs and divide ns to get µs
+    output['IsoTimeRd'] = (output['IsoTimeRd'] +2000)/1000
+    output['IsoTimeWr'] = (output['IsoTimeWr'] +2000)/1000  #divide with 1200 to get same values how on real hardware (Sdias Dauertest)
+    return output
+  
+  def ChecktimeVarankwargs():
+    # Checks if kwargs is supported by the timeVaranx functions
+    import inspect
+    funcinfo = inspect.getcallargs(timeVaranRdDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+   
+    funcinfo = inspect.getcallargs(timeVaranWrDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+    
+    funcinfo = inspect.getcallargs(timeVaranRdWrDO, 1,2,3,4) # 1,2,3,4 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+      
+    return True
+    
+  def lotimeVaranRdDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS)
+  
+  def lotimeVaranWrDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS)
+# ---------------------------------------------------------------------------------------------------- 
+  element['result']['optional'].append({'depth': parameters['depth']})
+  subelements = {'PDO':[],}
+  
+  bkwargs = ChecktimeVarankwargs()
+  
+  for object in element['result']['optional']: 
+    for key in subelements.keys():
+      if object.has_key(key):
+        subelements[key].append(object[key])
+        
+  
+  # Add 2x Broadcast Timer
+  subelementBC = {'PDO': {'Wr':[2,2], 'Rd':[0,0], 'WrDyn':[0,0], 'RdDyn':[0,0]}} 
+  subelements['PDO'].append(subelementBC['PDO'])
+  
+  PDOList = computeSimpleObjects(subelements['PDO'])
+    
+  VaranMem = {'IsoRdBytes':0, 'IsoWrBytes':0}
+  VaranMem = computeVaranMem(PDOList)
+  
+  # Rd DOs ----------------------------------------------------------------------------------------------------
+  if operator.gt(VaranMem['IsoRdBytes'],0):
+    element['result'] = memVaranRdDO(VaranMem['IsoRdBytes'],element, parameters, DoChangeAble=True)
+    
+    bytesLeft = VaranMem['IsoRdBytes']
+        
+    if parameters['SplitRdWr'] == 0:
+      while operator.gt(bytesLeft, 0):
+        if operator.gt(bytesLeft,128):
+          element['result']['IsoTime'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 128, parameters['cable'], parameters = parameters)
+          bytesLeft -= 128
+        else:
+          element['result']['IsoTime'] += lotimeVaranRdDO(bkwargs, parameters['depth'], bytesLeft, parameters['cable'], parameters = parameters)
+          bytesLeft = 0
+    else:
+      while operator.gt(bytesLeft, 0):
+        if operator.gt(bytesLeft,128):
+          element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 128, parameters['cable'], parameters = parameters)
+          bytesLeft -= 128
+        else:
+          element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], bytesLeft, parameters['cable'], parameters = parameters)
+          bytesLeft = 0
+          
+  # Wr DOs ----------------------------------------------------------------------------------------------------
+  if operator.gt(VaranMem['IsoWrBytes'],0):
+    element['result'] = memVaranWrDO(VaranMem['IsoWrBytes'],element, parameters, DoChangeAble=True)
+    
+    bytesLeft = VaranMem['IsoWrBytes']
+    
+    if parameters['SplitRdWr'] == 0:
+      while operator.gt(bytesLeft, 0):
+        if operator.gt(bytesLeft,128):
+          element['result']['IsoTime'] += lotimeVaranWrDO(bkwargs, parameters['depth'], 128, parameters['cable'], parameters = parameters)
+          bytesLeft -= 128
+        else:
+          element['result']['IsoTime'] += lotimeVaranWrDO(bkwargs, parameters['depth'], bytesLeft, parameters['cable'], parameters = parameters)
+          bytesLeft = 0
+    else:
+      while operator.gt(bytesLeft, 0):
+        if operator.gt(bytesLeft,128):
+          element['result']['IsoTimeWr'] += lotimeVaranWrDO(bkwargs, parameters['depth'], 128, parameters['cable'], parameters = parameters)
+          bytesLeft -= 128
+        else:
+          element['result']['IsoTimeWr'] += lotimeVaranWrDO(bkwargs, parameters['depth'], bytesLeft, parameters['cable'], parameters = parameters)
+          bytesLeft = 0
+    
+  # Taskinfo 28 Byte Rd
+  if ((operator.gt(VaranMem['IsoRdBytes'],0)) or (operator.gt(VaranMem['IsoWrBytes'],0))):
+    element['result'] = memVaranRdDO(28,element, parameters, DoChangeAble=True)
+    if parameters['SplitRdWr'] == 0:
+      element['result']['IsoTime'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 28, parameters['cable'], parameters = parameters)
+    else:
+      element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 28, parameters['cable'], parameters = parameters)
+      
+  # TaskSettings 4 Byte Wr
+  if ((operator.gt(VaranMem['IsoRdBytes'],0)) or (operator.gt(VaranMem['IsoWrBytes'],0))):
+    
+    element['result'] = memVaranWrDO(4,element, parameters, DoChangeAble=True)  
+    if parameters['SplitRdWr'] == 0:
+      element['result']['IsoTime'] += lotimeVaranWrDO(bkwargs, parameters['depth'], 4, parameters['cable'], parameters = parameters)
+    else:
+      element['result']['IsoTimeWr'] += lotimeVaranWrDO(bkwargs, parameters['depth'], 4, parameters['cable'], parameters = parameters)
+    
+  # DO for ASY Read
+  element['result'] = memVaranRdDO(128,element, parameters, DoChangeAble=True)
+  element['result']['AsyTime'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 128, parameters['cable'], parameters = parameters)
+  
+  # DO for ASY Write
+  element['result'] = memVaranWrDO(128,element, parameters, DoChangeAble=True)
+  element['result']['AsyTime'] += lotimeVaranWrDO(bkwargs, parameters['depth'], 128, parameters['cable'], parameters = parameters)
+  
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  #for read dataobjects sdias
+  if PDOList['RdSDIASBurst'].count(0) > 0:
+    PDOList['RdSDIASBurst'].remove(0)
+  #for write dataobjects sdias
+  if PDOList['WrSDIASBurst'].count(0) > 0:
+    PDOList['WrSDIASBurst'].remove(0)
+  #SDIAS time and mem calculation
+  SDIASMem = computeSDIASMem(PDOList)
+  element['result']['SDIASMem'] = SDIASMem['IsoRdBytes']
+  element['result']['SDIASMem'] += SDIASMem['IsoWrBytes']
+  BurstRdByteLen = len(PDOList['RdSDIASBurst'])
+  BurstWrLen = len(PDOList['WrSDIASBurst'])
+  
+  SDIASTime = computeSDIASTime(subelements['PDO'], PDOList['RdSDIASBurst'], PDOList['WrSDIASBurst'])
+  element['result']['SDIASIsoTimeRd'] = SDIASTime['IsoTimeRd']
+  element['result']['SDIASIsoTimeWr'] = SDIASTime['IsoTimeWr']
+  
+  #remove added zeros which where before added to calculate sdias time
+  for dataobjects in subelements['PDO']:
+    #for read dataobjects sdias
+    while dataobjects['Rd'].count(0) > 0:
+      dataobjects['Rd'].remove(0)
+    #for read dataobjects sdias
+    while dataobjects['RdDyn'].count(0) > 0:
+      dataobjects['RdDyn'].remove(0)
+    #for write dataobjects sdias
+    while dataobjects['Wr'].count(0) > 0:
+      dataobjects['Wr'].remove(0)
+    #for write dataobjects sdias
+    while dataobjects['WrDyn'].count(0) > 0:
+      dataobjects['WrDyn'].remove(0)
+</Code>
+</Script>
+  </Class>
+</HWClassInfo>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<File CRC="B1AC5277" Version="1.1">
+	<Types>
+		<Type Name="SafetyConfigStateType" Datatype="UDINT" TypeId="ENUM">
+			<Elements>
+				<Type Name="_ModuleNotFound" Value="0"/>
+				<Type Name="_SafetyClassOK" Value="1"/>
+				<Type Name="_ReinitConfig" Value="2"/>
+				<Type Name="_UnsafeVarNotFound" Value="3"/>
+				<Type Name="_ModFromCfgNotFound" Value="4"/>
+				<Type Name="_MemAllocFailed" Value="5"/>
+				<Type Name="_ReadFWVerFailed" Value="6"/>
+				<Type Name="_UnknownCfgError" Value="7"/>
+				<Type Name="_WaitForSynchronicity" Value="8"/>
+				<Type Name="_AsyncComError" Value="9"/>
+				<Type Name="_DOsIncreasedRestartApp" Value="10"/>
+				<Type Name="_LostPowerSupply" Value="11"/>
+				<Type Name="_WrongSafetyHW" Value="12"/>
+			</Elements>
+		</Type>
+		<Type Name="t_e_VaranErrors" Datatype="UDINT" TypeId="ENUM">
+			<Elements>
+				<Type Name="_ClassOk" Value="0"/>
+				<Type Name="_NotInitialized" Value="1"/>
+				<Type Name="_CallBackError" Value="2"/>
+				<Type Name="_RequiredError" Value="3"/>
+				<Type Name="_RootError" Value="4"/>
+				<Type Name="_NoHardware" Value="5"/>
+				<Type Name="_WrongHardware" Value="6"/>
+				<Type Name="_CreateDOFailed" Value="7"/>
+				<Type Name="_DirectAccessFailed" Value="8"/>
+				<Type Name="_PllError" Value="9"/>
+				<Type Name="_TimeoutInInit" Value="10"/>
+				<Type Name="_HardwareRequiredIRQ" Value="11"/>
+				<Type Name="_HardwareNotRequiredIRQ" Value="12"/>
+				<Type Name="_HardwareFatalErrorIRQ" Value="13"/>
+				<Type Name="_ManagerError" Value="14"/>
+				<Type Name="_DisableError" Value="15"/>
+				<Type Name="_EnableError" Value="16"/>
+				<Type Name="_MultipleError" Value="17"/>
+				<Type Name="_SPIError" Value="18"/>
+				<Type Name="_ErrorBootImageFPGA" Value="19"/>
+				<Type Name="_NoCDIASInterface" Value="20"/>
+				<Type Name="_EEPromError" Value="21"/>
+				<Type Name="_NoVaranInterface" Value="22"/>
+				<Type Name="_MemoryFault" Value="23"/>
+				<Type Name="_TimesliceError" Value="24"/>
+				<Type Name="_TimesliceErrorIRQ" Value="25"/>
+				<Type Name="_WatchdogError" Value="26"/>
+				<Type Name="_VaranTimeError" Value="27"/>
+				<Type Name="_DiasTimeError" Value="28"/>
+				<Type Name="_DORamFull" Value="29"/>
+				<Type Name="_PortNoLink" Value="30"/>
+				<Type Name="_VaranDriverNotExists" Value="31"/>
+				<Type Name="_WrongDOLType" Value="32"/>
+				<Type Name="_WrongRunStatus" Value="33"/>
+				<Type Name="_DOHandleInvalid" Value="34"/>
+				<Type Name="_DOCmdInvalid" Value="35"/>
+				<Type Name="_ManagerNotExists" Value="36"/>
+				<Type Name="_DOLAddressInvalid" Value="37"/>
+				<Type Name="_UnknownCommand" Value="38"/>
+				<Type Name="_ComponentNotExists" Value="39"/>
+				<Type Name="_ClientNotExists" Value="40"/>
+				<Type Name="_CdiasEEPromNotExists" Value="41"/>
+				<Type Name="_CdiasEEPromNoGrant" Value="42"/>
+				<Type Name="_CdiasEEPromNack" Value="43"/>
+				<Type Name="_PortNotExists" Value="44"/>
+				<Type Name="_PortIsUplink" Value="45"/>
+				<Type Name="_NoMutex" Value="46"/>
+				<Type Name="_NoTask" Value="47"/>
+				<Type Name="_IDNotFound" Value="48"/>
+				<Type Name="_IDNotInitialized" Value="49"/>
+				<Type Name="_InvalidDeviceAddress" Value="50"/>
+				<Type Name="_CallbackNotHandled" Value="51"/>
+				<Type Name="_NoMem" Value="52"/>
+				<Type Name="_NoLegacyWd" Value="53"/>
+				<Type Name="_AdminDOLExecutionError" Value="54"/>
+				<Type Name="_DADOLExecutionError" Value="55"/>
+				<Type Name="_SPIFlashNoAccess" Value="56"/>
+				<Type Name="_ClientNotready" Value="57"/>
+				<Type Name="_TimeoutVaran" Value="58"/>
+				<Type Name="_UnknownFault" Value="59"/>
+				<Type Name="_DiasError" Value="60"/>
+				<Type Name="_DeviceError" Value="61"/>
+				<Type Name="_VaranTimeWarning" Value="62"/>
+				<Type Name="_OnlyASYSupported" Value="63"/>
+				<Type Name="_InvalidSerialNo" Value="64"/>
+				<Type Name="_CDIASRequiredError" Value="65"/>
+				<Type Name="_DIASRequiredError" Value="66"/>
+				<Type Name="_NoCalibDataFound" Value="67"/>
+				<Type Name="_ModuleFoundButManagerIsOff" Value="68"/>
+				<Type Name="_InvalidConfguration" Value="69"/>
+				<Type Name="_ClientDisabled" Value="70"/>
+				<Type Name="_ClientCantEnable" Value="71"/>
+				<Type Name="_CdiasAddressInvalid" Value="72"/>
+				<Type Name="_SPIFlashInvalid" Value="73"/>
+				<Type Name="_SPIDOLIDInvalid" Value="74"/>
+				<Type Name="_SPIDOLInvalid" Value="75"/>
+				<Type Name="_SPIRequiredListError" Value="76"/>
+				<Type Name="_SPIChksumError" Value="77"/>
+				<Type Name="_ParameterInvalid" Value="78"/>
+				<Type Name="_DOTypeNotSupported" Value="79"/>
+				<Type Name="_DMAError" Value="80"/>
+				<Type Name="_PropertyIDInvalid" Value="81"/>
+				<Type Name="_PropertyValueInvalid" Value="82"/>
+				<Type Name="_DONumberOverflow" Value="83"/>
+				<Type Name="_APIUsageNotAllowed" Value="84"/>
+				<Type Name="_NodeTypeWrong" Value="85"/>
+				<Type Name="_DataLengthInvalid" Value="86"/>
+				<Type Name="_DOTypeInvalid" Value="87"/>
+				<Type Name="_OperationNotAllowed" Value="88"/>
+				<Type Name="_NodeNumberOverflow" Value="89"/>
+				<Type Name="_NoHandleFound" Value="90"/>
+				<Type Name="_TopologyNotAllowed" Value="91"/>
+			</Elements>
+		</Type>
+	</Types>
+	<Classes>
+		<Class
+			Name     = "AI043"
+			Datatype = "t_e_VaranErrors"
+			Base     = "SdiasBase"
+			Size     = "924"
+			Guid     = "60F7777C-F3F3-4B20-915B-C8F9D4BBCA83">
+			<Servers>
+				<Server Name="ClassState" Datatype="t_e_VaranErrors" Guid="070CD62D-F011-403B-A668-118E2A1842A7" WriteProtected="true"/>
+				<Server Name="DeviceID" Datatype="UDINT" Guid="1F67076F-D511-400A-8CEF-0F0E0579EC0B" WriteProtected="true"/>
+				<Server Name="FPGAVersion" Datatype="HDINT" Guid="D5EF701A-412A-4C34-AA2E-FFC7D82C2F86" WriteProtected="true"/>
+				<Server Name="HwVersion" Datatype="HDINT" Guid="6BF31076-362C-4517-9DA7-F776C9F85012" WriteProtected="true"/>
+				<Server Name="SerialNo" Datatype="STRING" Guid="68FBC413-E3CB-4059-BC09-1D975B4D4819" WriteProtected="true"/>
+				<Server Name="RetryCounter" Datatype="UDINT" Guid="833C80D1-4726-4DCB-B1AB-C268D7D72245" WriteProtected="true"/>
+				<Server Name="LEDControl" Datatype="DINT" Guid="FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8" WriteProtected="false"/>
+				<Server Name="FirmwareVersion" Datatype="HDINT" Guid="74ABB48A-A01C-4856-BC0B-2268E5981932" WriteProtected="true"/>
+				<Server Name="FWErrorBits" Datatype="SdiasBase::t_s_SdiasFWStateStandard" Guid="52BC0A9C-D330-4475-A685-12337C1BD543" WriteProtected="true"/>
+				<Server Name="AI1" Datatype="DINT" Guid="08A3C829-FE79-4197-9D60-296278BDCF8C" WriteProtected="true"/>
+				<Server Name="AI2" Datatype="DINT" Guid="817A5181-F870-4D7B-9002-7D4F5BFA549C" WriteProtected="true"/>
+				<Server Name="AI3" Datatype="DINT" Guid="44E8C4DB-7B34-4FD5-8156-6B50F5973B3F" WriteProtected="true"/>
+				<Server Name="AI4" Datatype="DINT" Guid="43267F4F-D9E0-4E74-9848-858B75487729" WriteProtected="true"/>
+				<Server Name="CableBreak" Datatype="BDINT" Guid="6F75EDE5-C8E1-4005-8AC7-1E9CB7F299CC" WriteProtected="true"/>
+				<Server Name="Range" Datatype="BDINT" Guid="C1B4CA0B-3900-40A9-9A71-DD5374B97B08" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="SerialNoStr" Datatype="String" Guid="016F794C-857F-482F-8C65-B5EE24158A3F"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "ASCII_BIN"
+			Datatype = "DINT"
+			Size     = "12"
+			Guid     = "CBAEE384-C115-4DE8-8094-C7D4F0EF8746">
+			<Servers>
+				<Server Name="Obj_channel" Datatype="DINT" Guid="AA790E5E-E4EC-4B0F-80BB-3FC837048BBA" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "BusInterfaceSdias"
+			Datatype = "t_e_VaranErrors"
+			Base     = "SdiasBase"
+			Size     = "4920"
+			Guid     = "74134B4E-6C37-4D4E-A553-14246973EFB6">
+		</Class>
+		<Class
+			Name     = "BusInterfaceSDIASInternal"
+			Datatype = "DINT"
+			Size     = "232"
+			Guid     = "0F88252F-E206-4746-9EE2-190EB96646AE">
+		</Class>
+		<Class
+			Name     = "CP112_IOs"
+			Datatype = "DINT"
+			Base     = "XXXBase_IOs"
+			Size     = "204"
+			Guid     = "57313482-BD5C-4316-91BE-BC6D8D2B3999">
+			<Servers>
+				<Server Name="ClassState" Datatype="DINT" Guid="3A3AB6B3-8638-4EBF-BE1F-FF95BD2A673E" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "DM161"
+			Datatype = "t_e_VaranErrors"
+			Base     = "SdiasBase"
+			Size     = "688"
+			Guid     = "32158574-3D84-4244-ABAE-F62BF4B89E96">
+			<Servers>
+				<Server Name="ClassState" Datatype="t_e_VaranErrors" Guid="070CD62D-F011-403B-A668-118E2A1842A7" WriteProtected="true"/>
+				<Server Name="DeviceID" Datatype="UDINT" Guid="1F67076F-D511-400A-8CEF-0F0E0579EC0B" WriteProtected="true"/>
+				<Server Name="FPGAVersion" Datatype="HDINT" Guid="D5EF701A-412A-4C34-AA2E-FFC7D82C2F86" WriteProtected="true"/>
+				<Server Name="HwVersion" Datatype="HDINT" Guid="6BF31076-362C-4517-9DA7-F776C9F85012" WriteProtected="true"/>
+				<Server Name="SerialNo" Datatype="STRING" Guid="68FBC413-E3CB-4059-BC09-1D975B4D4819" WriteProtected="true"/>
+				<Server Name="RetryCounter" Datatype="UDINT" Guid="833C80D1-4726-4DCB-B1AB-C268D7D72245" WriteProtected="true"/>
+				<Server Name="LEDControl" Datatype="DINT" Guid="FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8" WriteProtected="false"/>
+				<Server Name="Input1" Datatype="DINT" Guid="2D974C62-80E3-4625-828C-140BD0016A2D" WriteProtected="true"/>
+				<Server Name="Input2" Datatype="DINT" Guid="38869745-7485-4568-812C-843F8B105A11" WriteProtected="true"/>
+				<Server Name="Input3" Datatype="DINT" Guid="D70208B8-C9DE-4DE0-8909-3ADADBF462CE" WriteProtected="true"/>
+				<Server Name="Input4" Datatype="DINT" Guid="8B1558AC-FBE6-4997-8C8E-003BF3E07D4F" WriteProtected="true"/>
+				<Server Name="Input5" Datatype="DINT" Guid="FA430548-0138-41BD-B527-374169014476" WriteProtected="true"/>
+				<Server Name="Input6" Datatype="DINT" Guid="188D3054-6589-446F-A074-BA8D79AE341F" WriteProtected="true"/>
+				<Server Name="Input7" Datatype="DINT" Guid="F80FDD57-918F-45EE-8CEE-6F6CBBAE22CF" WriteProtected="true"/>
+				<Server Name="Input8" Datatype="DINT" Guid="30E9C9BB-DFBB-4C24-936D-3B2CB8EFA649" WriteProtected="true"/>
+				<Server Name="Output1" Datatype="DINT" Guid="6D9719FB-779C-4EAF-A41A-8726515E46F2" WriteProtected="false"/>
+				<Server Name="Output2" Datatype="DINT" Guid="04641EAB-5DB5-4164-8EBA-13EB02625D5A" WriteProtected="false"/>
+				<Server Name="Output3" Datatype="DINT" Guid="03C4CDF3-4B3F-4F73-A39E-0E8132C6A6E4" WriteProtected="false"/>
+				<Server Name="Output4" Datatype="DINT" Guid="C6CE0931-58EE-4E11-9D18-8C70B0390864" WriteProtected="false"/>
+				<Server Name="Output5" Datatype="DINT" Guid="D0C365FB-0386-4EF8-AFD5-BA86E56A7AA0" WriteProtected="false"/>
+				<Server Name="Output6" Datatype="DINT" Guid="C97A79B3-1A91-4A3E-AC64-F24DABC9A698" WriteProtected="false"/>
+				<Server Name="Output7" Datatype="DINT" Guid="807DE5FE-061C-45CA-BD0C-97155D91357D" WriteProtected="false"/>
+				<Server Name="Output8" Datatype="DINT" Guid="F72C0E69-3486-4186-A693-31D01551FE3D" WriteProtected="false"/>
+				<Server Name="InputByte" Datatype="BDINT" Guid="8E5F05B8-8D1B-4170-94CA-86E586096B3C" WriteProtected="true"/>
+				<Server Name="OutputByte" Datatype="BDINT" Guid="82951DB6-2149-49F8-9C40-64D33C503818" WriteProtected="false"/>
+				<Server Name="VoltageOk" Datatype="DINT" Guid="544B8C98-4878-4C59-BF98-FC0E29F32E2B" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="SerialNoStr" Datatype="String" Guid="016F794C-857F-482F-8C65-B5EE24158A3F"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "Hub_Base"
+			Datatype = "DINT"
+			Base     = "VaranManager_Base"
+			Size     = "72"
+			Guid     = "EF7BD0F8-81CC-4E01-A3FF-C2B56BBF8AD3">
+		</Class>
+		<Class
+			Name     = "Hub_Base_Root"
+			Datatype = "DINT"
+			Base     = "Hub_Base"
+			Size     = "84"
+			Guid     = "64ED1FC4-EA8C-4B30-98C0-5BA271C4FFE8">
+			<Servers>
+				<Server Name="Control" Datatype="DINT" Guid="217B6364-B62D-4D4A-A8F6-84A5BF141EC1" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "HwControl"
+			Datatype = "DINT"
+			Base     = "HwControlBase"
+			Size     = "892"
+			Guid     = "4794F3F9-7ABA-4680-9933-0608225B5265">
+			<Servers>
+				<Server Name="Control" Datatype="DINT" Guid="6E0C095B-B92D-47BE-BA84-39E07206C58D" WriteProtected="true"/>
+				<Server Name="State" Datatype="t_e_VaranErrors" Guid="662C9213-4BB2-4CC6-AE9F-D19FC74B0F6B" WriteProtected="true"/>
+				<Server Name="DiasMaster" Datatype="DINT" Guid="346AEDBC-831D-4D5C-B71F-A1BF17D120A4" WriteProtected="false"/>
+				<Server Name="SafetyState" Datatype="DINT" Guid="7E088AB6-AB0A-450E-964A-E46FE15A0D4B" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="SafetyManager" Datatype="SafetyManager" Guid="4545C840-4FB2-4C80-B150-345DF08208A7"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "HwControlBase"
+			Datatype = "DINT"
+			Size     = "72"
+			Guid     = "25529921-015E-4979-B126-D406D2F83DDD">
+		</Class>
+		<Class
+			Name     = "SafetyBaseFSoE"
+			Datatype = "DINT"
+			Size     = "10104"
+			Guid     = "7B09BE5F-9F0C-4D32-AF0D-D03A17AC196B">
+		</Class>
+		<Class
+			Name     = "SafetyManager"
+			Datatype = "DINT"
+			Base     = "SafetyUDP"
+			Size     = "29396"
+			Guid     = "186EBAC0-5F71-4A3F-BA36-ED9EA68EA059">
+			<Servers>
+				<Server Name="ClassState" Datatype="DINT" Guid="A6D9A0DC-20E2-414D-B902-67A7FC14ABB0" WriteProtected="true"/>
+				<Server Name="sErrorCount" Datatype="DINT" Guid="873197F2-33A7-4806-A999-3D24D4F6C9BB" WriteProtected="true"/>
+				<Server Name="sLastErrorMessage" Datatype="SafetyUDP::_FSM_UDP_ERROR" Guid="94E630A5-6991-4FA1-AF39-605514F6C930" WriteProtected="true"/>
+				<Server Name="sLastErrorNoOS" Datatype="DINT" Guid="ED25AD73-138F-4A20-90C9-1E2204E795D3" WriteProtected="true"/>
+				<Server Name="LoginCnt" Datatype="DINT" Guid="5FC5C929-C7F8-4BFB-8DF3-09B84403273D" WriteProtected="true"/>
+				<Server Name="MinSyncDuration" Datatype="UDINT" Guid="697A1FC7-1D68-4539-AE59-3800B4CF8373" WriteProtected="false"/>
+				<Server Name="SyncDuration" Datatype="UDINT" Guid="58439908-A73E-4D89-8216-1483D81B8572" WriteProtected="true"/>
+				<Server Name="MaxSyncDuration" Datatype="UDINT" Guid="7517B303-9F59-4B9A-AD1A-8766B8C07194" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "SafetyUDP"
+			Datatype = "DINT"
+			Size     = "232"
+			Guid     = "5260DCC2-D171-4729-B965-8A7B43D0B86A">
+			<Types>
+				<Type Name="_FSM_UDP_ERROR" Datatype="DINT" TypeId="ENUM">
+					<Elements>
+						<Type Name="_NO_ERROR_UDP_ERROR" Value="0"/>
+						<Type Name="_INIT_TCP_USER_UDP_ERROR" Value="-1"/>
+						<Type Name="_NO_IP_ADDRESS_UDP_ERROR" Value="-2"/>
+						<Type Name="_NO_MEMORY_SOCKET_UDP_ERROR" Value="-3"/>
+						<Type Name="_NO_MEMORY_SENDBUFFER_UDP_ERROR" Value="-4"/>
+						<Type Name="_INVALID_HANDLE_UDP_ERROR" Value="-5"/>
+						<Type Name="_SHUTDOWN_UDP_ERROR" Value="-6"/>
+						<Type Name="_CLOSESOCKET_UDP_ERROR" Value="-7"/>
+						<Type Name="_ALLOCATE_SOCKET_UDP_ERROR" Value="-8"/>
+						<Type Name="_SET_BIND_UDP_ERROR" Value="-9"/>
+						<Type Name="_RECV_UDP_ERROR" Value="-10"/>
+						<Type Name="_SEND_UDP_ERROR" Value="-11"/>
+						<Type Name="_NO_LOCAL_IP_UDP_ERROR" Value="-12"/>
+						<Type Name="_NO_DESTINATION_IP_UDP_ERROR" Value="-13"/>
+						<Type Name="_INVALID_UDP_PORT_UDP_ERROR" Value="-12"/>
+						<Type Name="_INVALID_INTERFACE_NUMBER_UDP_ERROR" Value="-11"/>
+						<Type Name="_NO_MEMORY_RECEIVE_BUFFER_UDP_ERROR" Value="-10"/>
+						<Type Name="_NO_MEMORY_CONNECTION_BUFFER_UDP_ERROR" Value="-9"/>
+					</Elements>
+				</Type>
+			</Types>
+		</Class>
+		<Class
+			Name     = "SCP111"
+			Datatype = "t_e_VaranErrors"
+			Base     = "BusInterfaceSdias"
+			Size     = "5220"
+			Guid     = "0895B3E0-011E-422A-B14C-ABA587DF4D86">
+			<Servers>
+				<Server Name="ClassState" Datatype="t_e_VaranErrors" Guid="070CD62D-F011-403B-A668-118E2A1842A7" WriteProtected="true"/>
+				<Server Name="DeviceID" Datatype="UDINT" Guid="1F67076F-D511-400A-8CEF-0F0E0579EC0B" WriteProtected="true"/>
+				<Server Name="FPGAVersion" Datatype="HDINT" Guid="D5EF701A-412A-4C34-AA2E-FFC7D82C2F86" WriteProtected="true"/>
+				<Server Name="SerialNo" Datatype="STRING" Guid="68FBC413-E3CB-4059-BC09-1D975B4D4819" WriteProtected="true"/>
+				<Server Name="RetryCounter" Datatype="UDINT" Guid="833C80D1-4726-4DCB-B1AB-C268D7D72245" WriteProtected="true"/>
+				<Server Name="SafetyState" Datatype="SafetyConfigStateType" Guid="1C61AEC1-1DB4-494A-BB65-88BAD86607BA" WriteProtected="true"/>
+				<Server Name="RunState" Datatype="DINT" Guid="505E7FD0-1D16-49C8-9046-FDC7C879ECAA" WriteProtected="true"/>
+				<Server Name="ServiceMode" Datatype="DINT" Guid="64B9AD40-F811-4EA4-A753-CD7DFD5C2230" WriteProtected="true"/>
+				<Server Name="ErrorState" Datatype="DINT" Guid="97F68A06-7C65-48EA-8747-7C685BBBBAF1" WriteProtected="true"/>
+				<Server Name="QuitComError" Datatype="DINT" Guid="8F2D6E32-DB61-4B9A-A52C-6566EFE9F015" WriteProtected="false"/>
+				<Server Name="FirmwareVersion" Datatype="HDINT" Guid="99D3F343-CFCA-4C79-A783-5B921AE2119D" WriteProtected="true"/>
+				<Server Name="SafetyNumber" Datatype="HDINT" Guid="6C2DC144-9119-4CA0-8B66-11868AB52785" WriteProtected="true"/>
+				<Server Name="ApplCRC" Datatype="HDINT" Guid="D5178D2C-980B-4282-8BC9-28A86B95A2C5" WriteProtected="true"/>
+				<Server Name="HwCRC" Datatype="HDINT" Guid="626D2522-8ED3-4F0D-865F-34190ACD588D" WriteProtected="true"/>
+				<Server Name="DesignerPrjName" Datatype="STRING" Guid="69E13CC5-FE82-48D1-973A-FD2671712AA7" WriteProtected="true"/>
+				<Server Name="DesignerPrjRev" Datatype="STRING" Guid="50F3C08D-F1EE-4447-91A9-758A83D53F3C" WriteProtected="true"/>
+				<Server Name="ValidationButtonState" Datatype="DINT" Guid="A0B1F955-6FEF-4898-A807-C9A614B77BF4" WriteProtected="true"/>
+				<Server Name="FastUnsafeInputs" Datatype="BDINT" Guid="F7E36086-DB61-4453-BD44-693DD3AB5FD4" WriteProtected="false"/>
+				<Server Name="FastUnsafeOutputs" Datatype="BDINT" Guid="9ADD5AEE-A374-43D2-ADAB-8CAB457DE785" WriteProtected="false"/>
+				<Server Name="SdiasSafetyOut" Datatype="DINT" Guid="87F1233D-548C-411B-BB97-ABC3F4C7A72E" WriteProtected="true"/>
+				<Server Name="SafetyRetryCounter" Datatype="DINT" Guid="53AF9255-7390-41E2-BA2F-967B9CAACF8A" WriteProtected="true"/>
+				<Server Name="FCN_Command" Datatype="UDINT" Guid="325FD72B-AEAC-439E-BE73-FC17DB6B8E0C" WriteProtected="false"/>
+				<Server Name="FCN_StateMachine" Datatype="UDINT" Guid="656029C6-63CC-41E0-A316-C2E1D06B4266" WriteProtected="true"/>
+				<Server Name="FCN_HostSafetyNumber" Datatype="HDINT" Guid="2D80BE68-8BF9-4870-B4D3-741A9EE41316" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="SdiasSafetyManagerFSoE1" Datatype="SdiasSafetyManagerFSoE" Guid="EF603F3E-5340-40A9-AAB0-BB16ED46D520"/>
+				<Object Name="SerialNoStr" Datatype="String" Guid="016F794C-857F-482F-8C65-B5EE24158A3F"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "SdiasBase"
+			Datatype = "t_e_VaranErrors"
+			Size     = "448"
+			Guid     = "A44D11C6-5133-4AE2-9A40-4704050522AE">
+			<Types>
+				<Type Name="t_b_SdiasFWState" Datatype="BINT" TypeId="BIT">
+					<Elements>
+						<Type Name="VoltageNotOk" BitNo="1"/>
+						<Type Name="NoSync" BitNo="2"/>
+						<Type Name="FlashDataCRCError" BitNo="3"/>
+						<Type Name="RAMDataCRCError" BitNo="4"/>
+						<Type Name="FlashUnsafe" BitNo="5"/>
+						<Type Name="BusTimeNotSupported" BitNo="6"/>
+						<Type Name="ToggleBit" BitNo="7"/>
+					</Elements>
+				</Type>
+				<Type
+					Name      = "t_s_SdiasFWStateStandard"
+					TypeId    = "STRUCT"
+					Size      = "4"
+					Alignment = "1">
+					<Elements>
+						<Type Name="ErrorBits" Datatype="SdiasBase::t_b_SdiasFWState" Offset="0"/>
+						<Type Name="Reserved" Datatype="UINT" Offset="2"/>
+					</Elements>
+				</Type>
+			</Types>
+		</Class>
+		<Class
+			Name     = "SdiasManager"
+			Datatype = "t_e_VaranErrors"
+			Size     = "7296"
+			Guid     = "394AF67B-8CC6-416D-B09C-7933A3E56E13">
+			<Servers>
+				<Server Name="ClassState" Datatype="t_e_VaranErrors" Guid="E6C8CCE7-B734-4664-8812-F515E1FE477F" WriteProtected="true"/>
+				<Server Name="RetryCounter" Datatype="UDINT" Guid="137B93FA-1521-4EAB-847F-D714446F712A" WriteProtected="true"/>
+				<Server Name="FirmwareVersion" Datatype="HDINT" Guid="33D83E48-6798-4F71-8AEC-B390D678A708" WriteProtected="true"/>
+				<Server Name="IsoWrTaskDuration" Datatype="UDINT" Guid="FA10A8DF-3224-4BE8-BB1A-0F7DC484B45D" WriteProtected="true"/>
+				<Server Name="IsoWrTaskMaxDuration" Datatype="UDINT" Guid="A06F001F-ACF6-457D-95D0-C51681D1E93C" WriteProtected="false"/>
+				<Server Name="IsoRdTaskDuration" Datatype="UDINT" Guid="84AD2B57-3AC4-4538-BDB4-2DAEE2EFB169" WriteProtected="true"/>
+				<Server Name="IsoRdTaskMaxDuration" Datatype="UDINT" Guid="EF301307-DE27-43B6-A903-8B0CC8527A83" WriteProtected="false"/>
+				<Server Name="IsoTaskErrorCount" Datatype="DINT" Guid="FA87199C-1736-4C34-AA25-9B13716E0332" WriteProtected="true"/>
+				<Server Name="ManagerOptionBits" Datatype="DINT" Guid="4DB931BE-ED72-4899-84E6-9E3B1687227E" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "SdiasPLC"
+			Datatype = "DINT"
+			Base     = "BusInterfaceSDIASInternal"
+			Size     = "404"
+			Guid     = "8EE0BE0E-BEE7-4218-A4AF-A0AB0DE83F43">
+			<Servers>
+				<Server Name="FirmwareVersion" Datatype="HDINT" Guid="110EDFDE-5D00-4525-834D-7E99AA65EEF4" WriteProtected="true"/>
+				<Server Name="ClassState" Datatype="t_e_VaranErrors" Guid="CC338568-5E5E-4B72-BB67-E573CD9CE59F" WriteProtected="true"/>
+				<Server Name="RetryCounter" Datatype="UDINT" Guid="3BC15DE0-3955-4B15-86D2-18FB43792F0F" WriteProtected="true"/>
+				<Server Name="IsoWrTaskDuration" Datatype="UDINT" Guid="107F6C59-3F86-4945-883C-1730324CE708" WriteProtected="true"/>
+				<Server Name="IsoWrTaskMaxDuration" Datatype="UDINT" Guid="732E66FA-8CD0-4FE7-BB47-F47F45CD63D4" WriteProtected="false"/>
+				<Server Name="IsoRdTaskDuration" Datatype="UDINT" Guid="6DEF0FB2-2B7B-4859-A498-992DF86A9C33" WriteProtected="true"/>
+				<Server Name="IsoRdTaskMaxDuration" Datatype="UDINT" Guid="7407C9C7-AEDD-478D-94B7-18DEC7EA7537" WriteProtected="false"/>
+				<Server Name="ManagerOptionBits" Datatype="DINT" Guid="1ACFAA3D-1F6C-4193-9962-DACD4520FB4A" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="SdiasManager1" Datatype="SdiasManager" Guid="A6CE8FF7-1B3C-49A6-976D-ED8995566590"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "SdiasSafetyBase"
+			Datatype = "t_e_VaranErrors"
+			Size     = "208"
+			Guid     = "C9D93D75-D00D-4F2B-9B1D-C9428267FFB5">
+		</Class>
+		<Class
+			Name     = "SdiasSafetyManagerFSoE"
+			Datatype = "DINT"
+			Base     = "SafetyBaseFSoE"
+			Size     = "11192"
+			Guid     = "5BC70C54-F263-445B-950C-3A230EA234A9">
+			<Servers>
+				<Server Name="ClassSvr" Datatype="DINT" Guid="3D1411CE-19C8-4543-AD7B-B5D6468E55FD" WriteProtected="true"/>
+				<Server Name="SafetyState" Datatype="SafetyConfigStateType" Guid="A8244A82-B5A2-481F-B2D6-D9F61CFF77FB" WriteProtected="true"/>
+				<Server Name="VoltageOK" Datatype="DINT" Guid="E7A96867-825D-4C1E-8DA0-79BC048837F3" WriteProtected="true"/>
+				<Server Name="RunState" Datatype="DINT" Guid="AA55B58D-145B-437C-86B5-344D77645EF9" WriteProtected="true"/>
+				<Server Name="ServiceMode" Datatype="DINT" Guid="63FC066A-4EB8-40EE-A881-715A0F7A57CD" WriteProtected="true"/>
+				<Server Name="ErrorState" Datatype="DINT" Guid="9CC210B0-1231-4523-AAD3-6ED052F7BE24" WriteProtected="true"/>
+				<Server Name="QuitComError" Datatype="DINT" Guid="0C9064D6-DD1D-44A6-9529-EDC23EDF3155" WriteProtected="false"/>
+				<Server Name="FirmwareVersion" Datatype="HDINT" Guid="36902EC1-1639-4CEF-AD06-B273246BF0B1" WriteProtected="true"/>
+				<Server Name="SafetyNumber" Datatype="HDINT" Guid="2E25F877-7C24-4A9B-BF75-3B6393B3C78F" WriteProtected="true"/>
+				<Server Name="SafetyRetryCounter" Datatype="DINT" Guid="CB6DBF5D-3482-4154-84FF-C4BD868CA0C5" WriteProtected="true"/>
+				<Server Name="DesignerPrjConfigCRC" Datatype="HDINT" Guid="E12043F9-5599-42B0-9770-CEE5696A2542" WriteProtected="true"/>
+				<Server Name="ApplCRC" Datatype="HDINT" Guid="C417B39A-384A-4DE1-9CA9-408891187AED" WriteProtected="true"/>
+				<Server Name="HwCRC" Datatype="HDINT" Guid="DC50FC4B-2EEC-40C9-A9AF-C2AC7D27D81D" WriteProtected="true"/>
+				<Server Name="DesignerPrjName" Datatype="STRING" Guid="3800216A-F78D-4566-9518-138D0F55C7EF" WriteProtected="true"/>
+				<Server Name="DesignerPrjRev" Datatype="STRING" Guid="8D8BA4D8-0422-454B-86B1-E7E52F9008D7" WriteProtected="true"/>
+				<Server Name="FastUnsafeInputs" Datatype="BDINT" Guid="7056D587-EC1A-4355-9927-0107A6F69388" WriteProtected="false"/>
+				<Server Name="FastUnsafeOutputs" Datatype="BDINT" Guid="3B2D285A-4040-493E-B44E-F076DA09CED6" WriteProtected="false"/>
+				<Server Name="SdiasSafetyOut" Datatype="DINT" Guid="FBE550CC-290F-46C6-89BA-6ED77B07552B" WriteProtected="true"/>
+				<Server Name="FCN_Command" Datatype="UDINT" Guid="BD77EAE8-7D94-446E-8A9B-BA667AE65218" WriteProtected="false"/>
+				<Server Name="FCN_StateMachine" Datatype="UDINT" Guid="969EBC6D-DE62-4DF8-B689-826FF32ABD6B" WriteProtected="true"/>
+				<Server Name="FCN_HostSafetyNumber" Datatype="HDINT" Guid="2186369F-B3F1-4FE5-B6B3-A632B71F6EBB" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="ProjectNameStr" Datatype="String" Guid="20EAAF8C-A7BC-4457-9625-E78943BD2412"/>
+				<Object Name="ProjectRevisionStr" Datatype="String" Guid="32AE3537-6A01-4AE2-A277-3B9212D50A2E"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "SDM081"
+			Datatype = "t_e_VaranErrors"
+			Base     = "SdiasSafetyBase"
+			Size     = "420"
+			Guid     = "1A0F98A1-0A73-491B-85FD-92EF0F0E722C">
+			<Servers>
+				<Server Name="ClassState" Datatype="t_e_VaranErrors" Guid="4183DCF5-56A8-44D9-9E66-0C0060095175" WriteProtected="true"/>
+				<Server Name="DeviceID" Datatype="UDINT" Guid="293FCB43-F362-434D-8B62-54FDB70DDEA9" WriteProtected="true"/>
+				<Server Name="HwVersion" Datatype="HDINT" Guid="D0A7359B-DC0E-4079-8A27-968B09CDBE21" WriteProtected="true"/>
+				<Server Name="SafetyNumber" Datatype="HDINT" Guid="0A1547FA-741C-4E4B-A246-D35D487F9A2E" WriteProtected="true"/>
+				<Server Name="RetryCounteruC1" Datatype="DINT" Guid="FDBE491B-4F19-4B40-90F6-E59B9DBD6C7E" WriteProtected="true"/>
+				<Server Name="RetryCounteruC2" Datatype="DINT" Guid="9B5859BB-3C7F-449E-B724-F7D1D267F8EE" WriteProtected="true"/>
+				<Server Name="QuitComError" Datatype="DINT" Guid="D9C01530-B0F7-4D32-A95E-9725071F0254" WriteProtected="false"/>
+				<Server Name="Safe_Input1" Datatype="DINT" Guid="DA7F861D-236B-4420-A748-0D3BA84BC4FC" WriteProtected="true"/>
+				<Server Name="Safe_Input2" Datatype="DINT" Guid="D1AB89B4-2CFD-4D9F-922A-5B8B90E6C948" WriteProtected="true"/>
+				<Server Name="Safe_Input3" Datatype="DINT" Guid="D5B37546-A741-4043-9F48-57F68004FCB9" WriteProtected="true"/>
+				<Server Name="Safe_Input4" Datatype="DINT" Guid="EAAB4928-C70C-4E63-8CB8-DF77750AF169" WriteProtected="true"/>
+				<Server Name="Safe_Input5" Datatype="DINT" Guid="5CE2E52B-2586-462D-8E7A-77AF785448C5" WriteProtected="true"/>
+				<Server Name="Safe_Input6" Datatype="DINT" Guid="554DF3DD-4612-44A2-8030-E430EE82606B" WriteProtected="true"/>
+				<Server Name="Safe_Output1" Datatype="DINT" Guid="2B676776-DD4F-4040-8460-CA1534FF39FC" WriteProtected="true"/>
+				<Server Name="Unsafe_Output1" Datatype="DINT" Guid="AF82D7B0-2E3A-4EE9-9FE4-65770371CB38" WriteProtected="false"/>
+				<Server Name="Safe_Output2" Datatype="DINT" Guid="59094D42-FE37-4647-A925-5E59275A4400" WriteProtected="true"/>
+				<Server Name="Unsafe_Output2" Datatype="DINT" Guid="82C3D54D-B1E3-41E3-9024-4CEE159CDFE9" WriteProtected="false"/>
+				<Server Name="SafeIOError" Datatype="BDINT" Guid="494367BD-AC42-4247-8353-F49010D60A9D" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="SerialNoStr" Datatype="String" Guid="CB4C4175-6645-4807-8DE2-8CCCC6A55AEE"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "String"
+			Datatype = "UDINT"
+			Base     = "StringInternal"
+			Size     = "60"
+			Guid     = "26C84422-A6E4-4372-A53C-A964595DA01D">
+			<Servers>
+				<Server Name="Data" Datatype="STRING" Guid="81990015-D505-4977-9326-733789F9FEAA" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "StringInternal"
+			Datatype = "UDINT"
+			Base     = "VirtualBaseInit"
+			Size     = "48"
+			Guid     = "2C12408A-7CCA-458A-912B-98C634EE4BD9">
+		</Class>
+		<Class
+			Name     = "VaranManager"
+			Datatype = "DINT"
+			Base     = "VaranManager_Base"
+			Size     = "7588"
+			Guid     = "2CF568E9-025C-4CAE-9A6D-3802AC2DB447">
+		</Class>
+		<Class
+			Name     = "VaranManager_1"
+			Datatype = "DINT"
+			Base     = "VaranManager"
+			Size     = "7612"
+			Guid     = "9A3C5E5A-54D9-4CA5-A40F-EDA41B52FEAD">
+			<Servers>
+				<Server Name="Control" Datatype="DINT" Guid="217B6364-B62D-4D4A-A8F6-84A5BF141EC1" WriteProtected="true"/>
+				<Server Name="State" Datatype="t_e_VaranErrors" Guid="A82B4B9F-AB6D-423E-97B9-D67D4AE9D9BE" WriteProtected="true"/>
+				<Server Name="ManagerOn" Datatype="DINT" Guid="3D57A698-3E86-4812-9F57-BCFA7179418A" WriteProtected="true"/>
+				<Server Name="Release" Datatype="HDINT" Guid="B0FAF2D9-DA3F-4F0E-93DE-130D37732570" WriteProtected="true"/>
+				<Server Name="RetryCounter" Datatype="DINT" Guid="E3E8AAA9-2CC2-4B74-AAFE-F03CBA5D574B" WriteProtected="false"/>
+				<Server Name="IsoVaranTime" Datatype="DINT" Guid="A21FDC9A-2A45-4D32-9D9F-16268E6DA2F3" WriteProtected="true"/>
+				<Server Name="IsoVaranTimeMax" Datatype="UDINT" Guid="D5EB16BB-6777-4076-8550-4754E7E31E6E" WriteProtected="false"/>
+				<Server Name="AsyVaranTime" Datatype="DINT" Guid="C1D6D199-88EA-4EFF-B4C4-3E5B075159E9" WriteProtected="true"/>
+				<Server Name="Act_RtTime" Datatype="UDINT" Guid="210878FF-5568-4CFA-BD03-CBAB5B1C1C27" WriteProtected="true"/>
+				<Server Name="Min_RtTime" Datatype="UDINT" Guid="6C3D2B3C-0907-45F7-9C81-AEFDFF92C841" WriteProtected="false"/>
+				<Server Name="Max_RtTime" Datatype="UDINT" Guid="A5565D8C-B6E2-4559-BC3D-FDD908F37782" WriteProtected="false"/>
+				<Server Name="Act_RtCallTime" Datatype="UDINT" Guid="86C8821F-08C9-4A88-B684-C7584BB5E1BB" WriteProtected="true"/>
+				<Server Name="Min_RtCallTime" Datatype="UDINT" Guid="EC5C52D8-64B5-4BFE-8297-4B42F3C4FB12" WriteProtected="false"/>
+				<Server Name="Max_RtCallTime" Datatype="UDINT" Guid="2EC877A1-3026-425A-A66B-F95D4EBC7A94" WriteProtected="false"/>
+				<Server Name="SuperiorSystemOK" Datatype="DINT" Guid="B2A1DA64-5A8A-47AC-89AD-B2EAB631558D" WriteProtected="true"/>
+				<Server Name="ManagerProtocolVersion" Datatype="HDINT" Guid="0D8AB714-B3BB-4F11-BE12-24EEB39635D1" WriteProtected="true"/>
+				<Server Name="VaranOut_1" Datatype="DINT" Guid="0BE4D2F2-F359-40DE-B933-9F51683D8A0B" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="Hub_Base_Root0" Datatype="Hub_Base_Root" Guid="F934CCA3-05BF-4D92-9C62-69704186A95F"/>
+				<Object Name="ASCII_BIN1" Datatype="ASCII_BIN" Guid="8C265742-AE37-41F3-9FFC-79C0C2DE41AA"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "VaranManager_Base"
+			Datatype = "DINT"
+			Size     = "48"
+			Guid     = "C7469E6D-58D6-464D-8C08-61D9F18730FD">
+		</Class>
+		<Class
+			Name     = "VirtualBaseInit"
+			Datatype = "UDINT"
+			Size     = "12"
+			Guid     = "9FBB5A34-CCCF-441F-A614-0CCECBD76648">
+		</Class>
+		<Class
+			Name     = "XXXBase_IOs"
+			Datatype = "DINT"
+			Size     = "204"
+			Guid     = "42E1B640-B96E-4F8F-89AF-47A9750E5F90">
+		</Class>
+	</Classes>
+	<Objects>
+		<Object Name="AI0431" Datatype="AI043" Guid="6790A0EA-D206-41B5-A4CE-C84D894D43A2"/>
+		<Object Name="CP112_IOs1" Datatype="CP112_IOs" Guid="7BD90D56-F1ED-4732-9B92-3C345EEF2050"/>
+		<Object Name="DM1611" Datatype="DM161" Guid="74D5420A-0AF1-4C26-B93A-8CF737276553"/>
+		<Object Name="HwControl1" Datatype="HwControl" Guid="F8C3F814-628C-4F0A-AF3F-270C3C3244FB"/>
+		<Object Name="SCP1111" Datatype="SCP111" Guid="044700B2-A876-42D5-B565-DE0A4FF9B792"/>
+		<Object Name="SdiasPLC1" Datatype="SdiasPLC" Guid="43990E04-F6FD-495B-9C26-7E81D19E00E4"/>
+		<Object Name="SDM0811" Datatype="SDM081" Guid="DB3A8272-0241-4BE1-97D2-74DD458B6092"/>
+		<Object Name="VaranManager_11" Datatype="VaranManager_1" Guid="74746B5E-1C47-480E-9A5B-D910908C3453"/>
+	</Objects>
+	<UnitDefinitions>
+		<UnitGrp Name="Acceleration">
+			<Units>
+				<Unit Name="mmPsec2" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Angle">
+			<Units>
+				<Unit Name="deg" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Area">
+			<Units>
+				<Unit Name="mm2" Factor="1" Divisor="10"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Force">
+			<Units>
+				<Unit Name="kN" Factor="1" Divisor="1000" Base="N"/>
+				<Unit Name="N" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Length">
+			<Units>
+				<Unit Name="m" Factor="1" Divisor="1000" Base="mm"/>
+				<Unit Name="mm" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Memory">
+			<Units>
+				<Unit Name="GB" Factor="1" Divisor="1024" Base="MB"/>
+				<Unit Name="kB" Factor="1" Divisor="1024"/>
+				<Unit Name="MB" Factor="1" Divisor="1024" Base="kB"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Pressure">
+			<Units>
+				<Unit Name="bar" Factor="1" Divisor="1000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Revolution">
+			<Units>
+				<Unit Name="RPM" Factor="1" Divisor="1000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Speed">
+			<Units>
+				<Unit Name="mlpmin" Factor="1" Divisor="1"/>
+				<Unit Name="mmpsec" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Time">
+			<Units>
+				<Unit Name="hours" Factor="1" Divisor="60" Base="min"/>
+				<Unit Name="min" Factor="1" Divisor="60" Base="secs"/>
+				<Unit Name="ms" Factor="1" Divisor="1"/>
+				<Unit Name="sec" Factor="1" Divisor="1000"/>
+				<Unit Name="secs" Factor="1" Divisor="1000" Base="ms"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Volume">
+			<Units>
+				<Unit Name="ccm" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+	</UnitDefinitions>
+</File>

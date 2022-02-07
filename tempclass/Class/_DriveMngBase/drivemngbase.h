@@ -1,0 +1,73 @@
+#ifndef DRIVEMNGBASE_H
+  #pragma once
+  #define DRIVEMNGBASE_H
+
+  //**********************************************************************************
+  //** NEWINST COMMANDS (Range reserved for Businterface commands: 0x8390 - 0x83AF) **
+  //**********************************************************************************
+  #define  BUSIF_DRIVEMNGBASE_STARTCOMMUNICATION    0x8390
+  #define  BUSIF_DRIVEMNGBASE_SER_NO_LEN            0x8391
+  #define  BUSIF_DRIVEMNGBASE_SER_NO_DATA           0x8392
+  #define  BUSIF_DRIVEMNGBASE_SET_PARALIST          0x8393
+  #define  BUSIF_DRIVEMNGBASE_GET_PARA_STATE        0x8394
+  #define  BUSIF_DRIVEMNGBASE_SET_PARAMETER         0x8395
+  #define  BUSIF_DRIVEMNGBASE_GET_PARAMETER         0x8396
+  #define  BUSIF_DRIVEMNGBASE_GET_CMD_STATE         0x8397
+  #define  BUSIF_DRIVEMNGBASE_EXTERN_INIT_FINISH    0x8398
+  #define  BUSIF_DRIVEMNGBASE_GET_DRIVE_INT_STATE   0x8399
+  #define  BUSIF_DRIVEMNGBASE_GET_SERIES            0x839A
+  #define  BUSIF_DRIVEMNGBASE_GET_AXIS_WR_PTR       0x839B
+  #define  BUSIF_DRIVEMNGBASE_GET_AXIS_RD_PTR       0x839C
+  #define  BUSIF_DRIVEMNGBASE_INIT_DRIVE            0x839D
+  #define  BUSIF_DRIVEMNGBASE_GET_SYNC_PARA         0x839E
+  #define  BUSIF_DRIVEMNGBASE_SET_SYNC_PARA         0x839F
+  #define  BUSIF_DRIVEMNGBASE_SDD_GETSERIES         0x83A0
+  #define  BUSIF_DRIVEMNGBASE_READ_FPGA_VERSION     0x83A1
+  #define  BUSIF_DRIVEMNGBASE_READ_RETRY_COUNTER    0x83A2
+  #define  BUSIF_DRIVEMNGBASE_CREATE_DEF_PARALIST   0x83A3
+  #define  BUSIF_DRIVEMNGBASE_READ_DEVICEID         0x83A4
+  #define  BUSIF_DRIVEMNGBASE_READ_OFFLINE_DEVICEID 0x83A5  
+  #define  BUSIF_DRIVEMNGBASE_SET_OBJECT_CALLBACK   0x83A6
+  #define  BUSIF_DRIVEMNGBASE_WRITE_PARAMETER       0x83A7
+  #define  BUSIF_DRIVEMNGBASE_READ_PARAMETER        0x83A8
+  #define  BUSIF_DRIVEMNGBASE_GET_BUSTYPE           0x83A9
+   
+  
+  //Subcommandos for BUSIF_DRIVEMNGBASE_WRITE_PARAMETER and BUSIF_DRIVEMNGBASE_READ_PARAMETER
+  #define  _BUS_IF_DRVMNG_DEVICEADDRESS       0
+  #define  _BUS_IF_DRVMNG_VENDORID            1
+  #define  _BUS_IF_DRVMNG_DISABLE_DEVICE      2
+  #define  _BUS_IF_DRVMNG_ENABLE_DEVICE       3
+  
+  //**********************************************************************************
+  //** Drive Device IDs                                                             **
+  //**********************************************************************************
+  
+  //SDD1X00 drives varan
+  #define DRIVEMNG_BUSDEVICEID_SDD1300    1237  //3 axes
+  #define DRIVEMNG_BUSDEVICEID_SDD1400    1238  //4 axes
+  #define DRIVEMNG_BUSDEVICEID_SDD1500    1239  //5 axes
+  #define DRIVEMNG_BUSDEVICEID_SDD1600    1240  //6 axes
+  
+  //drives with flex fsoe configuration
+  #define DRIVEMNG_BUSDEVICEID_MDD2000    1300  //max 3 axis mdd2000
+  #define DRIVEMNG_BUSDEVICEID_VSDC151    1301  //1 axis Saacke version
+  
+  //drives sdias 
+  #define DRIVEMNG_BUSDEVICEID_DC061      1042 //SDIAS Drive 6A Resolver
+  #define DRIVEMNG_BUSDEVICEID_DC062      1801 //SDIAS Drive 6A Incremental Encoder
+  #define DRIVEMNG_BUSDEVICEID_SR011      1802 //SDIAS DC Motor Drive 5A Incremental Encoder
+  #define DRIVEMNG_BUSDEVICEID_SR012      1803 //SDIAS DC Motor Drive 5A
+  #define DRIVEMNG_BUSDEVICEID_DC101      1804 //SDIAS DC Motor Drive 48V 10A Resolver
+  #define DRIVEMNG_BUSDEVICEID_DC102      1805 //SDIAS DC Motor Drive 48V 10A Incremental Encoder
+  
+  //drives varanS2
+  #define DRIVEMNG_BUSDEVICEID_WA011      1800
+  #define DRIVEMNG_BUSDEVICEID_WA012      1801
+  //
+  
+  //*****
+  #define DRIVEMNG_MDD2000FWVERSION_HIPERFACEDSL 130 // 1.30 
+
+
+#endif

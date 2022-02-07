@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<HWClassInfo>
+<HWDevice 
+  ModuleID="1279"
+  SubModuleID="0"
+  ModType="OnboardIO">	
+  <Types>
+    <Device Name="CP731 IOs" ClassName="CP731_IOs" DisplayGroup="Control Systems;CPU Modules" Desc="CP731"/>
+  </Types>
+</HWDevice>
+<Class Name="CP731_IOs">
+  <Uplink   Name="HwControl"                      Channel="To_HwControl" BusType="OnBoardIO"/>
+  <!-- Interfaces for CPU_IOs Classes -->
+  <Downlink Name="USB_1_Connect"    BusType="USB-INTERFACE"            Port="0" Sort="1"  Desc="Connects a USB communication class" />
+  <Downlink Name="Ethernet_1_Connect" BusType="ETHERNET"               Port="0" Sort="2"  Desc="Connects a ETHERNET communication class" />
+  <Downlink Name="Ethernet_2_Connect" BusType="ETHERNET"               Port="1" Sort="3"  Desc="Connects a ETHERNET communication class" />
+  <Downlink Name="CAN_1_Connect"    BusType="CAN-INTERFACE"            Port="1" Sort="4"  Desc="Connects a CAN communication class" />
+  
+  <IOState  Name="Class state"                    Channel="ClassState"            Type="Analog"   Desc="Shows the initialisation state of the class.&#13;&#10; 0 ... Initialisation ok&#13;&#10;-1 ... PCI Interface not found&#13;&#10;-2 ... XADC-FPGA component not found&#13;&#10;-3 ... CPU-FPGA component not found&#13;&#10;-4 ... Login to HwControl failed" />
+  <Input    Name="Battery OK"	                    Channel="BatteryOK"             Type="Digital"  Desc="Shows the state of the battery.&#13;&#10;0 ... Not OK &#13;&#10;1 ... OK"> </Input>
+  <Input    Name="Supply voltage"	                Channel="SupplyVoltage"         Type="Analog"   Desc="Shows the supply voltage in mV."> </Input>  
+  <Input    Name="Ambient Temperature Connectors"	Channel="TemperatureConnectors" Type="Analog"   Desc="Shows the measured ambient temperature of the connectors in [1°C/10]"> </Input>  
+  <Input    Name="Ambient Temperature CPU"	      Channel="TemperatureCPU"        Type="Analog"   Desc="Shows the measured ambient temperature of the CPU in [1°C/10]"> </Input>  
+  <Output   Name="Run LED"	                      Channel="RunLED"                Type="Analog"   Desc="The Run-LED of the CPU can be controlled with this server.&#13;&#10;0 ... HW - Status of LED is active&#13;&#10;1 ... LED is off&#13;&#10;2 ... LED is flashes&#13;&#10;3 ... LED is on"> </Output>  
+  <Output   Name="Error LED"	                    Channel="ErrorLED"              Type="Analog"   Desc="The Error-LED of the CPU can be controlled with this server.&#13;&#10;0 ... HW - Status of LED is active&#13;&#10;1 ... LED is off&#13;&#10;2 ... LED is flashes&#13;&#10;3 ... LED is on"> </Output>  
+  <Output   Name="Status LED"	                    Channel="StatusLED"             Type="Analog"   Desc="The Status-LED of the CPU can be controlled with this server.&#13;&#10;0 ... HW - Status of LED is active&#13;&#10;1 ... LED is off&#13;&#10;2 ... LED is flashes&#13;&#10;3 ... LED is on"> </Output>    
+  <Output   Name="CAN 1 Termination"              Channel="Can1_Termination"      Type="Digital"  Desc="By writing to this output, the termination of the can bus can be controlled. 0 = Termination is off, 1 = Termination is on." Editor="Combo:0 = Termination is off;1 = Termination is on"> </Output>
+</Class>
+</HWClassInfo>

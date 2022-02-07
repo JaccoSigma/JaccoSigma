@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<HWClassInfo>
+<HWDevice ModuleID="1020" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS internal SSI module">
+	<Types>
+		<Device Name="SSISdias" ClassName="SSISdias" Visible="false" UploadAllowed="false"/>	
+	</Types>
+</HWDevice>
+<Class Name="SSISdias">
+	<Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+</Class>
+</HWClassInfo>

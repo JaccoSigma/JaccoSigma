@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1008" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Analog Out Module; 8x Analog Out" OrderNr="20-010-081">
+    <Types>
+      <Device Name="AO081" ClassName="AO081" DisplayGroup="Analog" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="60"/>
+        <Power Voltage="24000" Supply="0" Drain="0"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="AO 081" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="1+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.81" Left="0.26" Top="17.99" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="2+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="3+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="33.34" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="36.51" />
+            <VisualText Text="4+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.69" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="42.86" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="5+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="6+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" />
+            <VisualText Text="7+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="64.03" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="67.2" />
+            <VisualText Text="8+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="70.38" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.55" />
+            <VisualText Text="X5" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />
+            <VisualText Text="" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="85.72" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="AO081.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" Negate="true" DataString="AO081.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="AO081.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="AO081.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="AO081.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="AO081.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <!-- X2-->
+            <!-- X3-->
+            <!-- X4-->
+            <!-- X5-->
+            <VisualLed Description="Extern Voltage ok" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="87.05">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="AO081.ExternVoltageOk" Value="1" />
+              </Behaviour>
+            </VisualLed>           
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="AO081.AO1" Description="Analog Output 1+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO1" Description="Analog Output 1-" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO2" Description="Analog Output 2+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO2" Description="Analog Output 2-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="AO081.AO3" Description="Analog Output 3+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO3" Description="Analog Output 3-" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO4" Description="Analog Output 4+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO4" Description="Analog Output 4-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="AO081.AO5" Description="Analog Output 5+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO5" Description="Analog Output 5-" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO6" Description="Analog Output 6+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO6" Description="Analog Output 6-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="AO081.AO7" Description="Analog Output 7+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO7" Description="Analog Output 7-" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO8" Description="Analog Output 8+" TypeId="1" />
+              <ConnectorPin DataString="AO081.AO8" Description="Analog Output 8-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="" Description="not connected" TypeId="0" />
+              <ConnectorPin DataString="" Description="not connected" TypeId="0" />
+              <ConnectorPin DataString="AO081.ExternVoltageOk" Description="+24 Volt" TypeId="1" />
+              <ConnectorPin DataString="AO081.ExternVoltageOk" Description="Ground" TypeId="1" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="AO081">
+    <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+	<Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" /> 
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+    <IOState Name="Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Type="" Desc="This server shows the firmware version of the hardware module" />
+    <IOState Name="Firmware Status" Channel="FWErrorBits" Type="" Desc="Firmware Status:Bit0..DC not Ok; Bit1..No Sync; Bit2..Flash data CRC error; Bit3..RAM data CRC error; Bit4..No valid EEPROM Version" />
+    <IOState Name="Extern Voltage Ok" Type="Digital" Channel="ExternVoltageOk" Desc="Extern voltage supply is connected" />
+
+    <IOComment Name="---------------------- Analog Outputs ----------------------" IsInfo="true" Desc=""/>
+    <!-- Analog Output 1 -->
+    <Output Name="Analog Output 1" Channel="AO1" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO1 minimal value" Channel="AO1_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO1 maximal value" Channel="AO1_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 2 -->
+    <Output Name="Analog Output 2" Channel="AO2" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO2 minimal value" Channel="AO2_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO2 maximal value" Channel="AO2_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 3 -->
+    <Output Name="Analog Output 3" Channel="AO3" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO3 minimal value" Channel="AO3_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO3 maximal value" Channel="AO3_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 4 -->
+    <Output Name="Analog Output 4" Channel="AO4" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO4 minimal value" Channel="AO4_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO4 maximal value" Channel="AO4_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 5 -->
+    <Output Name="Analog Output 5" Channel="AO5" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO5 minimal value" Channel="AO5_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO5 maximal value" Channel="AO5_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 6 -->
+    <Output Name="Analog Output 6" Channel="AO6" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO6 minimal value" Channel="AO6_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO6 maximal value" Channel="AO6_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 7 -->
+    <Output Name="Analog Output 7" Channel="AO7" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO7 minimal value" Channel="AO7_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO7 maximal value" Channel="AO7_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    <!-- Analog Output 8 -->
+    <Output Name="Analog Output 8" Channel="AO8" IsConfig="true" Desc="Analog Output" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AO8 minimal value" Channel="AO8_Min" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AO8 maximal value" Channel="AO8_Max" Desc="The scale of analog output can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+    </Output>
+    
+    <Script Name="AO081">
+<Code>
+def compPost_AO081(element, parameters):
+  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0x2,element)
+    SDIASPDOWrAdd(0x10,element)  
+
+</Code>
+    </Script>     
+  </Class>
+</HWClassInfo>

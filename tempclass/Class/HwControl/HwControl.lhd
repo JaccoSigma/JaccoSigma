@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<HWClassInfo>
+  <Class Name="HwControl" MultiVaranAllowed="true">
+    <!--<Downlink Name="VaranManager" Channel="Control" BusType="HWCONTROL_VM" Port="0" />-->
+    <Downlink Name="DiasMaster" BusType="HWCONTROL_DMC" Port="0" />
+    <Downlink Name="SDias" Channel="Control" BusType="HWCONTROL_SDM" Port="0" />
+    <Downlink Name="OnBoardIO" Channel="Control" BusType="OnBoardIO" Port="0" />
+	<Downlink Name="Ethercat" Channel="Control" BusType="HWCONTROL_ETM" Port="0" />			
+    <Downlink Name="MULTIVARAN" Channel="Control" BusType="MULTIVARAN" Port="0"/>
+    <Property Name="Optional Safety Domain Timeout" Channel="SafetyDomainTimeout" Desc="[ms] the class has to wait for optional interface domains (leave 0 if none available)&#13;&#10;Set this client to 1 when using FlexCon functionality (without interface domains) where it&apos;s possible that not all participants are available at all times" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Port number for safety via IP" Channel="UdpSafetyPort" Desc="Only change this if you would otherwise have a conflict in your system (Default: 10823)" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Interface number for safety via IP" Channel="InterfaceNo" Desc="Choose the IP interface you want to use for safety via IP (Default: 1)" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Realtime Task Synchronization" Channel="RtTaskSync" Editor="Combo:0=deactivated;1=activated" Desc="
+With this setting the realtime task synchronization between more cores can be activated.&#13;&#10;
+If it is activated and not supported, the property is set to 0.&#13;&#10;
+As an initialization value. For further information look at library help.&#13;&#10;
+0 .. deactivated (default)&#13;&#10;
+1 .. activated" />
+  </Class>
+</HWClassInfo>

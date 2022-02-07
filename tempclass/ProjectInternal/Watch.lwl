@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<WatchVariable>
+	<Variable Name="Class_Names1">
+		<ChildVar Name="Server_Counter"/>
+		<ChildVar Name="Client_Counter"/>
+		<ChildVar Name="Server0"/>
+		<ChildVar Name="Server1"/>
+		<ChildVar Name="_SigCLib"/>
+		<ChildVar Name="Client"/>
+		<ChildVar Name="Client0"/>
+		<ChildVar Name="Client1"/>
+		<ChildVar Name="Client2"/>
+		<ChildVar Name="ServerNames"/>
+		<ChildVar Name="ClientNames"/>
+		<ChildVar Name="ClassName"/>
+		<ChildVar Name="ObjectName"/>
+		<ChildVar Name="SVRTypes"/>
+		<ChildVar Name="CLITypes"/>
+		<ChildVar Name="TotalDsc"/>
+	</Variable>
+	<Variable
+		Name       = "Class_Names1.ClientNames"
+		Expand     = "1"
+		Array      = "1"
+		ArrayStart = "0"
+		ArrayEnd   = "5">
+		<ChildVar
+			Name       = "[0]"
+			Array      = "1"
+			ArrayStart = "0"
+			ArrayEnd   = "101">
+			<ChildVar Name="[0]"/>
+			<ChildVar Name="[1]"/>
+			<ChildVar Name="[2]"/>
+			<ChildVar Name="[3]"/>
+			<ChildVar Name="[4]"/>
+			<ChildVar Name="[5]"/>
+			<ChildVar Name="[6]"/>
+			<ChildVar Name="[7]"/>
+			<ChildVar Name="[8]"/>
+			<ChildVar Name="[9]"/>
+			<ChildVar Name="[10]"/>
+			<ChildVar Name="[11]"/>
+			<ChildVar Name="[12]"/>
+			<ChildVar Name="[13]"/>
+			<ChildVar Name="[14]"/>
+			<ChildVar Name="[15]"/>
+			<ChildVar Name="[16]"/>
+			<ChildVar Name="[17]"/>
+			<ChildVar Name="[18]"/>
+			<ChildVar Name="[19]"/>
+			<ChildVar Name="[20]"/>
+			<ChildVar Name="[21]"/>
+			<ChildVar Name="[22]"/>
+			<ChildVar Name="[23]"/>
+			<ChildVar Name="[24]"/>
+			<ChildVar Name="[25]"/>
+			<ChildVar Name="[26]"/>
+			<ChildVar Name="[27]"/>
+			<ChildVar Name="[28]"/>
+			<ChildVar Name="[29]"/>
+			<ChildVar Name="[30]"/>
+			<ChildVar Name="[31]"/>
+			<ChildVar Name="[32]"/>
+			<ChildVar Name="[33]"/>
+			<ChildVar Name="[34]"/>
+			<ChildVar Name="[35]"/>
+			<ChildVar Name="[36]"/>
+			<ChildVar Name="[37]"/>
+			<ChildVar Name="[38]"/>
+			<ChildVar Name="[39]"/>
+			<ChildVar Name="[40]"/>
+			<ChildVar Name="[41]"/>
+			<ChildVar Name="[42]"/>
+			<ChildVar Name="[43]"/>
+			<ChildVar Name="[44]"/>
+			<ChildVar Name="[45]"/>
+			<ChildVar Name="[46]"/>
+			<ChildVar Name="[47]"/>
+			<ChildVar Name="[48]"/>
+			<ChildVar Name="[49]"/>
+			<ChildVar Name="[50]"/>
+			<ChildVar Name="[51]"/>
+			<ChildVar Name="[52]"/>
+			<ChildVar Name="[53]"/>
+			<ChildVar Name="[54]"/>
+			<ChildVar Name="[55]"/>
+			<ChildVar Name="[56]"/>
+			<ChildVar Name="[57]"/>
+			<ChildVar Name="[58]"/>
+			<ChildVar Name="[59]"/>
+			<ChildVar Name="[60]"/>
+			<ChildVar Name="[61]"/>
+			<ChildVar Name="[62]"/>
+			<ChildVar Name="[63]"/>
+			<ChildVar Name="[64]"/>
+			<ChildVar Name="[65]"/>
+			<ChildVar Name="[66]"/>
+			<ChildVar Name="[67]"/>
+			<ChildVar Name="[68]"/>
+			<ChildVar Name="[69]"/>
+			<ChildVar Name="[70]"/>
+			<ChildVar Name="[71]"/>
+			<ChildVar Name="[72]"/>
+			<ChildVar Name="[73]"/>
+			<ChildVar Name="[74]"/>
+			<ChildVar Name="[75]"/>
+			<ChildVar Name="[76]"/>
+			<ChildVar Name="[77]"/>
+			<ChildVar Name="[78]"/>
+			<ChildVar Name="[79]"/>
+			<ChildVar Name="[80]"/>
+			<ChildVar Name="[81]"/>
+			<ChildVar Name="[82]"/>
+			<ChildVar Name="[83]"/>
+			<ChildVar Name="[84]"/>
+			<ChildVar Name="[85]"/>
+			<ChildVar Name="[86]"/>
+			<ChildVar Name="[87]"/>
+			<ChildVar Name="[88]"/>
+			<ChildVar Name="[89]"/>
+			<ChildVar Name="[90]"/>
+			<ChildVar Name="[91]"/>
+			<ChildVar Name="[92]"/>
+			<ChildVar Name="[93]"/>
+			<ChildVar Name="[94]"/>
+			<ChildVar Name="[95]"/>
+			<ChildVar Name="[96]"/>
+			<ChildVar Name="[97]"/>
+			<ChildVar Name="[98]"/>
+			<ChildVar Name="[99]"/>
+			<ChildVar Name="[100]"/>
+		</ChildVar>
+		<ChildVar Name="[1]"/>
+		<ChildVar Name="[2]" Format="ASCII"/>
+		<ChildVar Name="[3]"/>
+		<ChildVar Name="[4]"/>
+		<ChildVar Name="[5]"/>
+		<ChildVar Name="[6]"/>
+		<ChildVar Name="[7]"/>
+		<ChildVar Name="[8]"/>
+		<ChildVar Name="[9]"/>
+		<ChildVar Name="[10]"/>
+	</Variable>
+	<Variable
+		Name       = "Class_Names1.CLITypes"
+		Expand     = "1"
+		Array      = "1"
+		ArrayStart = "0"
+		ArrayEnd   = "5">
+		<ChildVar Name="[0]"/>
+		<ChildVar Name="[1]"/>
+		<ChildVar Name="[2]"/>
+		<ChildVar Name="[3]"/>
+		<ChildVar Name="[4]"/>
+	</Variable>
+	<Variable Name="Class_Names1.TotalDsc" Expand="1">
+		<ChildVar Name="[0]" Expand="1">
+			<ChildVar Name="uiOff"/>
+			<ChildVar Name="uiMode"/>
+			<ChildVar Name="uiFlags">
+				<ChildVar Name="Retentive"/>
+				<ChildVar Name="Required"/>
+				<ChildVar Name="Reserved"/>
+				<ChildVar Name="Remanent"/>
+				<ChildVar Name="IntoFile"/>
+				<ChildVar Name="Existed"/>
+				<ChildVar Name="Redirect"/>
+				<ChildVar Name="8"/>
+				<ChildVar Name="9"/>
+				<ChildVar Name="10"/>
+				<ChildVar Name="11"/>
+				<ChildVar Name="12"/>
+				<ChildVar Name="13"/>
+				<ChildVar Name="14"/>
+				<ChildVar Name="15"/>
+				<ChildVar Name="16"/>
+			</ChildVar>
+			<ChildVar Name="Name">
+				<ChildVar Name="udCRC"/>
+				<ChildVar Name="Text"/>
+			</ChildVar>
+		</ChildVar>
+		<ChildVar Name="[1]" Expand="1">
+			<ChildVar Name="uiOff"/>
+			<ChildVar Name="uiMode"/>
+			<ChildVar Name="uiFlags"/>
+			<ChildVar Name="Name">
+				<ChildVar Name="udCRC"/>
+				<ChildVar Name="Text"/>
+			</ChildVar>
+		</ChildVar>
+		<ChildVar Name="[2]">
+			<ChildVar Name="uiOff"/>
+			<ChildVar Name="uiMode"/>
+			<ChildVar Name="uiFlags"/>
+			<ChildVar Name="Name"/>
+		</ChildVar>
+		<ChildVar Name="[3]"/>
+		<ChildVar Name="[4]"/>
+		<ChildVar Name="[5]"/>
+	</Variable>
+	<Variable Name="Class_Names1.ClientNames[2]"/>
+	<Variable Name="Send_message1"/>
+	<Variable Name="Send_message1.Link_E" Expand="1">
+		<ChildVar Name="pCh" Expand="1">
+			<ChildVar Name="^" Expand="1">
+				<ChildVar Name="pMeth"/>
+				<ChildVar Name="dData"/>
+				<ChildVar Name="pDsc"/>
+			</ChildVar>
+		</ChildVar>
+		<ChildVar Name="dData"/>
+		<ChildVar Name="pCmd"/>
+	</Variable>
+	<Variable Name="Send_message1.Link_E.pCh^$DSComm_Eventjournal" Expand="1">
+		<ChildVar Name="ClassSvr"/>
+		<ChildVar Name="DSComm_Interface"/>
+		<ChildVar Name="SigCLib"/>
+	</Variable>
+	<Variable Name="DSComm_Eventjournal1" Expand="1">
+		<ChildVar Name="ClassSvr"/>
+		<ChildVar Name="DSComm_Interface"/>
+		<ChildVar Name="SigCLib"/>
+	</Variable>
+</WatchVariable>

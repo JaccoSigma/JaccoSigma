@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" ?>
+<HWClassInfo>
+  <HWDevice ModuleID="1014" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Incremental Encoder Module" OrderNr="20-011-100">
+    <Types>
+      <Device Name="NC100" ClassName="NC100" DisplayGroup="Axis" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="50"/>
+        <Power Voltage="24000" Supply="0" Drain="0"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="NC 100" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="A-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="17.99" />
+            <VisualText Text="A+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="B-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="B+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="R-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="33.34" />
+            <VisualText Text="R+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="36.51" />
+            <VisualText Text="5V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.69" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="42.86" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="I1" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="I2" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="I3" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" />
+            <VisualText Text="I4" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" />
+            <VisualText Text="O1" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="64.03" />
+            <VisualText Text="O2" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="67.2" />
+            <VisualText Text="O3" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="70.38" />
+            <VisualText Text="O4" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.55" />
+            <VisualText Text="X5" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />			
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="85.72" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="NC100.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" Negate="true" DataString="NC100.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="NC100.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="NC100.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="NC100.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="NC100.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X3-->
+            <VisualLed Description="Digital Input 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="50.01">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="NC100.Input1" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital Input 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="53.18">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="NC100.Input2" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital Input 3" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="56.36">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="NC100.Input3" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital Input 4" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="59.53">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="NC100.Input4" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X4-->
+            <VisualLed Description="Digital Output 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="65.35">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="NC100.Output1" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital Output 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="68.53">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="NC100.Output2" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital Output 3" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="71.7">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="NC100.Output3" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital Output 4" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="74.88">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="NC100.Output4" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X5-->
+            <VisualLed Description="Voltage supply for Output" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="80.7">
+              <Behaviour ClrForeground="4278190335">
+                <Activator TypeId="3" Negate="true" DataString="NC100.VoltageOkOutput" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Voltage supply for Incremental Encoder" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="83.87">
+              <Behaviour ClrForeground="4278190335">
+                <Activator TypeId="3" Negate="true" DataString="NC100.VoltageOkEncoder" Value="1" />
+              </Behaviour>
+            </VisualLed>
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="" Description="Incremental Encoder Signal RS422 (A-)" TypeId="0" />
+              <ConnectorPin DataString="" Description="Incremental Encoder Signal RS422/TTL (A+)" TypeId="0" />
+              <ConnectorPin DataString="" Description="Incremental Encoder Signal RS422 (B-)" TypeId="0" />
+              <ConnectorPin DataString="" Description="Incremental Encoder Signal RS422/TTL (B+)" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="" Description="Incremental Encoder Signal RS422 (R-)" TypeId="0" />
+              <ConnectorPin DataString="" Description="Incremental Encoder Signal RS422/TTL (R+)" TypeId="0" />
+              <ConnectorPin DataString="" Description="5V Supply Voltage" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="NC100.Input1" Description="Digital Input 1" TypeId="1" />
+              <ConnectorPin DataString="NC100.Input2" Description="Digital Input 2" TypeId="1" />
+              <ConnectorPin DataString="NC100.Input3" Description="Digital Input 3" TypeId="1" />
+              <ConnectorPin DataString="NC100.Input4" Description="Digital Input 4" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="NC100.Output1" Description="Digital Output 1" TypeId="1" />
+              <ConnectorPin DataString="NC100.Output2" Description="Digital Output 2" TypeId="1" />
+              <ConnectorPin DataString="NC100.Output3" Description="Digital Output 3" TypeId="1" />
+              <ConnectorPin DataString="NC100.Output4" Description="Digital Output 4" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="NC100.VoltageOkOutput" Description="Voltage supply for Output ok" TypeId="1" />
+              <ConnectorPin DataString="NC100.VoltageOkEncoder" Description="Voltage supply for Incremental Encoder ok" TypeId="1" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+        </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+<Class Name="NC100">
+  <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+  <Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" /> 
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+    <!-- Encoder -->
+    <IOComment Name="------------------------- Encoder --------------------------" IsInfo="true" Desc=""/>
+    <Input Name="Position" Channel="Position" IsConfig="true" Desc="incremental encoder position" Type="Analog" >
+      <Property Name="Encoder Mode" Channel="EncMode" Desc="0=No encoder, 1=TTL mode, 2=RS422 mode" Editor="Combo:0=No encoder;1=TTL encoder;2=RS422 encoder" />
+      <Property Name="Encoder Direction" Channel="EncDirection" Desc="0=normal, 1=invers" Editor="Combo:0=Normal;1=Inverse" />
+      <Property Name="Encoder Sampling" Channel="EncSampling" Desc="Sampling of incremental encoder&#xA;0 .. Encoder off; 1 .. 1-edge; 2 .. 2-edge; 3 .. 4-edge" Editor="Combo:0=Encoder off;1=1-Edge;2=2-Edge;3=4-Edge" />
+    </Input>
+    <IOState Name="Voltage OK Incremental Encoder"	Channel="VoltageOkEncoder"	Desc="Voltage supply for Incremental Encoder ok" />    
+    <Input Name="Position Latched" Channel="PositionLatch" Desc="latch value of incremental encoder position" Type="Analog" />
+    <Input Name="Speed" Channel="Speed" IsConfig="true" Desc="speed in rpm" Type="Analog" >
+      <Property Name="Encoder Speed" Channel="EncSpeed" Desc="0...no speed measurement, 1...speed measurement on" Editor="Combo:0=Off;1=On" />
+      <Property Name="Encoder CPR" Channel="EncCPR" Desc="resolution of incremental encoder (increments, in CPR) for speed measurement, default=500" Editor="EditNumber:Signed;Dec" />
+      <Property Name="Speed Measure Limit" Channel="SpeedMeasureLimit" Desc="upper limit for speed measurement with period counter (in increments per ms)" Editor="EditNumber:Signed;Dec" />
+      <Property Name="Period Prescale" Channel="PeriodPrescale" Desc="period prescale for incremental period counter (1 - 255)&#xA;Lower values for measurement of higher speed, high values for measurement of slower speed&#xA;The higher this value is, that more time is needed to reconize a stop.&#xA;For detailed setting info look at library help." Editor="Range:1..255" />
+      <Property Name="Period Counterbits" Channel="PeriodCounterBits" Desc="length of signed period counter in bit (default: 16 bit)&#xA;Lower values for measurement of higher speed, high values for measurement of slower speed&#xA;The higher this value is, that more time is needed to reconize a stop.&#xA;For detailed setting info look at library help.&#xA;min = 1 bit max.=32 bit" Editor="Range:1..32" />
+    </Input>
+    <Input Name="Increments / ms" Channel="IncPerMs" Desc="increments per ms" Type="Analog" />
+    <!-- Digital Inputs -->
+    <IOComment Name="---------------------- Digital Inputs ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 1" Channel="Input1" IsConfig="true" Type="Digital" Desc="digital input 1 (0=off, 1=on)" >
+      <Property Name="DigIn1 Input Latch configuration" Channel="Input1Latch" Desc="The digital input latches the incremental encoder value. Note: The signals are connected via an OR gate. Every configured input latches the encoder value. " Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges"/>
+    </Input>
+    <Input Name="Digital Input 1 Latched" Channel="Input1Latched" Desc="Digital input 1 latched (Requires FPGA version 1.4 or higher)" Type="Digital" />
+    
+    <Input Name="Digital Input 2" Channel="Input2" IsConfig="true" Type="Digital" Desc="digital input 2 (0=off, 1=on)" >
+      <Property Name="DigIn2 Input Latch configuration" Channel="Input2Latch" Desc="The digital input latches the incremental encoder value. Note: The signals are connected via an OR gate. Every configured input latches the encoder value. " Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges"/>
+    </Input>
+    <Input Name="Digital Input 2 Latched" Channel="Input2Latched" Desc="Digital input 2 latched (Requires FPGA version 1.4 or higher)" Type="Digital" />
+
+    <Input Name="Digital Input 3" Channel="Input3" IsConfig="true" Type="Digital" Desc="digital input 3 (0=off, 1=on)" >
+      <Property Name="DigIn3 Input Latch configuration" Channel="Input3Latch" Desc="The digital input latches the incremental encoder value. Note: The signals are connected via an OR gate. Every configured input latches the encoder value. " Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges"/>
+    </Input>
+    <Input Name="Digital Input 3 Latched" Channel="Input3Latched" Desc="Digital input 3 latched (Requires FPGA version 1.4 or higher)" Type="Digital" />
+
+    <Input Name="Digital Input 4" Channel="Input4" IsConfig="true" Type="Digital" Desc="digital input 4 (0=off, 1=on)" >
+      <Property Name="DigIn4 Input Latch configuration" Channel="Input4Latch" Desc="The digital input latches the incremental encoder value. Note: The signals are connected via an OR gate. Every configured input latches the encoder value. " Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges"/>
+    </Input>
+    <Input Name="Digital Input 4 Latched" Channel="Input4Latched" Desc="Digital input 4 latched (Requires FPGA version 1.4 or higher)" Type="Digital" />    
+
+    <Input Name="Zero Position" Channel="ZPuls" IsConfig="true" Desc="zero position" Type="Digital" >
+      <Property Name="Invert Zero Position" Channel="InvertZeroPosition" Desc="inverts server ZeroPosition (0..normal, 1..inverted)" Editor="Combo:0=Normal;1=Invert" />
+      <Property Name="Z-Pulse Latch configuration" Channel="ZPulseLatch" Desc="The Z-Pulse latches the incremental encoder value. Note: The signals are connected via an OR gate. Every configured input latches the encoder value. (Requires FPGA version 1.4 or higher)" Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges"/>
+    </Input>
+    <Input Name="ZeroPosition Latched" Channel="ZPulsLatched" Desc="zero position latched" Type="Digital" />    
+
+    <IOComment Name="-------------------- Latched Positions ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Position Latched Input 1" Channel="PosLatchedInput1" Desc="Latched value of incremental encoder position latched by input 1" Type="Analog" />
+    <Input Name="Position Latched Input 2" Channel="PosLatchedInput2" Desc="Latched value of incremental encoder position latched by input 2" Type="Analog" />
+    <Input Name="Position Latched Input 3" Channel="PosLatchedInput3" Desc="Latched value of incremental encoder position latched by input 3" Type="Analog" />
+    <Input Name="Position Latched Input 4" Channel="PosLatchedInput4" Desc="Latched value of incremental encoder position latched by input 4" Type="Analog" />
+    <Input Name="Position Latched Zero Position" Channel="PosLatchedZPuls" Desc="Latched value of incremental encoder position latched by Zero Position" Type="Analog" />
+    
+    <!-- Digital Outputs -->
+    <IOComment Name="--------------------- Digital Outputs ----------------------" IsInfo="true" Desc=""/>
+    <Output Name="Digital Output 1" Channel="Output1" Type="Digital" Desc="Digital Output 1  (0=off, 1=on)"/>
+    <Output Name="Digital Output 2" Channel="Output2" Type="Digital" Desc="Digital Output 2  (0=off, 1=on)"/>
+    <Output Name="Digital Output 3" Channel="Output3" Type="Digital" Desc="Digital Output 3  (0=off, 1=on)"/>
+    <Output Name="Digital Output 4" Channel="Output4" Type="Digital" Desc="Digital Output 4  (0=off, 1=on)"/>
+    <!-- Module States -->
+    <IOState Name="Voltage OK Output"	Channel="VoltageOkOutput"		Desc="Voltage supply for Output ok" />
+    <!-- Encoder Settings -->
+    <Property Name="Additional Latch Info" Channel="AdditionalLatchInfo" Desc="0=Disabled (Only one latch position server for all inputs)1= Enables extended latch informations. One latch position server for every input. " Editor="Combo:0=Disabled;1=Enabled" />
+
+    <Script Name="NC100">
+    <Parameter Name="AdditionalLatchInfo" Type="Client" Channel="AdditionalLatchInfo" Desc="" />
+<Code>
+def compPost_NC100(element, parameters):
+  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0xA,element) # Standard PDO Read Access
+    SDIASPDOWrAdd(0x1,element) # Standard PDO Write Access
+    if operator.gt(element['options']['AdditionalLatchInfo'], 0):
+      SDIASPDORdAdd(0xA,element) # Additional PDO Read Access for Latch Values
+
+</Code>
+    </Script>  
+</Class>
+</HWClassInfo>

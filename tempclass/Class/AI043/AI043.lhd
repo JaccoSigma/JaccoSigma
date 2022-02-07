@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1045" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Analog In Module; 4x Analog In" OrderNr="20-009-043">
+    <Types>
+      <Device Name="AI043" ClassName="AI043" DisplayGroup="Analog" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="0"/>
+        <Power Voltage="24000" Supply="0" Drain="41"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="AI 043" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" ClrBackground="16777215" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" ClrBackground="16777215" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" ClrBackground="16777215" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="R+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.81" Left="0.26" Top="17.99" ClrBackground="16777215" />
+            <VisualText Text="S+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" ClrBackground="16777215" />
+            <VisualText Text="R-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" ClrBackground="16777215" />
+            <VisualText Text="" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" ClrBackground="16777215" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="R+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="33.34" ClrBackground="16777215" />
+            <VisualText Text="S+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="36.51" ClrBackground="16777215" />
+            <VisualText Text="R-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.69" ClrBackground="16777215" />
+            <VisualText Text="" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="42.86" ClrBackground="16777215" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="R+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" ClrBackground="16777215" />
+            <VisualText Text="S+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" ClrBackground="16777215" />
+            <VisualText Text="R-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" ClrBackground="16777215" />
+            <VisualText Text="" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" ClrBackground="16777215" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" />
+            <VisualText Text="R+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="64.03" ClrBackground="16777215" />
+            <VisualText Text="S+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="67.2" ClrBackground="16777215" />
+            <VisualText Text="R-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="70.38" ClrBackground="16777215" />
+            <VisualText Text="" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.55" ClrBackground="16777215" />
+          </VisualTexts>
+          
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="AI043.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" Negate="true" DataString="AI043.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="AI043.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="AI043.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="AI043.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="AI043.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <VisualLed Description="Input 1 active" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="22.49">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.1" Value="0" />
+                  <Activator TypeId="3" DataString="AI043.Range.5" Value="0" />
+                  <Activator TypeId="3" DataString="AI043.CableBreak.1" Value="0" />
+                  <Activator TypeId="2" DataString="AI043.AI1_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+              <!-- Overrange -->
+              <Behaviour ClrForeground="4278255360" Interval="250">
+                <Activator TypeId="4">
+                  <Activator TypeId="2" DataString="AI043.AI1_Active" Value="1" />
+                  <Activator TypeId="5">
+                    <Activator TypeId="3" DataString="AI043.CableBreak.1" Value="1"/>
+                    <Activator TypeId="3" DataString="AI043.Range.1" Value="1" />
+                  </Activator>
+                </Activator>
+              </Behaviour>
+              <!-- Underrange -->
+              <Behaviour ClrForeground="4278255360" Interval="2000">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.5" Value="1" />
+                  <Activator TypeId="2" DataString="AI043.AI1_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <!-- X2-->
+            <VisualLed Description="Input 2 active" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="37.84">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.2" Value="0" />
+                  <Activator TypeId="3" DataString="AI043.Range.6" Value="0" />
+                  <Activator TypeId="3" DataString="AI043.CableBreak.2" Value="0" />
+                  <Activator TypeId="2" DataString="AI043.AI2_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+              <!-- Overrange -->
+              <Behaviour ClrForeground="4278255360" Interval="250">
+                <Activator TypeId="4">
+                  <Activator TypeId="2" DataString="AI043.AI2_Active" Value="1" />
+                  <Activator TypeId="5">
+                    <Activator TypeId="3" DataString="AI043.CableBreak.2" Value="1"/>
+                    <Activator TypeId="3" DataString="AI043.Range.2" Value="1" />
+                  </Activator>
+                  </Activator>
+              </Behaviour>
+              <!-- Underrange -->
+              <Behaviour ClrForeground="4278255360" Interval="2000">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.6" Value="1" />
+                  <Activator TypeId="2" DataString="AI043.AI2_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>            
+            <!-- X3-->						
+            <VisualLed Description="Input 3 active" ImgPath=".\S-Dias\S-DIAS Led.xaml"  ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="53.18" >
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.3" Value="0" />
+                  <Activator TypeId="3" DataString="AI043.Range.7" Value="0" />									
+                  <Activator TypeId="3" DataString="AI043.CableBreak.3" Value="0" />
+                  <Activator TypeId="2" DataString="AI043.AI3_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+              <!-- Overrange -->
+              <Behaviour ClrForeground="4278255360" Interval="250">
+                <Activator TypeId="4">
+                  <Activator TypeId="2" DataString="AI043.AI3_Active" Value="1" />
+                  <Activator TypeId="5">
+                    <Activator TypeId="3" DataString="AI043.Range.3" Value="1" />
+                    <Activator TypeId="3" DataString="AI043.CableBreak.3" Value="1"/>
+                  </Activator>
+                  </Activator>
+              </Behaviour>
+              <!-- Underrange -->
+              <Behaviour ClrForeground="4278255360" Interval="2000">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.7" Value="1" />
+                  <Activator TypeId="2" DataString="AI043.AI3_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>            
+            <!-- X4-->
+            <VisualLed Description="Input 4 active" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="68.53">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.4" Value="0" />
+                  <Activator TypeId="3" DataString="AI043.Range.8" Value="0" />									
+                  <Activator TypeId="3" DataString="AI043.CableBreak.4" Value="0" />
+                  <Activator TypeId="2" DataString="AI043.AI4_Active" Value="1" />
+                </Activator>
+              </Behaviour>
+              <!-- Overrange -->
+              <Behaviour ClrForeground="4278255360" Interval="250">
+                <Activator TypeId="4">
+                  <Activator TypeId="2" DataString="AI043.AI4_Active" Value="1" />
+                  <Activator TypeId="5">
+                    <Activator TypeId="3" DataString="AI043.Range.4" Value="1" />
+                    <Activator TypeId="3" DataString="AI043.CableBreak.4" Value="1"/>
+                  </Activator>
+                </Activator>
+              </Behaviour>
+              <!-- Underrange -->
+              <Behaviour ClrForeground="4278255360" Interval="2000">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="AI043.Range.8" Value="1" />
+                  <Activator TypeId="2" DataString="AI043.AI4_Active" Value="1" />
+                </Activator>
+              </Behaviour>           
+            </VisualLed>
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="AI043.AI1" Description="Resistor-Connector 1+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI1" Description="Sense-Connector 1+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI1" Description="Resistor-Connector 1-" TypeId="1" />
+              <ConnectorPin Description="not connected" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="AI043.AI2" Description="Resistor-Connector 2+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI2" Description="Sense-Connector 2+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI2" Description="Resistor-Connector 2-" TypeId="1" />
+              <ConnectorPin Description="not connected" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="AI043.AI3" Description="Resistor-Connector 3+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI3" Description="Sense-Connector 3+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI3" Description="Resistor-Connector 3-" TypeId="1" />
+              <ConnectorPin Description="not connected" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="AI043.AI4" Description="Resistor-Connector 4+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI4" Description="Sense-Connector 4+" TypeId="1" />
+              <ConnectorPin DataString="AI043.AI4" Description="Resistor-Connector 4-" TypeId="1" />
+              <ConnectorPin Description="not connected" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="AI043">
+    <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+	
+	<Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the value is greater than 0, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" /> 
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="This server shows the Serial number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output  Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+    <IOState Name="Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Type="" Desc="This server shows the firmware version of the hardware module" />
+    <IOState Name="Firmware Status" Channel="FWErrorBits" Type="" Desc="Firmware Status:Bit0..DC not Ok; Bit1..No Sync; Bit2..Flash data CRC error; Bit3..RAM data CRC error; Bit4..No valid EEPROM Version" />
+    <IOComment Name="---------------------- Analog Inputs -----------------------" IsInfo="true" Desc=""/>
+    <!-- Analog Input 1 -->
+    <Input Name="Analog Input 1" Channel="AI1" IsConfig="true" Desc="Analog Input 1. Invalid value is 16#80000010. Values in 1/10° or 1/10 when type is potentiometer or 1/100°C if AI1Config = 25" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI1 Config" Channel="AI1_Config" Desc="Analog Input 1. Config setting KTY84-130 and higher is only supported if fw-version is v1.10 or higher" Editor="Combo: 0=PT100  (Range: -200...+150°C); 1=PT100  (Range: -200...+850°C); 2=PT200  (Range: -200...+150°C); 3=PT200  (Range: -200...+850°C); 4=PT500  (Range: -200...+150°C); 5=PT500  (Range: -200...+850°C); 6=PT1000 (Range: -200...+150°C); 7=PT1000 (Range: -200...+850°C); 8=NI100  (Range: -60 ...+150°C); 9=NI100  (Range: -60 ...+250°C);10=NI1000 (Range: -60 ...+150°C);11=NI1000 (Range: -60 ...+250°C);12=Potentiometer (Range: 0 ... 250 Ohm);13=Potentiometer (Range: 0 ... 500 Ohm);14=Potentiometer (Range: 0 ...1000 Ohm);15=Potentiometer (Range: 0 ...2500 Ohm);16=Potentiometer (Range: 0 ...5000 Ohm);17=KTY11-62  (Range: -50 ... 150°C);18=KTY81-110 (Range: -55 ... 150°C);19=KTY81-120 (Range: -55 ... 150°C);20=KTY81-121 (Range: -55 ... 150°C);21=KTY81-122 (Range: -55 ... 150°C);22=KTY81-150 (Range: -55 ... 150°C);23=KTY84-130 (Range: -40 ... 400°C);24=KTY84-150 (Range: -40 ... 400°C);25=PT100(Range: -200 ... 150) in 1/100°C" />
+      <Property Name="AI1 Channel Active" Channel="AI1_Active" Editor="Combo:0=Channel is inactive; 1=Channel is active" Desc="Active AI1" />
+      <Property Name="AI1 Measure Method" Channel="AI1_MeasureMethod" Editor="Combo:0=2 Wire Method; 1=3 Wire Method" Desc=" MeasureMethod of the channel" />
+      <Property Name="AI1 cut off frequency" Channel="AI1_FilterFreq" Editor="Combo:0=100 Hz; 1=50 Hz; 2=25 Hz; 3=10 Hz; 5=1 Hz; 4=Filter off" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="AI1 minimal value" Channel="AI1_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI1 maximal value" Channel="AI1_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+    </Input>
+    <!-- Analog Input 2 -->
+    <Input Name="Analog Input 2" Channel="AI2" IsConfig="true" Desc="Analog Input 2. Invalid value is 16#80000010. Values in 1/10° or 1/10 when type is potentiometer or 1/100°C if AI2Config = 25" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI2 Config" Channel="AI2_Config" Desc="Analog Input 2. Config setting KTY84-130 and higher is only supported if fw-version is v1.10 or higher" Editor="Combo: 0=PT100  (Range: -200...+150°C); 1=PT100  (Range: -200...+850°C); 2=PT200  (Range: -200...+150°C); 3=PT200  (Range: -200...+850°C); 4=PT500  (Range: -200...+150°C); 5=PT500  (Range: -200...+850°C); 6=PT1000 (Range: -200...+150°C); 7=PT1000 (Range: -200...+850°C); 8=NI100  (Range: -60 ...+150°C); 9=NI100  (Range: -60 ...+250°C);10=NI1000 (Range: -60 ...+150°C);11=NI1000 (Range: -60 ...+250°C);12=Potentiometer (Range: 0 ... 250 Ohm);13=Potentiometer (Range: 0 ... 500 Ohm);14=Potentiometer (Range: 0 ...1000 Ohm);15=Potentiometer (Range: 0 ...2500 Ohm);16=Potentiometer (Range: 0 ...5000 Ohm);17=KTY11-62  (Range: -50 ... 150°C);18=KTY81-110 (Range: -55 ... 150°C);19=KTY81-120 (Range: -55 ... 150°C);20=KTY81-121 (Range: -55 ... 150°C);21=KTY81-122 (Range: -55 ... 150°C);22=KTY81-150 (Range: -55 ... 150°C);23=KTY84-130 (Range: -40 ... 400°C);24=KTY84-150 (Range: -40 ... 400°C);25=PT100(Range: -200 ... 150) in 1/100°C" />
+      <Property Name="AI2 Channel Active" Channel="AI2_Active" Editor="Combo:0=Channel is inactive; 1=Channel is active" Desc="Active AI2" />
+      <Property Name="AI2 Measure Method" Channel="AI2_MeasureMethod" Editor="Combo:0=2 Wire Method; 1=3 Wire Method" Desc=" MeasureMethod of the channel" />
+      <Property Name="AI2 cut off frequency" Channel="AI2_FilterFreq" Editor="Combo:0=100 Hz; 1=50 Hz; 2=25 Hz; 3=10 Hz; 5=1 Hz; 4=Filter off" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="AI2 minimal value" Channel="AI2_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI2 maximal value" Channel="AI2_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+    </Input>
+    <!-- Analog Input 3 -->
+    <Input Name="Analog Input 3" Channel="AI3" IsConfig="true" Desc="Analog Input 3. Invalid value is 16#80000010. Values in 1/10° or 1/10 when type is potentiometer or 1/100°C if AI3Config = 25" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI3 Config" Channel="AI3_Config" Desc="Analog Input 3. Config setting KTY84-130 and higher is only supported if fw-version is v1.10 or higher" Editor="Combo: 0=PT100  (Range: -200...+150°C); 1=PT100  (Range: -200...+850°C); 2=PT200  (Range: -200...+150°C); 3=PT200  (Range: -200...+850°C); 4=PT500  (Range: -200...+150°C); 5=PT500  (Range: -200...+850°C); 6=PT1000 (Range: -200...+150°C); 7=PT1000 (Range: -200...+850°C); 8=NI100  (Range: -60 ...+150°C); 9=NI100  (Range: -60 ...+250°C);10=NI1000 (Range: -60 ...+150°C);11=NI1000 (Range: -60 ...+250°C);12=Potentiometer (Range: 0 ... 250 Ohm);13=Potentiometer (Range: 0 ... 500 Ohm);14=Potentiometer (Range: 0 ...1000 Ohm);15=Potentiometer (Range: 0 ...2500 Ohm);16=Potentiometer (Range: 0 ...5000 Ohm);17=KTY11-62  (Range: -50 ... 150°C);18=KTY81-110 (Range: -55 ... 150°C);19=KTY81-120 (Range: -55 ... 150°C);20=KTY81-121 (Range: -55 ... 150°C);21=KTY81-122 (Range: -55 ... 150°C);22=KTY81-150 (Range: -55 ... 150°C);23=KTY84-130 (Range: -40 ... 400°C);24=KTY84-150 (Range: -40 ... 400°C);25=PT100(Range: -200 ... 150) in 1/100°C" />
+      <Property Name="AI3 Channel Active" Channel="AI3_Active" Editor="Combo:0=Channel is inactive; 1=Channel is active" Desc="Active AI3" />
+      <Property Name="AI3 Measure Method" Channel="AI3_MeasureMethod" Editor="Combo:0=2 Wire Method; 1=3 Wire Method" Desc=" MeasureMethod of the channel" />
+      <Property Name="AI3 cut off frequency" Channel="AI3_FilterFreq" Editor="Combo:0=100 Hz; 1=50 Hz; 2=25 Hz; 3=10 Hz; 5=1 Hz; 4=Filter off" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="AI3 minimal value" Channel="AI3_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI3 maximal value" Channel="AI3_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+    </Input>
+    <!-- Analog Input 4 -->
+    <Input Name="Analog Input 4" Channel="AI4" IsConfig="true" Desc="Analog Input 4. Invalid value is 16#80000010. Values in 1/10° or 1/10 when type is potentiometer or 1/100°C if AI4Config = 25" Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI4 Config" Channel="AI4_Config" Desc="Analog Input 4. Config setting KTY84-130 and higher is only supported if fw-version is v1.10 or higher" Editor="Combo: 0=PT100  (Range: -200...+150°C); 1=PT100  (Range: -200...+850°C); 2=PT200  (Range: -200...+150°C); 3=PT200  (Range: -200...+850°C); 4=PT500  (Range: -200...+150°C); 5=PT500  (Range: -200...+850°C); 6=PT1000 (Range: -200...+150°C); 7=PT1000 (Range: -200...+850°C); 8=NI100  (Range: -60 ...+150°C); 9=NI100  (Range: -60 ...+250°C);10=NI1000 (Range: -60 ...+150°C);11=NI1000 (Range: -60 ...+250°C);12=Potentiometer (Range: 0 ... 250 Ohm);13=Potentiometer (Range: 0 ... 500 Ohm);14=Potentiometer (Range: 0 ...1000 Ohm);15=Potentiometer (Range: 0 ...2500 Ohm);16=Potentiometer (Range: 0 ...5000 Ohm);17=KTY11-62  (Range: -50 ... 150°C);18=KTY81-110 (Range: -55 ... 150°C);19=KTY81-120 (Range: -55 ... 150°C);20=KTY81-121 (Range: -55 ... 150°C);21=KTY81-122 (Range: -55 ... 150°C);22=KTY81-150 (Range: -55 ... 150°C);23=KTY84-130 (Range: -40 ... 400°C);24=KTY84-150 (Range: -40 ... 400°C);25=PT100(Range: -200 ... 150) in 1/100°C" />
+      <Property Name="AI4 Channel Active" Channel="AI4_Active" Editor="Combo:0=Channel is inactive; 1=Channel is active" Desc="Active AI4" />
+      <Property Name="AI4 Measure Method" Channel="AI4_MeasureMethod" Editor="Combo:0=2 Wire Method; 1=3 Wire Method" Desc=" MeasureMethod of the channel" />
+      <Property Name="AI4 cut off frequency" Channel="AI4_FilterFreq" Editor="Combo:0=100 Hz; 1=50 Hz; 2=25 Hz; 3=10 Hz; 5=1 Hz; 4=Filter off" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="AI4 minimal value" Channel="AI4_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI4 maximal value" Channel="AI4_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue.&#xD;&#xA;Only available at potentiometer measurements.&#xD;&#xA;When both limits are zero, no scale is activated." Editor="EditNumber:Signed;Dec" />
+    </Input>
+    <IOState Name="Cable Break" Channel="CableBreak" Type="Analog" Desc="Cable break detection:Bit0..AI1; Bit1..AI2; Bit2..AI3; Bit3..AI4; " />
+    <IOState Name="Range Detection" Channel="Range" Type="Analog" Desc="Range Detection: Bit0..AI1 overrange; Bit1..AI2 overrange; Bit2..AI3 overrange; Bit3..AI4 overrange; Bit4..AI1 underrange; Bit5..AI2 underrange; Bit6..AI3 underrange; Bit3..AI6 underrange " />
+    
+    <Script Name="AI043">
+<Code>
+def compPost_AI043(element, parameters):
+  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0xC,element)
+
+</Code>
+    </Script>       
+  </Class>
+</HWClassInfo>

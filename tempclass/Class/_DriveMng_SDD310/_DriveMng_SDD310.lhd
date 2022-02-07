@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <!-- ModuleID 1 VAC011  -->
+  <HWDevice ModuleID="1005" SubModuleID="0" ModType="VARAN" Desc="DIAS-Drive Interface Card, 1x VARAN-Out" CheckHWDriveId="true" OrderNr="09-501-101">
+    <Types>
+      <Device Name="SDD310-VAC011" ClassName="_DriveMng_SDD310" DisplayGroup="Axis;SDD310" Visible="true">
+        <HWDriveIdList>
+          <HWDriveId Value="0" />
+          <HWDriveId Value="3" />
+          <HWDriveId Value="26" />
+        </HWDriveIdList>
+        <VisualData>
+          <VisualView TypeId="0">
+            <VisualModule ImgPath=".\VARAN\SDD Grundmodul.xaml" Width="158" Height="378">
+              <VisualLeds>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="5" Height="5" Left="59.46" Top="106.22" Description="Led Run">
+                  <Behaviour ClrForeground="4026597120" Interval="500">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="0" Value="0" />
+                      <Activator TypeId="3" DataString="_DriveMng_SDD310.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342177535" Width="5" Height="5" Left="59.46" Top="112.28" Description="Led Error">
+                  <Behaviour ClrForeground="4026532095">
+                    <Activator TypeId="5">
+                      <Activator TypeId="3" DataString="_DriveMng_SDD310.Online" Value="0" />
+                      <Activator TypeId="4">
+                        <Activator TypeId="1" Value="1" />
+                        <Activator TypeId="0" Value="0" Negate="true" />
+                      </Activator>
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+              </VisualLeds>
+			  <VisualConnectors>
+				<VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="34.79" Top="378">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="52.86" Top="378" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+			  </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="SDD310         VAC-011 " FontFamily="ARIAL" FontSize="16" ClrForeground="4278190080" ClrBackground="16777215" Width="50.53" Height="5.22" Left="53.74" Top="139.8" FontWeight="400" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+          <VisualView TypeId="3">
+            <VisualModule ImgPath=".\VARAN\SDD Ober-Unterseite.xaml" Description="VAC-011" Width="158.81" Height="59.18">
+              <VisualLeds></VisualLeds>
+              <VisualConnectors>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Width="45" Height="9" Left="7.67" Top="25.54" Description="X6 Feedback connection Axis 1">
+                  <ConnectorPin DataString="0::1" TypeId="4" />
+                </VisualConnector>
+                <VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="27.79" Top="35.64">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" />
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="45.86" Top="35.79" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X3 Motor connector Axis 1" Width="41.46" Height="15.9" Left="7.67" Top="1.57" Angle="180">
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector Angle="180" ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X5 Motor connector Axis 2" Width="41.46" Height="15.9" Left="109.21" Top="1.57">
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Description="X7 Feedback connection Axis 2" Width="45" Height="9" Left="105.67" Top="25.54">
+                  <ConnectorPin DataString="0::2" TypeId="4" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Description="X8 Feedback connection Axis 3" Width="45" Height="9" Left="105.67" Top="41.41">
+                  <ConnectorPin DataString="0::3" TypeId="4" />
+                </VisualConnector>
+              </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="VAC 011" FontFamily="ARIAL" FontSize="18" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="12.7" Height="10.77" Left="2.15" Top="41.14" />
+                <VisualText Text="Varan In" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="15.66" Height="3.87" Left="46.53" Top="50.52" />
+                <VisualText Text="Varan Out" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="15.66" Height="3.87" Left="28.46" Top="50.52" />
+                <VisualText Text="X6 Feedback connection Axis 1" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="6.13" Top="21.76" />
+                <VisualText Text="X3 Motor connector Axis 1" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="4.36" Top="17.04" />
+                <VisualText Text="X4 Motor connector Axis 2" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="105.9" Top="17.04" />
+                <VisualText Text="X7 Feedback connection Axis 2" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="104.13" Top="34.88" />
+                <VisualText Text="X8 Feedback connection Axis 3" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="104.13" Top="50.27" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+          <VisualView TypeId="4">
+            <VisualModule ImgPath=".\VARAN\SDD Ober-Unterseite.xaml" Width="158.81" Height="59.18">
+              <VisualLeds></VisualLeds>
+              <VisualConnectors>
+				<VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="34.79" Top="59.18">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="52.86" Top="59.18" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\8-poliger Phoenix Stecker RM5,08.xaml" Description="X1B Supply connection" Width="54.51" Height="15.99" Left="30.64" Top="36.68">
+                  <ConnectorPin TypeId="0" Description="PE" />
+                  <ConnectorPin TypeId="0" Description="+DC" />
+                  <ConnectorPin TypeId="0" Description="-DC" />
+                  <ConnectorPin TypeId="0" Description="Rint" />
+                  <ConnectorPin TypeId="0" Description="Rtr" />
+                  <ConnectorPin TypeId="0" Description="L1" />
+                  <ConnectorPin TypeId="0" Description="L2" />
+                  <ConnectorPin TypeId="0" Description="L3" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X5 Motor connector Axis 3" Width="41.46" Height="15.9" Left="107.04" Top="36.77">
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\3-polige Phoenix Buchse RM5,08.xaml" Description="X1A 24V Power Supply" Width="20.4" Height="10.64" Left="10.24" Top="42.03">
+                  <ConnectorPin TypeId="0" Description="+24V - BR" />
+                  <ConnectorPin TypeId="0" Description="+24V" />
+                  <ConnectorPin TypeId="0" Description="BGND" />
+                </VisualConnector>
+              </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="X1B Supply connection" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="38.26" Height="3.87" Left="38.76" Top="31.9" />
+                <VisualText Text="X5 Motor connector Axis 3" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="38.26" Height="3.87" Left="108.86" Top="32.09" />
+                <VisualText Text="X1A 24V Power Supply" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="16.48" Height="11" Left="11.73" Top="30.15" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+        </VisualData>
+      </Device>
+    </Types>
+  </HWDevice>
+  <!-- ModuleID 2 VAC012 -->
+  <HWDevice ModuleID="1061" SubModuleID="0" ModType="VARAN" Desc="DIAS-Drive Interface Card, 1x VARAN-Out" CheckHWDriveId="true" OrderNr="09-501-101">
+    <Types>
+      <Device Name="SDD310" ClassName="_DriveMng_SDD310" DisplayGroup="Axis;SDD310" Store="SDD310-VAC012">
+        <HWDriveIdList>
+          <HWDriveId Value="0" />
+          <HWDriveId Value="3" />
+          <HWDriveId Value="26" />
+        </HWDriveIdList>
+        <VisualData>
+          <VisualView TypeId="0">
+            <VisualModule ImgPath=".\VARAN\SDD Grundmodul.xaml" Width="158" Height="378">
+              <VisualLeds>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="5" Height="5" Left="59.46" Top="106.22" Description="Led Run">
+                  <Behaviour ClrForeground="4026597120" Interval="500">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="0" Value="0" />
+                      <Activator TypeId="3" DataString="_DriveMng_SDD310.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342177535" Width="5" Height="5" Left="59.46" Top="112.28" Description="Led Error">
+                  <Behaviour ClrForeground="4026532095">
+                    <Activator TypeId="5">
+                      <Activator TypeId="3" DataString="_DriveMng_SDD310.Online" Value="0" />
+                      <Activator TypeId="4">
+                        <Activator TypeId="1" Value="1" />
+                        <Activator TypeId="0" Value="0" Negate="true" />
+                      </Activator>
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+              </VisualLeds>
+			  <VisualConnectors>
+				<VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="26.78" Top="378">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="45.44" Top="378" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+			  </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="SDD310         VAC-012 " FontFamily="ARIAL" FontSize="16" ClrForeground="4278190080" ClrBackground="16777215" Width="50.53" Height="5.22" Left="53.74" Top="139.8" FontWeight="400" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+          <VisualView TypeId="3">
+            <VisualModule ImgPath=".\VARAN\SDD Ober-Unterseite.xaml" Description="VAC-013" Width="158.81" Height="59.18">
+              <VisualConnectors>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Width="45" Height="9" Left="7.67" Top="22.94" Description="X6 Feedback connection Axis 1">
+                  <ConnectorPin DataString="0::1" TypeId="4" />
+                </VisualConnector>
+                <VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="19.78" Top="35.74">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" />
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="38.44" Top="35.89" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" />
+                </VisualConnector>
+                <VisualConnector Description="X13" Angle="90" ImgPath=".\Connectors\4x4-polige Phoenix Buchse RM3,5.xaml" Width="14.35" Height="17.45" Left="56.68" Top="35.54">
+                  <ConnectorPin TypeId="0" Description="Lock" />
+                  <ConnectorPin TypeId="0" Description="Input 2" />
+                  <ConnectorPin TypeId="0" Description="Enable" />
+                  <ConnectorPin TypeId="0" Description="Input 3" />
+                  <ConnectorPin TypeId="0" Description="Enable Break" />
+                  <ConnectorPin TypeId="0" Description="Input 4" />
+                  <ConnectorPin TypeId="0" Description="Ext. GND" />
+                  <ConnectorPin TypeId="0" Description="Input 5" />
+                </VisualConnector>
+                <VisualConnector Angle="90" ImgPath=".\Connectors\4x4-polige Phoenix Buchse RM3,5.xaml" Width="14.35" Height="17.45" Left="74.13" Top="35.54" Description="X13">
+                  <ConnectorPin TypeId="0" Description="Normally open contact 1" />
+                  <ConnectorPin TypeId="0" Description="n.c." />
+                  <ConnectorPin TypeId="0" Description="Normally open contact 2" />
+                  <ConnectorPin TypeId="0" Description="n.c." />
+                  <ConnectorPin TypeId="0" Description="Normally closed contact 1" />
+                  <ConnectorPin TypeId="0" Description="n.c." />
+                  <ConnectorPin TypeId="0" Description="Normally closed contact 2" />
+                  <ConnectorPin TypeId="0" Description="Input 1" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X3 Motor connector Axis 1" Width="41.46" Height="15.9" Left="7.67" Top="3.77" Angle="180">
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector Angle="180" ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X5 Motor connector Axis 2" Width="41.46" Height="15.9" Left="109.21" Top="1.57">
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Description="X7 Feedback connection Axis 2" Width="45" Height="9" Left="105.67" Top="22.94">
+                  <ConnectorPin DataString="0::2" TypeId="4" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Description="X8 Feedback connection Axis 3" Width="45" Height="9" Left="105.67" Top="41.41">
+                  <ConnectorPin DataString="0::3" TypeId="4" />
+                </VisualConnector>
+              </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="VAC 012" FontFamily="ARIAL" FontSize="18" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="12.7" Height="10.77" Left="2.15" Top="41.14" />
+                <VisualText Text="Varan In" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="15.66" Height="3.87" Left="39.11" Top="50.62" />
+                <VisualText Text="Varan Out" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="15.66" Height="3.87" Left="20.46" Top="50.62" />
+                <VisualText Text="X13" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="10.25" Height="3.87" Left="69.4" Top="31.96" />
+                <VisualText Text="X11" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="10.25" Height="3.87" Left="41.82" Top="31.96" />
+                <VisualText Text="X12" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="10.25" Height="3.87" Left="23.16" Top="31.96" />
+                <VisualText Text="X3 Motor connector Axis 1" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="3.54" Top="0.68" />
+                <VisualText Text="X6 Feedback connection Axis 1" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="6.13" Top="19.64" />
+                <VisualText Text="X4 Motor connector Axis 2" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="105.9" Top="17.28" />
+                <VisualText Text="X7 Feedback connection Axis 2" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="103.92" Top="32.02" />
+                <VisualText Text="X8 Feedback connection Axis 3" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="104.13" Top="50.7" />
+              </VisualTexts>
+              <VisualLeds>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led.xaml" ClrForeground="4294967295" Width="4" Height="2" Left="11.39" Top="38.17" Description="Reserved" />
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led.xaml" ClrForeground="1342216703" Width="4" Height="2" Left="7.13" Top="38.17" Description="Varan In">
+                  <Behaviour ClrForeground="4026571263">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="3" DataString="_DriveMng.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led.xaml" ClrForeground="1342216703" Width="4" Height="2" Left="2.87" Top="38.17" Description="Varan Out">
+                  <Behaviour ClrForeground="4026571263">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+                      <Activator TypeId="3" DataString="_DriveMng.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+              </VisualLeds>
+            </VisualModule>
+          </VisualView>
+          <VisualView TypeId="4">
+            <VisualModule ImgPath=".\VARAN\SDD Ober-Unterseite.xaml" Width="158.81" Height="59.18">
+              <VisualLeds></VisualLeds>
+              <VisualConnectors>
+				<VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="26.78" Top="59.18">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="45.44" Top="59.18" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\8-poliger Phoenix Stecker RM5,08.xaml" Description="X1B Supply connection" Width="54.51" Height="15.99" Left="30.64" Top="36.68">
+                  <ConnectorPin TypeId="0" Description="PE" />
+                  <ConnectorPin TypeId="0" Description="+DC" />
+                  <ConnectorPin TypeId="0" Description="-DC" />
+                  <ConnectorPin TypeId="0" Description="Rint" />
+                  <ConnectorPin TypeId="0" Description="Rtr" />
+                  <ConnectorPin TypeId="0" Description="L1" />
+                  <ConnectorPin TypeId="0" Description="L2" />
+                  <ConnectorPin TypeId="0" Description="L3" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X5 Motor connector Axis 3" Width="41.46" Height="15.9" Left="107.04" Top="36.77">
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\3-polige Phoenix Buchse RM5,08.xaml" Description="X1A 24V Power Supply" Width="20.4" Height="10.64" Left="10.24" Top="42.03">
+                  <ConnectorPin TypeId="0" Description="+24V - BR" />
+                  <ConnectorPin TypeId="0" Description="+24V" />
+                  <ConnectorPin TypeId="0" Description="BGND" />
+                </VisualConnector>
+              </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="X1B Supply connection" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="38.26" Height="3.87" Left="38.76" Top="31.9" />
+                <VisualText Text="X5 Motor connector Axis 3" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="38.26" Height="3.87" Left="108.86" Top="32.09" />
+                <VisualText Text="X1A 24V Power Supply" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="16.48" Height="11" Left="11.73" Top="30.15" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+        </VisualData>
+      </Device>
+    </Types>
+  </HWDevice>
+  <!-- ModuleID 3 VAC013 -->
+  <HWDevice ModuleID="1075" SubModuleID="0" ModType="VARAN" Desc="DIAS-Drive Interface Card, 1x VARAN-Out" CheckHWDriveId="true" OrderNr="09-501-101">
+    <Types>
+      <Device Name="SDD310-VAC013" ClassName="_DriveMng_SDD310" DisplayGroup="Axis;SDD310" Visible="true">
+        <HWDriveIdList>
+          <HWDriveId Value="0" />
+          <HWDriveId Value="3" />
+          <HWDriveId Value="26" />
+        </HWDriveIdList>
+        <VisualData>
+          <VisualView TypeId="0">
+            <VisualModule ImgPath=".\VARAN\SDD Grundmodul.xaml" Width="158" Height="378">
+              <VisualLeds>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="5" Height="5" Left="59.46" Top="106.22" Description="Led Run">
+                  <Behaviour ClrForeground="4026597120" Interval="500">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="0" Value="0" />
+                      <Activator TypeId="3" DataString="_DriveMng_SDD310.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342177535" Width="5" Height="5" Left="59.46" Top="112.28" Description="Led Error">
+                  <Behaviour ClrForeground="4026532095">
+                    <Activator TypeId="5">
+                      <Activator TypeId="3" DataString="_DriveMng_SDD310.Online" Value="0" />
+                      <Activator TypeId="4">
+                        <Activator TypeId="1" Value="1" />
+                        <Activator TypeId="0" Value="0" Negate="true" />
+                      </Activator>
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+              </VisualLeds>
+			  <VisualConnectors>
+				<VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="26.78" Top="378">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="45.44" Top="378" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+			  </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="SDD310         VAC-013 " FontFamily="ARIAL" FontSize="16" ClrForeground="4278190080" ClrBackground="16777215" Width="50.53" Height="5.22" Left="53.74" Top="139.8" FontWeight="400" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+          <VisualView TypeId="3">
+            <VisualModule ImgPath=".\VARAN\SDD Ober-Unterseite.xaml" Description="VAC-013" Width="158.81" Height="59.18">
+              <VisualConnectors>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Width="45" Height="9" Left="7.67" Top="22.94" Description="X6 Feedback connection Axis 1">
+                  <ConnectorPin DataString="0::1" TypeId="4" />
+                </VisualConnector>
+                <VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="19.78" Top="35.74">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" />
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="38.44" Top="35.89" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" />
+                </VisualConnector>
+                <VisualConnector Description="X13" Angle="90" ImgPath=".\Connectors\4x4-polige Phoenix Buchse RM3,5.xaml" Width="14.35" Height="17.45" Left="56.68" Top="35.54">
+                  <ConnectorPin TypeId="0" Description="n.c." />
+                  <ConnectorPin TypeId="0" Description="D-IN 1" />
+                  <ConnectorPin TypeId="0" Description="n.c." />
+                  <ConnectorPin TypeId="0" Description="D-IN 2" />
+                  <ConnectorPin TypeId="0" Description="S3" />
+                  <ConnectorPin TypeId="0" Description="D-IN 3" />
+                  <ConnectorPin TypeId="0" Description="S4" />
+                  <ConnectorPin TypeId="0" Description="D-IN 4" />
+                </VisualConnector>
+                <VisualConnector Angle="90" ImgPath=".\Connectors\4x4-polige Phoenix Buchse RM3,5.xaml" Width="14.35" Height="17.45" Left="74.13" Top="35.54" Description="X13">
+                  <ConnectorPin TypeId="0" Description="Enable L" />
+                  <ConnectorPin TypeId="0" Description="Reserved" />
+                  <ConnectorPin TypeId="0" Description="Enable H" />
+                  <ConnectorPin TypeId="0" Description="Reserved" />
+                  <ConnectorPin TypeId="0" Description="Reserved" />
+                  <ConnectorPin TypeId="0" Description="Reserved" />
+                  <ConnectorPin TypeId="0" Description="Reserved" />
+                  <ConnectorPin TypeId="0" Description="Ext. GND" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X3 Motor connector Axis 1" Width="41.46" Height="15.9" Left="7.67" Top="3.77" Angle="180">
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::1" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector Angle="180" ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X5 Motor connector Axis 2" Width="41.46" Height="15.9" Left="109.21" Top="1.57">
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::2" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Description="X7 Feedback connection Axis 2" Width="45" Height="9" Left="105.67" Top="22.94">
+                  <ConnectorPin DataString="0::2" TypeId="4" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Description="X8 Feedback connection Axis 3" Width="45" Height="9" Left="105.67" Top="41.41">
+                  <ConnectorPin DataString="0::3" TypeId="4" />
+                </VisualConnector>
+              </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="VAC 013" FontFamily="ARIAL" FontSize="18" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="12.7" Height="10.77" Left="2.15" Top="41.14" />
+                <VisualText Text="Varan In" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="15.66" Height="3.87" Left="39.11" Top="50.62" />
+                <VisualText Text="Varan Out" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="15.66" Height="3.87" Left="20.46" Top="50.62" />
+                <VisualText Text="X13" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="10.25" Height="3.87" Left="69.4" Top="31.96" />
+                <VisualText Text="X11" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="10.25" Height="3.87" Left="41.82" Top="31.96" />
+                <VisualText Text="X12" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="10.25" Height="3.87" Left="23.16" Top="31.96" />
+                <VisualText Text="X3 Motor connector Axis 1" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="3.54" Top="0.68" />
+                <VisualText Text="X6 Feedback connection Axis 1" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="6.13" Top="19.64" />
+                <VisualText Text="X4 Motor connector Axis 2" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="105.9" Top="17.28" />
+                <VisualText Text="X7 Feedback connection Axis 2" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="103.92" Top="32.02" />
+                <VisualText Text="X8 Feedback connection Axis 3" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="48.08" Height="3.87" Left="104.13" Top="50.7" />
+              </VisualTexts>
+              <VisualLeds>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led.xaml" ClrForeground="4294967295" Width="4" Height="2" Left="11.39" Top="38.17" Description="Reserved" />
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led.xaml" ClrForeground="1342216703" Width="4" Height="2" Left="7.13" Top="38.17" Description="Varan In">
+                  <Behaviour ClrForeground="4026571263">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="3" DataString="_DriveMng.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+                <VisualLed ImgPath=".\C-DIAS\C-DIAS Led.xaml" ClrForeground="1342216703" Width="4" Height="2" Left="2.87" Top="38.17" Description="Varan Out">
+                  <Behaviour ClrForeground="4026571263">
+                    <Activator TypeId="4">
+                      <Activator TypeId="1" Value="1" />
+                      <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+                      <Activator TypeId="3" DataString="_DriveMng.Online" Value="1" />
+                    </Activator>
+                  </Behaviour>
+                </VisualLed>
+              </VisualLeds>
+            </VisualModule>
+          </VisualView>
+          <VisualView TypeId="4">
+            <VisualModule ImgPath=".\VARAN\SDD Ober-Unterseite.xaml" Width="158.81" Height="59.18">
+              <VisualLeds></VisualLeds>
+              <VisualConnectors>
+				<VisualConnector Description="X12 Varan Out" Angle="270" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="26.78" Top="59.18">
+                  <ConnectorPin TypeId="3" Description="X12 Varan Out" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector Description="X11 Varan In" ImgPath=".\Connectors\RJ45.xaml" Width="0.1" Height="0.1" Left="45.44" Top="59.18" Angle="270">
+                  <ConnectorPin TypeId="2" Description="X11 Varan In" DataString="VARAN:00" DummyObject="true"/>
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\8-poliger Phoenix Stecker RM5,08.xaml" Description="X1B Supply connection" Width="54.51" Height="15.99" Left="30.64" Top="36.68">
+                  <ConnectorPin TypeId="0" Description="PE" />
+                  <ConnectorPin TypeId="0" Description="+DC" />
+                  <ConnectorPin TypeId="0" Description="-DC" />
+                  <ConnectorPin TypeId="0" Description="Rint" />
+                  <ConnectorPin TypeId="0" Description="Rtr" />
+                  <ConnectorPin TypeId="0" Description="L1" />
+                  <ConnectorPin TypeId="0" Description="L2" />
+                  <ConnectorPin TypeId="0" Description="L3" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\6-poliger Phoenix Stecker RM5,08.xaml" Description="X5 Motor connector Axis 3" Width="41.46" Height="15.9" Left="107.04" Top="36.77">
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="W" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="V" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="U" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="PE" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="B+" />
+                  <ConnectorPin DataString="0::3" TypeId="4" Description="B-" />
+                </VisualConnector>
+                <VisualConnector ImgPath=".\Connectors\3-polige Phoenix Buchse RM5,08.xaml" Description="X1A 24V Power Supply" Width="20.4" Height="10.64" Left="10.24" Top="42.03">
+                  <ConnectorPin TypeId="0" Description="+24V - BR" />
+                  <ConnectorPin TypeId="0" Description="+24V" />
+                  <ConnectorPin TypeId="0" Description="BGND" />
+                </VisualConnector>
+              </VisualConnectors>
+              <VisualTexts>
+                <VisualText Text="X1B Supply connection" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="38.26" Height="3.87" Left="38.76" Top="31.9" />
+                <VisualText Text="X5 Motor connector Axis 3" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="38.26" Height="3.87" Left="108.86" Top="32.09" />
+                <VisualText Text="X1A 24V Power Supply" FontFamily="ARIAL" FontSize="12" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="400" Width="16.48" Height="11" Left="11.73" Top="30.15" />
+              </VisualTexts>
+            </VisualModule>
+          </VisualView>
+        </VisualData>
+      </Device>
+    </Types>
+  </HWDevice>
+  <Class Name="_DriveMng_SDD310" Path="Drives;DiasDrive" DriveType="SDD310" MultiPlaceRange="3">
+    <Uplink Name="VaranIn" BusType="VARAN" TransparentClient="Transparent" />
+    <Downlink Name="VaranOut_1" BusType="Varan" Port="0" Desc="The VARAN hardware classes are connected to this server with the 'VaranIn' client" />
+    <Downlink Name="CmdState" Channel="CmdState" BusType="DIASDRIVE" Desc="Shows the actual status of the class." PlaceDefault="1" />
+    <!-- General Settings -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" />
+    <Property Name="Serial Number Validation" Channel="SerNoValidation" Type="Digital" Desc="This server shows the actual state of the respective digital input.&#xD;&#xA;&#xD;&#xA;0 .. input is inactive&#xD;&#xA;1 .. input is active" Editor="Combo:0=Serial number of varan client does not matter; 1=Serial number of varan client has to  be validated, to use the module" />
+    <Property Name="Transparent" Channel="Transparent" Desc="0=Object is used as VARAN client, 1=Object is not used as VARAN client" Editor="Combo:0=Object is used as VARAN client;1=Object is not used as VARAN client" />
+    <!-- <Property Name="Time Base" Channel="TimeBase" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the period of time during which the    Isochrone Varan data objects are transferred over the bus. This time must be a mutiple of the Varan ManagerTime." /> -->
+    <!-- <Property Name="Time Base Offset" Channel="TimeBaseOffset" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the offset within the    TimeBase. " />	-->
+    <!-- General State -->
+    <IOState Name="Online" Channel="Online" Desc="Shows the online state of the class.&#xD;&#xA;0..Not Online.&#xD;&#xA;1..Online" EditorColor="0=B(255,0,0);0=T(255,255,255)" />
+    <IOState Name="Release" Channel="Release" Format="V{5-12}.{1-4}" IsInfo="true" Type="" Desc="FPGA - Version" />
+    <IOState Name="Device Address" Channel="DeviceAddress" IsInfo="true" Desc="Device address of hardware module" Type="" />
+    <IOState Name="Vendor ID" Channel="VendorID" IsInfo="true" Desc="This server contains the vendor ID of the hardware module." Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Validate Serial Number" Channel="ValidateSerNo" Type="" Desc="If the validation of the serial number is activated (SerNoValidation=1) &#xD;&#xA; The serial number of the actual module can be validated by writing to this server &#xD;&#xA;&#xD;&#xA; this server shows also the state of validation; &#xD;&#xA; -2, validation not activated &#xD;&#xA; -1.. no module validated on this position &#xD;&#xA; 0...module is not the validated one &#xD;&#xA; 1.. module is the validated one" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Retry counter of varan module" Type="" />
+    <IOState Name="VARAN Protocol Version" Channel="ProtocolVersion" Format="V{13-16}{9-12}.{5-8}.{1-4}" IsInfo="true" Desc="Shows the VARAN Client Protocol version" />
+    <!-- General Modul  -->
+    <Property Name="Varan Time Multiplier" Channel="VaranTimeMultiplier" Desc="multiplier of varan time" Editor="EditNumber:Unsigned;Dec" />
+    <!--  -->
+    <IOState Name="Command State" Channel="CmdState" Desc=" Shows the actual status of the class." Type="Analog" />
+    <IOState Name="Drive Type" Channel="DriveType" IsInfo="true" Desc="Displays which hardware we have connected" Type="Analog" Editor="Combo:0=Not found;1=SDD310;2=SDD315;3=SDD105;4=SDD120;5=SDD305;6=SDD335;7=SDD215;8=SDD205;9=SDD210;10=MDD100;11=S340" />
+    <Input Name="Drive Type" Channel="DriveType" IsInfo="true" Desc="Displays which hardware we have connected" Type="Analog" Editor="Combo:0=Not found;1=SDD310;2=SDD315;3=SDD105;4=SDD120;5=SDD305;6=SDD335;7=SDD215;8=SDD205;9=SDD210;10=MDD100;11=S340" />
+    <IOState Name="Hardware Version" Channel="HWVersion" IsInfo="true" Desc="Displays Hardware Version (Parameter I-HC from Drive)." Type="Analog" />
+    <IOState Name="Firmware Version Drive" Channel="FwVersion" IsInfo="true" Desc="Shows the firmware version of the drive." Type="" />
+    <IOState Name="Firmware Date Drive" Channel="FwDate" IsInfo="true" Desc="Shows the firmware date of the drive." Type="" />
+    <IOState Name="CRC_Error Counter" Channel="CRC_ErrorCounter" Desc="Counts all CRC errors from all axes." Type="Analog" />
+    <!-- Axis -->
+    <Axis Name="_DriveAxis" Place="0" AxisNo="1" Device="Axis" PlaceOnUpload="true" />
+    <Axis Name="_DriveAxis" Place="0" AxisNo="2" Device="Axis" PlaceOnUpload="true" />
+    <Axis Name="_DriveAxis" Place="0" AxisNo="3" Device="Axis" PlaceOnUpload="true" />
+    <Script Name="_DriveMng_SDD310">
+      <Parameter Name="CableLength" Type="Variable" Channel="CableLength" Desc="Length of cable connected to &quot;VARAN In&quot; [m]&#xD;&#xA;Default length 1m" Editor="Range:0..100" DefValue="1" />
+      <Parameter DisplayName="Transparent" Name="Transparent" Type="Client" Channel="Transparent" Desc="" />
+      <Code>
+def compPost__DriveMng_SDD310(element, parameters):  
+  def computeSimpleObjects(input):
+    output = {'AxisExtend':[]}
+    for dataobjects in input:
+      if dataobjects.has_key('AxisExtend'):
+        output['AxisExtend'] += dataobjects['AxisExtend']
+    return output 
+  
+  def ChecktimeVarankwargs():
+    # Checks if kwargs is supported by the timeVaranx functions
+    import inspect
+    funcinfo = inspect.getcallargs(timeVaranRdDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+   
+    funcinfo = inspect.getcallargs(timeVaranWrDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+    
+    funcinfo = inspect.getcallargs(timeVaranRdWrDO, 1,2,3,4) # 1,2,3,4 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+      
+    return True
+    
+  def lotimeVaranRdDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS)
+  
+  def lotimeVaranWrDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS)
+      
+  def lotimeVaranRdWrDO(bkwargs, depth, bytesRd, bytesWr, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdWrDO(depth, bytesRd, bytesWr, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdWrDO(depth, bytesRd, bytesWr, cable, accessToCDIAS)
+  
+  bkwargs = ChecktimeVarankwargs()
+  
+  if parameters['varanBridge']:
+    
+    subelements = {'Axis':[],}
+    for object in element['result']['optional']:
+      for key in subelements.keys():
+        if object.has_key(key):
+          subelements[key].append(object[key])
+      
+    AxisList = computeSimpleObjects(subelements['Axis'])
+    NoAxis = len(AxisList['AxisExtend'])
+    
+    # Max 3 Axis on SDD310
+    if operator.gt(NoAxis,3):
+      NoAxis = 3
+    
+    if operator.gt(NoAxis,0):
+      for i in range(0,NoAxis):
+        
+        if operator.gt(AxisList['AxisExtend'][i],0):
+          DOLengh = 28  # sizeof(t_DataReadOneAxis)
+        else:
+          DOLengh = 16  # sizeof(t_DataReadOneAxis) - 3 * sizeof(DINT)
+        
+        if parameters['SplitRdWr'] == 0: 
+          element['result'] = memVaranRdWrDO(DOLengh, DOLengh, element, parameters)
+          element['result']['IsoTime'] += lotimeVaranRdWrDO(bkwargs, parameters['depth'], DOLengh, DOLengh, parameters['cable'], parameters = parameters)
+        else:
+          element['result'] = memVaranRdDO(DOLengh, element, parameters)
+          element['result'] = memVaranWrDO(DOLengh, element, parameters)
+          element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], DOLengh, parameters['cable'], parameters = parameters)
+          element['result']['IsoTimeWr'] += lotimeVaranWrDO(bkwargs, parameters['depth'], DOLengh, parameters['cable'], parameters = parameters)
+</Code>
+    </Script>
+  </Class>
+</HWClassInfo>

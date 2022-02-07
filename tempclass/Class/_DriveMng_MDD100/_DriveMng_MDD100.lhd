@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1071" SubModuleID="0" ModType="VARAN" Desc="1x VARAN-Out">
+    <Types>
+      <Device Name="MDD100" ClassName="_DriveMng_MDD100" DisplayGroup="Axis" Default="true" />
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0">
+        <VisualModule ImgPath=".\Varan\MDD Grundmodul.xaml" Width="60" Height="200">
+          <VisualTexts>
+            <VisualText Text="MDP 10." FontFamily="ARIAL" FontSize="18" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="24.1" Height="4.74" Left="27.1" Top="19.99" />
+            <VisualText Text="L/Act/Vin" FontFamily="ARIAL" ClrForeground="4278190080" ClrBackground="16777215" Width="12.47" Height="2.47" Left="42.78" Top="27.4" AlignH="0" FontWeight="700" />
+            <VisualText Text="L/Act/Vout" FontFamily="ARIAL" ClrForeground="4278190080" ClrBackground="16777215" Width="12.47" Height="2.47" Left="42.78" Top="35.78" AlignH="0" FontWeight="700" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="9.97" Top="45.48" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="12.61" Top="86.3" />
+            <VisualText Text="X6" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="43.61" Top="112.38" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="31.38" Top="56.29" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="31.38" Top="74.43" />
+            <VisualText Angle="270" Text="VARAN IN" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="16.5" Height="2.45" Left="51.74" Top="49.04" />
+            <VisualText Angle="270" Text="VARAN OUT" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="16.5" Height="2.45" Left="51.74" Top="67.72" />
+            <VisualText Angle="270" Text="SAFETY INPUT" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="16.5" Height="2.45" Left="18.57" Top="50.75" />
+            <VisualText Angle="270" Text="SUPPLY INPUT" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="16.5" Height="2.45" Left="27.26" Top="115.75" />
+            <VisualText Angle="270" Text="DIGITAL INPUT" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="16.5" Height="2.45" Left="51.64" Top="128.75" />
+          </VisualTexts>
+          <VisualLeds>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342216703" Width="2" Height="2" Left="39.9" Top="27.63" Description="Varan In">
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="_DriveMng_MDD100.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342216703" Width="2" Height="2" Left="39.9" Top="36.01" Description="Varan Out">
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+                  <Activator TypeId="3" DataString="_DriveMng_MDD100.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+          </VisualLeds>
+          <VisualConnectors>
+            <VisualConnector ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="37.3" Top="48.79">
+              <ConnectorPin TypeId="2" DataString="VARAN:00" Description="X3 Varan In" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\RJ45.xaml" Width="14" Height="17" Left="37.3" Top="67.47">
+              <ConnectorPin TypeId="3" DataString="VARAN:00" Description="X4 Varan Out" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\5-poliger Phoenix Stecker RM3,5.xaml" Width="12" Height="18" Left="5.83" Top="50" Description="X1 Safety Input">
+              <ConnectorPin TypeId="0" Description="S1" />
+              <ConnectorPin TypeId="0" Description="S2" />
+              <ConnectorPin TypeId="0" Description="reserved" />
+              <ConnectorPin TypeId="0" Description="Enable_L" />
+              <ConnectorPin TypeId="0" Description="Enable_H" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\9-poliger Phoenix Stecker RM3,5.xaml" Width="18.35" Height="68" Left="7.87" Top="90" Description="X2 Supply Input">
+              <ConnectorPin TypeId="0" Description="BGND" />
+              <ConnectorPin TypeId="0" Description="+24V" />
+              <ConnectorPin TypeId="0" Description="+24V-BR" />
+              <ConnectorPin TypeId="0" Description="PE" />
+              <ConnectorPin TypeId="0" Description="L1" />
+              <ConnectorPin TypeId="0" Description="L2" />
+              <ConnectorPin TypeId="0" Description="L3" />
+              <ConnectorPin TypeId="0" Description="-DC" />
+              <ConnectorPin TypeId="0" Description="+DC" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\12-poliger Phoenix Stecker RM3,5.xaml" Description="X6 Digital Inputs" Width="12" Height="42" Left="39.3" Top="116" Angle="180">
+              <ConnectorPin TypeId="0" Description="24V_GND_IO" />
+              <ConnectorPin TypeId="0" Description="Dig_IN8" />
+              <ConnectorPin TypeId="0" Description="Dig_IN7" />
+              <ConnectorPin TypeId="0" Description="Dig_IN6" />
+              <ConnectorPin TypeId="0" Description="Dig_IN5" />
+              <ConnectorPin TypeId="0" Description="Dig_IN4" />
+              <ConnectorPin TypeId="0" Description="Dig_IN3" />
+              <ConnectorPin TypeId="0" Description="Dig_IN2" />
+              <ConnectorPin TypeId="0" Description="Dig_IN1" />
+              <ConnectorPin TypeId="0" Description="reserved" />
+              <ConnectorPin TypeId="0" Description="V_BAT_GND" />
+              <ConnectorPin TypeId="0" Description="V_BAT" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+      <VisualView TypeId="5">
+        <VisualModule ImgPath=".\Varan\MDD Grundmodul.xaml" Width="60" Height="200">
+          <VisualTexts>
+            <VisualText Text="MDD 1.." FontFamily="ARIAL" FontSize="18" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="24.1" Height="4.74" Left="26.66" Top="19.99" />
+            <VisualText Text="Run" FontFamily="ARIAL" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="12.47" Height="2.47" Left="12.84" Top="27.4" AlignH="0" />
+            <VisualText Text="Run" FontFamily="ARIAL" ClrForeground="4278190080" ClrBackground="16777215" FontWeight="700" Width="12.47" Height="2.47" Left="12.64" Top="35.78" AlignH="0" />
+            <VisualText Text="Error" FontFamily="ARIAL" ClrForeground="4278190080" ClrBackground="16777215" Width="12.47" Height="2.47" Left="33.38" Top="27.4" AlignH="0" FontWeight="700" />
+            <VisualText Text="Error" FontFamily="ARIAL" ClrForeground="4278190080" ClrBackground="16777215" Width="12.47" Height="2.47" Left="33.38" Top="35.78" AlignH="0" FontWeight="700" />
+            <VisualText Text="X21" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="11.16" Top="47" />
+            <VisualText Text="X11" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="11.16" Top="107" />
+            <VisualText Text="X22" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="35.73" Top="47" />
+            <VisualText Text="X12" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="35.73" Top="107" />
+            <VisualText Text="B-" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="53.16" />
+            <VisualText Text="B+" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="60.45" />
+            <VisualText Text="PE" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="67.74" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="75.03" />
+            <VisualText Text="V" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="82.32" />
+            <VisualText Text="W" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="89.61" />
+            <VisualText Text="W" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="150.21" />
+            <VisualText Text="V" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="142.92" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="135.63" />
+            <VisualText Text="PE" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="128.34" />
+            <VisualText Text="B+" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="121.05" />
+            <VisualText Text="B-" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="3.78" Height="2.47" Left="3.87" Top="113.76" />
+            <VisualText Angle="270" Text="MOTOR" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="20.52" Height="2.64" Left="18.73" Top="63.54" />
+            <VisualText Angle="270" Text="MOTOR" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="20.52" Height="2.64" Left="18.73" Top="125.63" />
+            <VisualText Angle="270" Text="FEEDBACK" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="20.52" Height="2.64" Left="42.29" Top="63.54" />
+            <VisualText Angle="270" Text="FEEDBACK" FontFamily="ARIAL" ClrForeground="4294967295" ClrBackground="16777215" FontWeight="700" Width="20.52" Height="2.64" Left="42.48" Top="125.63" />
+          </VisualTexts>
+          <VisualLeds>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342177535" Width="2" Height="2" Left="30.5" Top="27.63" Description="Error Axis 1">
+              <Behaviour ClrForeground="4026532095">
+                <Activator TypeId="5">
+                  <Activator TypeId="3" DataString="_DriveMng_MDD100.Online" Value="0" />
+                  <Activator TypeId="4">
+                    <Activator TypeId="1" Value="1" />
+                    <Activator TypeId="0" Value="0" Negate="true" />
+                  </Activator>
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342177535" Width="2" Height="2" Left="30.5" Top="36.01" Description="Error Axis 2">
+              <Behaviour ClrForeground="4026532095">
+                <Activator TypeId="5">
+                  <Activator TypeId="3" DataString="_DriveMng_MDD100.Online" Value="0" />
+                  <Activator TypeId="4">
+                    <Activator TypeId="1" Value="1" />
+                    <Activator TypeId="0" Value="0" Negate="true" />
+                  </Activator>
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="9.7" Top="27.63" Description="Run Axis 1">
+              <Behaviour ClrForeground="4026597120" Interval="500">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="_DriveMng_MDD100.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="9.7" Top="36.01" Description="Run Axis 2">
+              <Behaviour ClrForeground="4026597120" Interval="500">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="_DriveMng_MDD100.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+          </VisualLeds>
+          <VisualConnectors>
+            <VisualConnector ImgPath=".\Connectors\6-polige Phoenix Buchse RM7.xaml" Width="10" Height="44" Left="8.08" Top="112" Description="X11 Motor connector">
+              <ConnectorPin DataString="1" TypeId="4" Description="B-" />
+              <ConnectorPin DataString="1" TypeId="4" Description="B+" />
+              <ConnectorPin DataString="1" TypeId="4" Description="PE" />
+              <ConnectorPin DataString="1" TypeId="4" Description="U" />
+              <ConnectorPin DataString="1" TypeId="4" Description="V" />
+              <ConnectorPin DataString="1" TypeId="4" Description="W" />
+            </VisualConnector>
+            <VisualConnector Angle="90" ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Width="42.25" Height="8.7" Left="33.15" Top="113.23" Description="X12 Feedback">
+              <ConnectorPin DataString="1" TypeId="4" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\6-polige Phoenix Buchse RM7.xaml" Width="10" Height="44" Left="8.08" Top="51.44" Description="X21 Motor connector">
+              <ConnectorPin DataString="2" TypeId="4" Description="B-" />
+              <ConnectorPin DataString="2" TypeId="4" Description="B+" />
+              <ConnectorPin DataString="2" TypeId="4" Description="PE" />
+              <ConnectorPin DataString="2" TypeId="4" Description="U" />
+              <ConnectorPin DataString="2" TypeId="4" Description="V" />
+              <ConnectorPin DataString="2" TypeId="4" Description="W" />
+            </VisualConnector>
+            <VisualConnector Angle="90" ImgPath=".\Connectors\25-polig D-Sub Drive.xaml" Width="42.25" Height="8.7" Left="33.15" Top="52.67" Description="X22 Feedback">
+              <ConnectorPin DataString="2" TypeId="4" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+      <VisualView TypeId="6">
+        <VisualModule ImgPath=".\VARAN\MDD Empty Slot.xaml" Width="60" Height="200"></VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="_DriveMng_MDD100" Path="Drives;DiasDrive" DriveType="MDD100" MultiPlaceRange="2">
+    <Uplink Name="VaranIn" BusType="VARAN" TransparentClient="Transparent" />
+    <Downlink Name="VaranOut_1" BusType="Varan" Port="0" Desc="The VARAN hardware classes are connected to this server with the 'VaranIn' client" />
+    <Downlink Name="CmdState" Channel="CmdState" BusType="DIASDRIVE" Desc="Shows the actual status of the class." />
+    <!-- General Settings -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" />
+    <Property Name="Serial Number Validation" Channel="SerNoValidation" Type="Digital" Desc="This server shows the actual state of the respective digital input.&#xD;&#xA;&#xD;&#xA;0 .. input is inactive&#xD;&#xA;1 .. input is active" Editor="Combo:0=Serial number of varan client does not matter; 1=Serial number of varan client has to  be validated, to use the module" />
+    <Property Name="Transparent" Channel="Transparent" Desc="0=Object is used as VARAN client, 1=Object is not used as VARAN client" Editor="Combo:0=Object is used as VARAN client;1=Object is not used as VARAN client" />
+    <!-- <Property Name="Time Base" Channel="TimeBase" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the period of time during which the    Isochrone Varan data objects are transferred over the bus. This time must be a mutiple of the Varan ManagerTime." /> -->
+    <!-- <Property Name="Time Base Offset" Channel="TimeBaseOffset" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the offset within the    TimeBase. " />	-->
+    <!-- General State -->
+    <IOState Name="Online" Channel="Online" Desc="Shows the online state of the class.&#xD;&#xA;0..Not Online.&#xD;&#xA;1..Online" EditorColor="0=B(255,0,0);0=T(255,255,255)" />
+    <IOState Name="Release" Channel="Release" Format="V{5-12}.{1-4}" IsInfo="true" Type="" Desc="FPGA - Version" />
+    <IOState Name="Device Address" Channel="DeviceAddress" IsInfo="true" Desc="Device address of hardware module" Type="" />
+    <IOState Name="Vendor ID" Channel="VendorID" IsInfo="true" Desc="This server contains the vendor ID of the hardware module." Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Validate Serial Number" Channel="ValidateSerNo" Type="" Desc="If the validation of the serial number is activated (SerNoValidation=1) &#xD;&#xA; The serial number of the actual module can be validated by writing to this server &#xD;&#xA;&#xD;&#xA; this server shows also the state of validation; &#xD;&#xA; -2, validation not activated &#xD;&#xA; -1.. no module validated on this position &#xD;&#xA; 0...module is not the validated one &#xD;&#xA; 1.. module is the validated one" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Retry counter of varan module" Type="" />
+    <IOState Name="VARAN Protocol Version" Channel="ProtocolVersion" Format="V{13-16}{9-12}.{5-8}.{1-4}" IsInfo="true" Desc="Shows the VARAN Client Protocol version" />
+    <!-- General Modul  -->
+    <Property Name="Varan Time Multiplier" Channel="VaranTimeMultiplier" Desc="multiplier of varan time" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Fetch Digital Inputs" Channel="FetchDigitalInputs" Desc="0 = the digital inputs of the drive are not fetched&#xD;1 = the digital inputs of the drive are fetched synchronously&#xD;&#xD;If the function is active an additional VARAN object is used" Editor="Combo:0=do not fetch inputs;1=fetch inputs" />
+    <!--  -->
+    <IOState Name="Command State" Channel="CmdState" Desc=" Shows the actual status of the class." Type="Analog" />
+    <IOState Name="Drive Type" Channel="DriveType" Desc="Displays which hardware we have connected" Type="Analog" Editor="Combo:0=Not found;1=SDD310;2=SDD315;3=SDD105;4=SDD120;5=SDD305;6=SDD335;7=SDD215;8=SDD205;9=MDD100;10=S340" />
+    <IOState Name="Hardware Version" Channel="HWVersion" IsInfo="true" Desc="Displays Hardware Version (Parameter I-HC from Drive)." Type="Analog" />
+    <IOState Name="Firmware Version Drive" Channel="FwVersion" IsInfo="true" Desc="Shows the firmware version of the drive." Type="" />
+    <IOState Name="Firmware Date Drive" Channel="FwDate" IsInfo="true" Desc="Shows the firmware date of the drive." Type="" />
+    <IOState Name="CRC_Error Counter" Channel="CRC_ErrorCounter" Desc="Counts all CRC errors from all axes." Type="Analog" />
+    <!-- Digital Inputs -->
+    <Input Name="Digital Input 1" Channel="Input1" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers." />
+    <Input Name="Digital Input 2" Channel="Input2" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Input Name="Digital Input 3" Channel="Input3" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Input Name="Digital Input 4" Channel="Input4" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Input Name="Digital Input 5" Channel="Input5" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Input Name="Digital Input 6" Channel="Input6" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Input Name="Digital Input 7" Channel="Input7" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Input Name="Digital Input 8" Channel="Input8" Type="Digital" Desc="State of digital input 8 of drive&#xD;&#xA;-1..input information not available&#xD;&#xA;0..input is low&#xD;&#xA;1..input is high&#xD;&#xA;Property Fetch Digital Inputs must be 1 that the digital inputs are fetched synchronously and displayed on the servers" />
+    <Script Name="_DriveMng_MDD100">
+      <Parameter Name="CableLength" Type="Variable" Channel="CableLength" Desc="Length of cable connected to &quot;VARAN In&quot; [m]&#xD;&#xA;Default length 1m" Editor="Range:0..100" DefValue="1" />
+      <Parameter DisplayName="Transparent" Name="Transparent" Type="Client" Channel="Transparent" Desc="" />
+      <Parameter Name="FetchDigitalInputs" Type="Client" Channel="FetchDigitalInputs" Desc="" />
+      <Code>
+def compPost__DriveMng_MDD100(element, parameters):
+  def computeSimpleObjects(input):
+    output = {'AxisExtend':[]}
+    for dataobjects in input:
+      if dataobjects.has_key('AxisExtend'):
+        output['AxisExtend'] += dataobjects['AxisExtend'] 
+    return output 
+  
+  def ChecktimeVarankwargs():
+    # Checks if kwargs is supported by the timeVaranx functions
+    import inspect
+    funcinfo = inspect.getcallargs(timeVaranRdDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+   
+    funcinfo = inspect.getcallargs(timeVaranWrDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+    
+    funcinfo = inspect.getcallargs(timeVaranRdWrDO, 1,2,3,4) # 1,2,3,4 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+      
+    return True
+    
+  def lotimeVaranRdDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS)
+  
+  def lotimeVaranWrDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS)
+      
+  def lotimeVaranRdWrDO(bkwargs, depth, bytesRd, bytesWr, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdWrDO(depth, bytesRd, bytesWr, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdWrDO(depth, bytesRd, bytesWr, cable, accessToCDIAS)
+  
+  bkwargs = ChecktimeVarankwargs()
+  
+  if parameters['varanBridge']:
+    
+    subelements = {'Axis':[],}    
+    for object in element['result']['optional']:
+      for key in subelements.keys():
+        if object.has_key(key):
+          subelements[key].append(object[key])
+      
+    AxisList = computeSimpleObjects(subelements['Axis'])
+    NoAxis = len(AxisList['AxisExtend'])
+    
+    # Max 8 Axis on MDD100
+    if operator.gt(NoAxis,8):
+      NoAxis = 8
+    
+    if operator.gt(NoAxis,0):
+      for i in range(0,NoAxis):
+        
+        if operator.gt(AxisList['AxisExtend'][i],0):
+          DOLengh = 20  # sizeof(t_newReadDataOneAxis)
+        else:
+          DOLengh = 8  # sizeof(t_newReadDataOneAxis) - 3 * DINT
+        
+        if parameters['SplitRdWr'] == 0: 
+          element['result'] = memVaranRdWrDO(DOLengh, DOLengh, element, parameters)
+          element['result']['IsoTime'] += lotimeVaranRdWrDO(bkwargs, parameters['depth'], DOLengh, DOLengh, parameters['cable'], parameters = parameters)
+        else:
+          element['result'] = memVaranRdDO(DOLengh, element, parameters)
+          element['result'] = memVaranWrDO(DOLengh, element, parameters)
+          element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], DOLengh, parameters['cable'], parameters = parameters)
+          element['result']['IsoTimeWr'] += lotimeVaranWrDO(bkwargs, parameters['depth'], DOLengh, parameters['cable'], parameters = parameters)
+    
+    # DO for DigInputs    
+    if operator.gt(element['options']['FetchDigitalInputs'],0):
+      
+      element['result'] = memVaranRdDO(1, element, parameters) # sizeof(USINT)
+      
+      if parameters['SplitRdWr'] == 0:
+        element['result']['IsoTime'] += lotimeVaranRdDO(bkwargs, parameters['depth'],1, parameters['cable'], parameters = parameters)
+      else:
+        element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'],1, parameters['cable'], parameters = parameters)
+    
+    if operator.gt(NoAxis,0):
+      # // create 1 general ASY RdWrDO with variable size (depending on number of available axis)      
+      element['result'] = memVaranRdWrDO(NoAxis * 6, NoAxis * 6, element, parameters) # AxisAvailableNo * sizeof(t_newASYRead), AxisAvailableNo * sizeof(t_newASYWrite)
+      element['result']['AsyTime'] += lotimeVaranRdWrDO(bkwargs, parameters['depth'], NoAxis * 6, NoAxis * 6, parameters['cable'], parameters = parameters)
+    
+</Code>
+    </Script>
+  </Class>
+</HWClassInfo>

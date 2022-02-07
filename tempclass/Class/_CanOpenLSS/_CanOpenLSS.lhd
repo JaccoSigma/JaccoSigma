@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<HWClassInfo>
+<HWDevice ModuleID="20485" SubModuleID="0" ModType="CAN" Desc="Class for Layer Setting Services of CANopen (CiA DSP 305)">	
+	<Types>
+		<Device Name="_CanOpenLSS" ClassName="_CanOpenLSS" DisplayGroup="CANopen"/>
+	</Types>
+</HWDevice>
+<Class Name="_CanOpenLSS">
+	<Uplink Name="Can" BusType="CAN-INTERFACE" PlaceName="Can"/>
+  <IOState Name="ClassState" Channel="ClassState" Desc="Shows the current state of the class.&#13;&#10;_NotInitialized...Class has not been initialized yet&#13;&#10;_Ready...Class is ready for a new task&#13;&#10;_InstallRxFailed...Installation of the receive object failed in the initialisation&#13;&#10;_Busy...Class is already working on a taks&#13;&#10;" />
+  <Property Name="Response Timeout" Channel="ResponseTimeout" IsConfig="true" Desc="Maximum time in [ms] a participant has to answer on a request" Editor="EditNumber:Unsigned;Dec" />
+</Class>
+</HWClassInfo>

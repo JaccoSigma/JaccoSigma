@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="4" SubModuleID="0x1" ModType="M_SDIAS" Desc="SDIAS Safety SSI module" OrderNr="20-894-021">
+    <Types>
+      <Device Name="SSI021" ClassName="SSI021" DisplayGroup="Safety" Default="true" IsParentPlaceUsed="true" PowerLoss="2500">
+        <Power Voltage="12000" Supply="0" Drain="100"/>
+        <Power Voltage="24000" Supply="0" Drain="50" UseParentBus="true"/> 
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul Safety.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="SSI 021" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="3.62" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="C+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="17.99" />
+            <VisualText Text="C-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="D+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="D-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.47" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="43.05" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="C+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="49.29" />
+            <VisualText Text="C-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="52.5" />
+            <VisualText Text="D+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="55.84" />
+            <VisualText Text="D-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="59.46" />
+            <VisualText Text="+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="69.46" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.18" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.28" Top="76.58" />
+            <VisualText Text="+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.22" Top="79.8" />
+            <VisualText Text="+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.22" Top="83.24" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.22" Top="86.68" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.22" Top="90.12" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32"></VisualLed>
+            <VisualLed Description="Safety-Used" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96"></VisualLed>
+            <!-- X1-->
+            <VisualLed Description="Encoder State 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="19.31"></VisualLed>
+            <VisualLed Description="Safe Data Ok Channel 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="22.49">
+            </VisualLed>
+            <!-- X2-->
+            <VisualLed Description="Encoder State 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="50.01"></VisualLed>
+            <VisualLed Description="Safe Data Ok Channel 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="53.18">
+            </VisualLed>
+            <!-- X3-->
+            <VisualLed Description="+24V Voltage Supply" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="80.7"></VisualLed>
+            <!-- X4-->
+            <!-- X5-->
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 8-polig.xaml" Width="7.86" Height="29.01" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="SSI021.Ch1_Data" Description="CLK+ Encoder 1" TypeId="1" />
+              <ConnectorPin DataString="SSI021.Ch1_Data" Description="CLK- Encoder 1" TypeId="1" />
+              <ConnectorPin DataString="SSI021.Ch1_Data" Description="Data+ Encoder 1" TypeId="1" />
+              <ConnectorPin DataString="SSI021.Ch1_Data" Description="Data- Encoder 1" TypeId="1" />
+              <ConnectorPin DataString="" Description="reserved" TypeId="0" />
+              <ConnectorPin DataString="" Description="reserved" TypeId="0" />
+              <ConnectorPin DataString="" Description="+24V Encoder 1" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 8-polig.xaml" Width="7.86" Height="29.01" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="SSI021.Ch2_Data" Description="CLK+ Encoder 2" TypeId="1" />
+              <ConnectorPin DataString="SSI021.Ch2_Data" Description="CLK- Encoder 2" TypeId="1" />
+              <ConnectorPin DataString="SSI021.Ch2_Data" Description="Data+ Encoder 2" TypeId="1" />
+              <ConnectorPin DataString="SSI021.Ch2_Data" Description="Data- Encoder 2" TypeId="1" />
+              <ConnectorPin DataString="" Description="reserved" TypeId="0" />
+              <ConnectorPin DataString="" Description="reserved" TypeId="0" />
+              <ConnectorPin DataString="" Description="+24V Encoder 2" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND " TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="" Description="+24V Encoder supply" TypeId="0" />
+              <ConnectorPin DataString="" Description="+24V Encoder supply" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="SSI021">
+    <Uplink Name="SdiasSafetyIn" BusType="INTERNAL1" PlaceName="Place" PlaceNameIntern="SSISdias1.Place" />
+	<Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module"/>
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module"/>
+    <IOState Name="Safety number" Channel="SafetyNumber" IsInfo="true" Type="" Desc="This server shows the unique safety number of the hardware module" />
+    <IOState Name="Retry Counter uC1" Channel="RetryCounteruC1" Desc="Shows the amount of retry counters of microprocessor 1.&#xD;&#xA;-1 ... Retrycounter read out is not supported by this firmware version." />
+    <IOState Name="Retry Counter uC2" Channel="RetryCounteruC2" Desc="Shows the amount of retry counters of microprocessor 2.&#xD;&#xA;-1 ... Retrycounter read out is not supported by this firmware version." />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <IOState Name="QuitComError" Channel="QuitComError" Desc="Write to this server to quit errors on safety cpu.&#xD;&#xA;It has the same function as QuitComError server on safety cpu.&#xD;&#xA;Server shows actual quit-state&#xD;&#xA;2..busy with quitting general errors (safety dll version 6 or higher required)&#xD;&#xA;1..busy with quitting communication error&#xD;&#xA;0..ready&#xD;&#xA;-1..error at creating a new safety state&#xD;&#xA;-2..failed to disable user prompt for quit error&#xD;&#xA;-3..failed to select module via safety number&#xD;&#xA;-4..error at establishing connection to module (safety designer must not be online at the same time!)&#xD;&#xA;-5..failed to send the quit error command to the module&#xD;&#xA;-6..failed to delete the created safety state " />
+    <!-- Digital Input 1 -->
+    <Input Name="Data Channel 1" Channel="Ch1_Data" Type="Analog" Desc="This server shows the actual value. (scaled to 32Bit)">
+      <Property Name="Number of data bits" Channel="Ch1_SSIBitSize" Editor="Range:1..32" Desc="Length of SSI shift register (1..32 Bit)" />
+      <Property Name="Use double read" Channel="Ch1_SSIDoubleRead" Editor="Combo:0=false;1=true" Desc="Double readout of SSI-Data can be activated to detect readout errors (Not all SSI devices support this.)" />
+      <Property Name="Frequency of SSI" Channel="Ch1_Frequency" Editor="Combo:0=125kHz;1=250kHz;2=500kHz;3=1Mhz" Desc="Select the Frequenzy of SSI transfer: 0=125 kHz, 1=250 kHz, 2=500 kHz, 3=1 MHz" />
+      <Property Name="Use graycode encoding" Channel="Ch1_UseGraycode" Editor="Combo:0=false;1=true" Desc="Select if SSI data should be decoded with graycode or not." />
+    </Input>
+    <Input Name="Error Channel 1" Channel="Ch1_Error" Type="Digital" Desc="This server shows 0 if the data is valid" />
+    <!-- Digital Input 2 -->
+    <Input Name="Data Channel 2" Channel="Ch2_Data" Type="Analog" Desc="This server shows the actual value. (scaled to 32Bit)">
+      <Property Name="Number of data bits" Channel="Ch2_SSIBitSize" Editor="Range:1..32" Desc="Length of SSI shift register (1..32 Bit)" />
+      <Property Name="Use double read" Channel="Ch2_SSIDoubleRead" Editor="Combo:0=false;1=true" Desc="Double readout of SSI-Data can be activated to detect readout errors (Not all SSI devices support this.)" />
+      <Property Name="Frequency of SSI" Channel="Ch2_Frequency" Editor="Combo:0=125kHz;1=250kHz;2=500kHz;3=1Mhz" Desc="Select the Frequenzy of SSI transfer: 0=125 kHz, 1=250 kHz, 2=500 kHz, 3=1 MHz" />
+      <Property Name="Use graycode encoding" Channel="Ch2_UseGraycode" Editor="Combo:0=false;1=true" Desc="Select if SSI data should be decoded with graycode or not." />
+    </Input>
+    <Input Name="Error Channel 2" Channel="Ch2_Error" Type="Digital" Desc="This server shows 0 if the data is valid" />
+    <!-- General Setting -->
+    
+    <Script Name="SSI021">
+<Code>
+def compPre_SSI021(element, parameters):
+  element ['result']['optional'] = []
+  
+def compPost_SSI021(element, parameters): 
+
+  if parameters['varanBridge']:
+    parameters['SAFE_SDIAS'] = True  
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}, 'InputsNeeded' : int, 'OutputsNeeded' : int}   
+    
+    element['result']['optional']['InputsNeeded'] = 3
+    element['result']['optional']['OutputsNeeded'] = 1
+    
+    SDIASPDORdAdd(0xA,element)
+    SDIASPDOWrAdd(0x1,element)
+    
+</Code>    </Script>   
+  </Class>
+</HWClassInfo>

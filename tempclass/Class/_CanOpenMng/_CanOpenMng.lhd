@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="20484" SubModuleID="0" ModType="CANOpen" Desc="Class for Managing of CANOpen Nodes">	
+    <Types>
+      <Device Name="_CanOpenMng" ClassName="_CanOpenMng" DisplayGroup="CANopen"/>
+    </Types>
+    <VisualData>
+      <VisualView>
+        <VisualModule ImgPath=".\Varan\SDD Ober-Unterseite.xaml" Width="158.81" Height="59.18" />
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="_CanOpenMng">
+    <Uplink Name="CanLib" BusType="CAN-INTERFACE" PlaceName="CanLib"/>
+    <Downlink Name="Hardwarealarme"    Channel="DeviceState" Port="0" BusType="Hardwarealarme"      Sort="0" Desc="Hardwarealarme" />
+    <Downlink Name="CANOpen-INTERFACE" Channel="DeviceState" Port="0" BusType="CANOpen-INTERFACE"   Sort="1"  Desc="Connects a CANOpen communication class" />
+    <IOState Name="Device State"       Channel="DeviceState" Desc="Shows the state of the Master/Mng." />
+    <IOState Name="Cycle Time" Channel="CycleTime" Desc="Shows the cyclic time of the Class (ms)." />
+    <Property Name="Baudrate Can" Channel="BaudrateCan" IsConfig="false" Desc="" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Heartbeat Multiplier" Channel="HeartbeatMult" IsConfig="false" Desc="" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Master ID" Channel="MasterId" IsConfig="false" Desc="" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Sync Active" Channel="SyncActive" IsConfig="false" Desc="" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Sync Counter" Channel="SyncCounter" IsConfig="false" Desc="" Editor="EditNumber:Unsigned;Dec" />
+    <Property Name="Activate Can Basic Object" Channel="ActivateCanBasicObject" IsConfig="false" Desc="" Editor="EditNumber:Unsigned;Dec" />
+  </Class>
+</HWClassInfo>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="5" SubModuleID="0x1" ModType="M_SDIAS" Desc="SDIAS Safety input/output module" OrderNr="20-895-081">
+    <Types>
+      <Device Name="SDM081" ClassName="SDM081" DisplayGroup="Safety" Default="true" PowerLoss="2500">
+        <Power Voltage="12000" Supply="0" Drain="34"/>
+        <Power Voltage="24000" Supply="0" Drain="21"/> 
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul Safety.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="SDM 081" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="3.62" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="I1" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="17.99" />
+            <VisualText Text="I2" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="A" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="B" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="I3" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="33.34" />
+            <VisualText Text="I4" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="36.51" />
+            <VisualText Text="A" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.69" />
+            <VisualText Text="B" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="42.86" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="I5" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="I6" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="A" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" />
+            <VisualText Text="B" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" />
+            <VisualText Text="O1" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="64.03" />
+            <VisualText Text="O2" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="67.2" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="70.38" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.55" />
+            <VisualText Text="X5" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="n.c" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="85.72" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Bus State" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32"></VisualLed>
+            <VisualLed Description="Safety-Used" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96"></VisualLed>
+            <!-- X1-->
+            <VisualLed Description="Digital input 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="19.31">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SDM081.Safe_Input1" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="22.49">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SDM081.Safe_Input2" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X2-->
+            <VisualLed Description="Digital input 3" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="34.66">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SDM081.Safe_Input3" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 4" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="37.84">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SDM081.Safe_Input4" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X3-->
+            <VisualLed Description="Digital input 5" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="50.01">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SDM081.Safe_Input5" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 6" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="53.18">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SDM081.Safe_Input6" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X4-->
+            <VisualLed Description="Digital output 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="65.35">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="SDM081.Safe_Output1" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital output 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="68.53">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="SDM081.Safe_Output2" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X5-->
+            <VisualLed Description="+24V Voltage Supply" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="80.7"></VisualLed>
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="SDM081.Safe_Input1" Description="Digital Input 1" TypeId="1" />
+              <ConnectorPin DataString="SDM081.Safe_Input2" Description="Digital Input 2" TypeId="1" />
+              <ConnectorPin DataString="" Description="Signal A" TypeId="0" />
+              <ConnectorPin DataString="" Description="Signal B" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="SDM081.Safe_Input3" Description="Digital Input 3" TypeId="1" />
+              <ConnectorPin DataString="SDM081.Safe_Input4" Description="Digital Input 4" TypeId="1" />
+              <ConnectorPin DataString="" Description="Signal A" TypeId="0" />
+              <ConnectorPin DataString="" Description="Signal B" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="SDM081.Safe_Input5" Description="Digital Input 5" TypeId="1" />
+              <ConnectorPin DataString="SDM081.Safe_Input6" Description="Digital Input 6" TypeId="1" />
+              <ConnectorPin DataString="" Description="Signal A" TypeId="0" />
+              <ConnectorPin DataString="" Description="Signal B" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="SDM081.Safe_Output1" Description="Safe Output 1" TypeId="1" />
+              <ConnectorPin DataString="SDM081.Safe_Output2" Description="Safe Output 2" TypeId="1" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="" Description="+24V" TypeId="0" />
+              <ConnectorPin DataString="" Description="n.c." TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="SDM081">
+    <Uplink Name="SdiasSafetyIn" BusType="INTERNAL1" PlaceName="Place" />
+	<Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0 = module is not required 1 = module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module"/>
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module or 0 if this feature is not supported by the firmware of the SCP" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module"/>
+    <IOState Name="Safety number" Channel="SafetyNumber" IsInfo="true" Type="" Desc="This server shows the unique safety number of the hardware module" />
+    <IOState Name="Retry Counter uC1" Channel="RetryCounteruC1" Desc="Shows the amount of retry counters of microprocessor 1.&#xD;&#xA;-1 ... Retrycounter read out is not supported by this firmware version." />
+    <IOState Name="Retry Counter uC2" Channel="RetryCounteruC2" Desc="Shows the amount of retry counters of microprocessor 2.&#xD;&#xA;-1 ... Retrycounter read out is not supported by this firmware version." />
+    <IOState Name="QuitComError" Channel="QuitComError" Desc="Write to this server to quit errors on safety cpu.&#xD;&#xA;It has the same function as QuitComError server on safety cpu.&#xD;&#xA;Server shows actual quit-state&#xD;&#xA;2..busy with quitting general errors (safety dll version 6 or higher required)&#xD;&#xA;1..busy with quitting communication error&#xD;&#xA;0..ready&#xD;&#xA;-1..error at creating a new safety state&#xD;&#xA;-2..failed to disable user prompt for quit error&#xD;&#xA;-3..failed to select module via safety number&#xD;&#xA;-4..error at establishing connection to module (safety designer must not be online at the same time!)&#xD;&#xA;-5..failed to send the quit error command to the module&#xD;&#xA;-6..failed to delete the created safety state " />
+    <!-- Safe Inputs -->
+    <Input Name="Safe Input 1" Channel="Safe_Input1" Type="Digital" Desc="State of input (read only)&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Input Low&#xD;&#xA; 1..Input High" />
+    <Input Name="Safe Input 2" Channel="Safe_Input2" Type="Digital" Desc="State of input read only&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Input Low&#xD;&#xA; 1..Input High" />
+    <Input Name="Safe Input 3" Channel="Safe_Input3" Type="Digital" Desc="State of input read only&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Input Low&#xD;&#xA; 1..Input High" />
+    <Input Name="Safe Input 4" Channel="Safe_Input4" Type="Digital" Desc="State of input read only&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Input Low&#xD;&#xA; 1..Input High" />
+    <Input Name="Safe Input 5" Channel="Safe_Input5" Type="Digital" Desc="State of input read only&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Input Low&#xD;&#xA; 1..Input High" />
+    <Input Name="Safe Input 6" Channel="Safe_Input6" Type="Digital" Desc="State of input read only&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Input Low&#xD;&#xA; 1..Input High" />
+    <!-- Safe and Unsafe Outputs -->
+    <Input Name="Safe Output 1" Channel="Safe_Output1" Type="Digital" Desc="State of output (read only)&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Output Low&#xD;&#xA; 1..Output High" />
+    <Output Name="Unsafe Output 1" Channel="Unsafe_Output1" Type="Digital" Desc="State of output write only; default value: 0&#xD;&#xA;&#xD;&#xA;If safety is given output would be 1, you can still switch to zero by writing 0 to this server" />
+    <Input Name="Safe Output 2" Channel="Safe_Output2" Type="Digital" Desc="State of output read only&#xD;&#xA;&#xD;&#xA;-1..Error&#xD;&#xA; 0..Output Low&#xD;&#xA; 1..Output High" />
+    <Output Name="Unsafe Output 2" Channel="Unsafe_Output2" Type="Digital" Desc="State of output write only; default value: 0&#xD;&#xA;&#xD;&#xA;If safety is given output would be 1, you can still switch to zero by writing 0 to this server" />
+    <!-- IO States -->
+    <IOState Name="SafeIOError" Channel="SafeIOError" Desc="Shows which safe in/outputs are in error.&#xD;&#xA;The in/outputs are bitcoded.&#xD;&#xA;Bit0 = Input1&#xD;&#xA;Bit1 = Input2&#xD;&#xA;..." />
+
+    <Script Name="SDM081">
+<Code>
+def compPre_SDM081(element, parameters):
+  element ['result']['optional'] = []
+  
+def compPost_SDM081(element, parameters): 
+
+  if parameters['varanBridge']:
+    parameters['SAFE_SDIAS'] = True  
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}, 'InputsNeeded' : int, 'OutputsNeeded' : int}   
+    
+    element['result']['optional']['InputsNeeded'] = 6
+    element['result']['optional']['OutputsNeeded'] = 2
+    
+</Code>    </Script>   
+  </Class>
+</HWClassInfo>    

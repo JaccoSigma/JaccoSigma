@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="VirtualConnection" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "ConnObjChannel"
+			GUID       = "{C9B5F469-9290-407A-B991-1446E9421FF3}"
+			Class      = "ConnObjChannel"
+			Position   = "(540,1170)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ConnTo"/>
+				<Server Name="State"/>
+				<Client Name="ObjChan"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "ConnReWr"
+			GUID       = "{CE5FAF71-9A20-468A-A703-835F081DC699}"
+			Class      = "ConnReWr"
+			Position   = "(540,570)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="FromNr"/>
+				<Server Name="ReadNr"/>
+				<Server Name="State"/>
+				<Server Name="ToNr"/>
+				<Server Name="Value"/>
+				<Client Name="In"/>
+				<Client Name="Out"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "In1"
+			GUID       = "{199A773F-365F-4D56-90C8-24F0895F9478}"
+			Class      = "CounterRoundTheClock"
+			Position   = "(150,120)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="AddValue" Value="123"/>
+				<Server Name="OnlyPos" Value="1"/>
+				<Server Name="Range" Value="1000"/>
+				<Server Name="Value"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "In2"
+			GUID       = "{6B762A9D-EC3D-4450-8568-65FC9288166F}"
+			Class      = "CounterRoundTheClock"
+			Position   = "(150,450)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="AddValue" Value="321"/>
+				<Server Name="OnlyPos" Value="0"/>
+				<Server Name="Range" Value="2000"/>
+				<Server Name="Value"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "MyObject1"
+			GUID       = "{59A15769-1A14-49B7-AECB-259970D18BD2}"
+			Class      = "MyObject"
+			Position   = "(150,1170)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "MyObject2"
+			GUID       = "{F734BE62-3295-4BBD-98A8-463425CB3F09}"
+			Class      = "MyObject"
+			Position   = "(150,1320)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Out1"
+			GUID       = "{F1587DFE-37DC-480E-AB5D-989C06F4136D}"
+			Class      = "Merker"
+			Position   = "(150,780)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="Data"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Out2"
+			GUID       = "{88F7674B-EE65-4286-BD48-AB4A3707A8BB}"
+			Class      = "Merker"
+			Position   = "(150,930)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="Data"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Read1"
+			GUID       = "{CBA91744-1980-4630-851E-0271AB046A5D}"
+			Class      = "Bridge"
+			Position   = "(1110,120)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="dummy"/>
+				<Client Name="Client_Read"/>
+				<Client Name="Client_Write"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Read2"
+			GUID       = "{961F064F-00C9-4708-900C-9CDB8357ADD4}"
+			Class      = "Bridge"
+			Position   = "(1110,330)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="dummy"/>
+				<Client Name="Client_Read"/>
+				<Client Name="Client_Write"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(90,60)" Size="(1380,1020)" Text="Connect virtual Data channels"/>
+		<Comment Position="(90,1110)" Size="(1380,360)" Text="Connect virtual Object channels"/>
+		<Comment Position="(900,570)" Size="(510,360)" Text="FromNr is 1 or 2 for In1 or In2.&#13;&#10;( 3 is an unvalid connection)&#13;&#10;&#13;&#10;ToNr is 1 or 2 for Out1 or Out2.&#13;&#10;( 3 is an unvalid connection)&#13;&#10;&#13;&#10;ReadNr is 1 or 2 for Read1 or Readt2.&#13;&#10;( 3 is an unvalid connection)"/>
+		<Comment Position="(900,1170)" Size="(510,210)" Text="ConnTo is 1 or 2 for Connection to MyObject1 or MyObject2&#13;&#10;( 3 is an unvalid connection)"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

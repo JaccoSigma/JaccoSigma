@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<DataAnalyser
+	VerSet        = "0.01"
+	Samplerate    = "1000"
+	DA_Type       = "0"
+	MaxMemTime    = "0"
+	MaxMem        = "512"
+	TimeRangeStr  = "5000 ms"
+	TimeOffsetStr = "3506.14 ms"
+	TimeRange     = "5000"
+	TimeOffset    = "3506.141602993012"
+	ScreenView    = "TREND"
+	DrawView      = "Split">
+	<DA_TriggerStart
+		Active    = "false"
+		Type      = "Start"
+		Condition = "Greater"
+		Channel   = "SCurve1.CurveOut"
+		Value     = "1">
+	</DA_TriggerStart>
+	<DA_TriggerStop Active="false" Type="Stop" Condition="Greater or Equal">
+	</DA_TriggerStop>
+	<DA_Channels>
+		<DA_Channel
+			Name          = "SCurve1.CurveOut"
+			Type          = "DINT"
+			ChannelInfo   = "SCurve1.CurveOut"
+			ChannelSize   = "4"
+			BitIndex      = "0"
+			UseReadMeth   = "true"
+			Color         = "886118"
+			Active        = "true"
+			LimitHi       = "100000"
+			LimitLo       = "0"
+			IsServer      = "true"
+			ChannelMemOff = "16">
+		</DA_Channel>
+		<DA_Channel
+			Name          = "Merker1.Data"
+			Type          = "DINT"
+			ChannelInfo   = "Merker1.Data"
+			ChannelSize   = "4"
+			BitIndex      = "0"
+			UseReadMeth   = "true"
+			Color         = "1331655"
+			Active        = "true"
+			LimitHi       = "100000"
+			LimitLo       = "0"
+			IsServer      = "true"
+			Y-Axis        = "SCurve1.CurveOut"
+			ChannelMemOff = "4">
+		</DA_Channel>
+	</DA_Channels>
+	<DA_AuxLines>
+		<DA_AuxLine
+			Name       = "_Gauge_0"
+			Type       = "Gauge"
+			Value      = "0.2339330690083864"
+			IsVertical = "true"
+			Draw       = "true">
+		</DA_AuxLine>
+		<DA_AuxLine
+			Name       = "_Gauge_1"
+			Type       = "Gauge"
+			Value      = "0.2839122928027602"
+			IsVertical = "true"
+			Draw       = "true">
+		</DA_AuxLine>
+	</DA_AuxLines>
+</DataAnalyser>

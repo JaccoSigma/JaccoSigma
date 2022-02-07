@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1000" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Safety CPU" OrderNr="20-890-???">
+    <Types>
+      <Device Name="SCP011_111" ClassName="SCP011_111" DisplayGroup="Safety" Default="false" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="200" UseParentBus="true" />
+        <Power Voltage="12000" Supply="800" Drain="0" />
+        <Power Voltage="24000" Supply="800" Drain="0" />
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul Safety.xaml" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <!-- SCP011_111 -->
+            <VisualText Text="SCPX11" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="700" LineHeight="10" Width="7.94" Height="5.82" Left="3.66" Top="10.05" ClrBackground="16777215" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="E" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="17.09" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="B" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.86" Height="2.65" Left="0.26" Top="25.74" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="C1" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="28.49" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="C2" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.06" Height="2.7" Left="0.26" Top="34.48" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="C3" FontFamily="ARIAL" ClrForeground="4294967295" Width="3.17" Height="2.65" Left="0.26" Top="37.53" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="47.59" FontWeight="400" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="60.65" FontWeight="400" />
+            <VisualText Text="A" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="63.03" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="B" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="66.2" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="-" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="69.38" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.8" FontWeight="400" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.65" Height="2.65" Left="0.26" Top="79.53" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="82.55" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.65" Height="2.65" Left="0.26" Top="85.72" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.65" Height="2.65" Left="0.26" Top="88.9" ClrBackground="16777215" FontWeight="400" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Run" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SCP011_111.RunState" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Module State" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.87">
+              <Behaviour ClrForeground="1342177535">
+                <Activator TypeId="3" DataString="SCP011_111.ServiceMode" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="1342177535" Interval="500">
+                <Activator TypeId="3" DataString="SCP011_111.ServiceMode" Value="2" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Error State" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="18.31">
+              <Behaviour ClrForeground="1342177535">
+                <Activator TypeId="3" DataString="SCP011_111.ErrorState" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="1342177535" Interval="500">
+                <Activator TypeId="3" DataString="SCP011_111.ErrorState" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="1342177535" Interval="250">
+                <Activator TypeId="3" DataString="SCP011_111.ValidationButtonState" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Validation Button S1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="26.46">
+              <Behaviour ClrForeground="1342177535">
+                <Activator TypeId="3" DataString="SCP011_111.ValidationButtonState" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="1342177535" Interval="500">
+                <Activator TypeId="3" DataString="SCP011_111.ValidationButtonState" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="1342177535" Interval="250">
+                <Activator TypeId="3" DataString="SCP011_111.ValidationButtonState" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Command 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="29.81"></VisualLed>
+            <VisualLed Description="Command 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="35.81"></VisualLed>
+            <VisualLed Description="Command 3" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="38.86"></VisualLed>
+            <!-- X1-->
+            <!-- X2-->
+            <VisualLed Description="CAN Active" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="64.1"></VisualLed>
+            <!-- X3-->
+            <VisualLed Description="Voltage Ok" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="80.34">
+              <Behaviour ClrForeground="4026597120">
+                <Activator TypeId="4">
+                  <Activator TypeId="3" DataString="SCP011_111.SafetyState" Value="11" Negate="true" />
+                  <Activator TypeId="3" DataString="SCP011_111.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <!-- X4-->
+            <!-- X5-->
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector ImgPath=".\S-DIAS\S-DIAS Drucktaster.xaml" Description="S-DIAS Drucktaster.xaml" Width="6.4" Height="6.2" Left="3.65" Top="17.07" />
+            <VisualConnector ImgPath=".\S-DIAS\S-DIAS MicroSD.xaml" Description="S-DIAS MicroSD.xaml" Width="2.12" Height="13.6" Left="3.65" Top="27.51" />
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS USB Mini.xaml" Width="4" Height="7.5" Left="3.65" Top="45.03"></VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 3-polig.xaml" Width="7.86" Height="11.55" Left="3.7" Top="61.97">
+              <ConnectorPin Description="CAN A Low" TypeId="0" />
+              <ConnectorPin Description="CAN B High" TypeId="0" />
+              <ConnectorPin Description="GND" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin Description="Voltage Supply +24" TypeId="0" />
+              <ConnectorPin Description="Voltage Supply +24" TypeId="0" />
+              <ConnectorPin Description="Voltage Supply GND" TypeId="0" />
+              <ConnectorPin Description="Voltage Supply GND" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="SCP011_111">
+    <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+    <Downlink Name="SdiasSafetyOut" BusType="INTERNAL1" />
+    <Downlink Name="FastUnsafeInputs" BusType="FastUnsafeInputs" Port="0" />
+    <Downlink Name="FastUnsafeOutputs" BusType="FastUnsafeOutputs" Port="0" />
+    <Downlink Name="CanOut" BusType="CAN" Port="0" />
+    <Downlink Name="GetDiagConnect" BusType="Safety_Diagnosis_Info" Port="0" />
+    <Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General Settings -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <Property Name="Server Update Time" Channel="ServerUpdateTime" Desc="Time in ms, how long the Servers (unsafe variables in Safety Designer) should take to update.&#xD;&#xA;This Client is automatically updated, if the given time is too short to handle with the current amount of servers." Editor="Range:0..10000" />
+    <!-- General -->
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="This server shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <IOState Name="Safety State" Channel="SafetyState" Desc="Shows state of safety module&#xD;&#xA;&#xD;&#xA;_ModuleNotFound:&#xD;&#xA; - Module has not been found at the given position&#xD;&#xA;&#xD;&#xA;_WaitForSynchronicity:&#xD;&#xA; - Waiting to get synchrony with interacting modules&#xD;&#xA;&#xD;&#xA;_SafetyClassOK:&#xD;&#xA; - Module has been found and no errors reported&#xD;&#xA;&#xD;&#xA;_MemAllocFailed: &#xD;&#xA; - Failed to allocate or reallocate some memory for the module&#xD;&#xA;&#xD;&#xA;_ReadFWVerFailed:&#xD;&#xA; - Failed to read firmware version of module&#xD;&#xA;&#xD;&#xA;_ReinitConfig:&#xD;&#xA; - Only for CPU: Config of CPU has changed and update is in progress&#xD;&#xA;&#xD;&#xA;_ModFromCfgNotFound (Only for CPU):&#xD;&#xA; - Module in configuration, which is not physically available and HW-Class is placed&#xD;&#xA; - Module in configuration, which is not physically available and no HW-Class is placed&#xD;&#xA; - Module in configuration, which is not a CDIAS module (according to it's HW-Path)&#xD;&#xA;&#xD;&#xA;_UnsafeVarNotFound (Only for CPU):&#xD;&#xA; - Couldn't find an unsafe variable in the project. Compare spelling in Designer and in project.&#xD;&#xA;&#xD;&#xA;_UnknownCfgError (Only for CPU):&#xD;&#xA; - Error in reading config or creating routing tables occured." />
+    <IOState Name="Run State" Channel="RunState" Desc="0: not running&#xD;&#xA;1: running in operational or temporary operational mode" />
+    <IOState Name="Service Mode" Channel="ServiceMode" Desc="0: operational mode&#xD;&#xA;1: service mode or temporary operational mode&#xD;&#xA;2: check configuration phase" />
+    <IOState Name="Error State" Channel="ErrorState" Desc="0: no errors&#xD;&#xA;1: error, which can be reset via safety designer&#xD;&#xA;2: communication timeout on input data from other safety modules. Reset this error with QuitComError." />
+    <Output Name="Quit Communication Errors" Channel="QuitComError" Desc="Write to this server to quit communication errors (indicated if Server ErrorState=2)" Type="Digital" />
+    <IOState Name="Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Type="" Desc="This server shows the firmware version of the hardware module in the format xx.yy (e.g. 16#0100 means v1.0)" />
+    <IOState Name="Safety Number" Channel="SafetyNumber" IsInfo="true" Desc="Shows the unique safety number of this module" />
+    <IOState Name="Safety RetryCounter" Channel="SafetyRetryCounter" Desc="Shows the amount of all retries on the safety bus.&#xD;&#xA;-1 ... Retrycounter read out is not supported by this firmware version." />
+    <IOState Name="Designer Project Config CRC" Channel="DesignerPrjConfigCRC" IsInfo="true" Desc="Shows the CRC of the whole SafetyDesigner project configuration (see CRC Dialog in the SafetyDesigner)" />
+    <IOState Name="Safety Application CRC" Channel="ApplCRC" IsInfo="true" Desc="Shows the CRC of the safety logic (see CRC Dialog in the SafetyDesigner)" />
+    <IOState Name="Safety HW Config CRC" Channel="HwCRC" IsInfo="true" Desc="Shows the CRC of the hardware configuration (see CRC Dialog in the SafetyDesigner)" />
+    <IOState Name="Designer Project Name" Channel="DesignerPrjName" IsInfo="true" Desc="Shows the name of the Safety Designer project" />
+    <IOState Name="Designer Project Revision" Channel="DesignerPrjRev" IsInfo="true" Desc="Shows the revision number of the Safety Designer project" />
+    <IOState Name="Validation Button State" Channel="ValidationButtonState" Desc="Shows the state of the validation button&#xD;&#xA;0: Validation button not used at the moment&#xD;&#xA;1: Select a command by pressing the button&#xD;&#xA;2: Command is executed&#xD;&#xA;3: Error in module" />
+    <Output Name="Fast unsafe inputs" Channel="FastUnsafeInputs" Type="Analog" Desc="In this server, the fast unsafe inputs are shown in a 32-bit field.&#xD;&#xA;Bits 0 to 31 in this word are allocated to fast unsafe input 1 to 32.&#xD;&#xA;A write() instruction to this server writes the bit pattern to the module." />
+    <Input Name="Fast unsafe outputs" Channel="FastUnsafeOutputs" Type="Analog" Desc="In this server, the fast unsafe outputs are shown in a 32-bit field.&#xD;&#xA;Bits 0 to 31 in this word are allocated to fast unsafe output 1 to 32." />
+    <Script Name="SCP011_111">
+      <Parameter DisplayName="SPDO Read Size" Name="PdoReadSize" Type="Variable" Channel="PdoReadSize" Desc="Length of safe PDO read data at this module (default: 28)" Editor="Range:0..128" DefValue="28" />
+      <Parameter DisplayName="SPDO Write Size" Name="PdoWriteSize" Type="Variable" Channel="PdoWriteSize" Desc="Length of safe PDO write data at this module (default: 28)" Editor="Range:0..128" DefValue="28" />
+      <Parameter DisplayName="Additional Write PDOs" Name="PdoWriteNo" Type="Variable" Channel="PdoWriteNo" Desc="Number of additional write DOs at this module (default: 0)" Editor="Range:0..9" DefValue="0" />
+      <Code>
+def compPost_SCP011_111(element, parameters): 
+
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    
+    InputsNeeded = 0
+    OutputsNeeded = 0
+    
+    # Store own Data in tempvariable
+    tempelement = {'result': {'optional' : {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}}}
+    
+    #Read state bytes for PDOs and TDOs
+    SDIASPDORdAdd(0x4,tempelement)
+    #TDO read data
+    SDIASPDORdAdd(0x18,tempelement)
+    #Write Time Sync Handshake
+    SDIASPDOWrAdd(0x1,tempelement)
+    #TDO write data
+    SDIASPDOWrAdd(0x18,tempelement)
+       
+    #Add Data from SDIAS Safety Modules    
+    element['result']['optional'].append(tempelement['result']['optional'])   
+    
+    subelements = {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}
+    for object in element['result']['optional']:   
+      subelements['PDO']['Wr'] += object['PDO']['Wr']
+      subelements['PDO']['Rd'] += object['PDO']['Rd']
+      subelements['PDO']['WrDyn'] += object['PDO']['WrDyn']
+      subelements['PDO']['RdDyn'] += object['PDO']['RdDyn']
+
+      if object.has_key('InputsNeeded'):
+        InputsNeeded += object['InputsNeeded']
+        
+      if object.has_key('OutputsNeeded'):
+        OutputsNeeded += object['OutputsNeeded']
+    
+    # Return combined data
+    element['result']['optional'] = subelements 
+    
+    #we have always 1 byte for the time synchronisation and 5 bytes LED Status    
+    Length = 1 + 5
+    Length += (((InputsNeeded + OutputsNeeded) * 2 - 1 ) / 8) + 1 + 4
+    SDIASPDORdAdd(Length,element)   
+    
+    #1 bit per output 
+    Length = ((OutputsNeeded - 1) / 8 ) + 1
+    
+    #maybe we don't need this DO (if we have only inputs and don't use the fast unsafe IOs)   
+    if Length != 0:
+      SDIASPDOWrAdd(Length,element)
+
+    #here we add the PDOs according to the setting in the hw-editor
+    if element['options']['PdoReadSize']:
+      SDIASPDORdAdd(element['options']['PdoReadSize'],element)   
+
+    if element['options']['PdoWriteSize']:
+      SDIASPDOWrAdd(element['options']['PdoWriteSize'],element)   
+      
+      #additional write DOs
+      for x in range(int(element['options']['PdoWriteNo'])):
+        SDIASPDOWrAdd(element['options']['PdoWriteSize'],element)   
+
+</Code>
+    </Script>
+  </Class>
+</HWClassInfo>

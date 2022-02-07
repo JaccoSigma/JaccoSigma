@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1193" SubModuleID="0" ModType="M_VARAN" Desc="VARAN Stepper Module" OrderNr="16-014-012">
+    <Types>
+      <Device Name="VST012" ClassName="VST012" DisplayGroup="Axis" />
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0">
+        <VisualModule ImgPath=".\VARAN\VST Grundmodul.xaml" Width="26.09" Height="152.74">
+          <VisualConnectors>
+            <VisualConnector Angle="180" ImgPath=".\Connectors\RJ45 mit Leds.xaml" Width="14" Height="17" Left="11.34" Top="32.81" Description="X1 Varan In">
+              <ConnectorPin TypeId="2" Description="X1 Varan IN" DataString="VARAN:00" />
+            </VisualConnector>
+            <VisualConnector Angle="180" ImgPath=".\Connectors\RJ45 mit Leds.xaml" Width="14" Height="17" Left="11.15" Top="50.96" Description="X2 Varan Out">
+              <ConnectorPin TypeId="3" Description="X2 Varan Out" DataString="VARAN:00" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\2x2-polige Phoenix Buchse RM3,5.xaml" Width="14.28" Height="9.09" Left="11.59" Top="68.52" Description="X3 Power Supply">
+              <ConnectorPin Description="+24V for Enable" TypeId="0" />
+              <ConnectorPin Description="+24V" TypeId="0" />
+              <ConnectorPin Description="Enable" TypeId="0" />
+              <ConnectorPin Description="GND" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\8-poliger Baumueller.xaml" Width="11.2" Height="20.33" Left="11.59" Top="77.8" Description="X4 Incremental Encoder">
+              <ConnectorPin Description="Incremental Encoder" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\4x4-polige Phoenix Buchse RM3,5.xaml" Width="14.35" Height="17.45" Left="11.59" Top="98.32" Description="X5 Digital I/Os">
+              <ConnectorPin DataString="VST012.Input1" Description="Digital Input 1" TypeId="1" />
+              <ConnectorPin DataString="VST012.Output1" Description="Digital Output 1" TypeId="1" />
+              <ConnectorPin DataString="VST012.Input2" Description="Digital Input 2" TypeId="1" />
+              <ConnectorPin DataString="VST012.Output2" Description="Digital Output 2" TypeId="1" />
+              <ConnectorPin DataString="VST012.Input3" Description="Digital Input 3" TypeId="1" />
+              <ConnectorPin DataString="VST012.Output3" Description="Digital Output 3" TypeId="1" />
+              <ConnectorPin DataString="VST012.Input4" Description="Digital Input 4" TypeId="1" />
+              <ConnectorPin DataString="VST012.Output4" Description="Digital Output 4" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\Connectors\6-polige Phoenix Buchse RM7.xaml" Width="5.4" Height="28.3" Left="11.59" Top="115.96" Description="X6 Stepper Motor">
+              <ConnectorPin Description="A-" TypeId="0" />
+              <ConnectorPin Description="A+" TypeId="0" />
+              <ConnectorPin Description="B-" TypeId="0" />
+              <ConnectorPin Description="B+" TypeId="0" />
+              <ConnectorPin Description="Motor Voltage" TypeId="0" />
+              <ConnectorPin Description="GND" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+          <VisualLeds>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="10.95" Top="12.33" Description="Varan IN Link" >
+              <Behaviour ClrForeground="4026597120">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242815" Width="2" Height="2" Left="14.48" Top="12.33" Description="Varan In Active" >
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="18.01" Top="12.33" Description="Varan Out Link" >
+              <Behaviour ClrForeground="4026597120">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242815" Width="2" Height="2" Left="21.54" Top="12.33" Description="Varan Out Active" >
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="6" DataString="VARAN:0:none:Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="10.95" Top="17.29" Description="24V OK" >
+              <Behaviour ClrForeground="4026597120" >
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="14.48" Top="17.29" Description="Motor Voltage Ok" />
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="18.01" Top="17.29" Description="Motor Enable" >
+              <Behaviour ClrForeground="4026597120" >
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.StateWord.SwitchedOn" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342177535" Width="2" Height="2" Left="21.54" Top="17.29" Description="Error">
+              <Behaviour ClrForeground="4026532095" >
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.StateWord.Fault" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342216703" Width="2" Height="2" Left="10.95" Top="22.25" Description="Output 1">
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Output1" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342216703" Width="2" Height="2" Left="14.48" Top="22.25" Description="Output 2">
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Output2" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342216703" Width="2" Height="2" Left="18.01" Top="22.25" Description="Output 3">
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Output3" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342216703" Width="2" Height="2" Left="21.54" Top="22.25" Description="Output 4">
+              <Behaviour ClrForeground="4026571263">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Output4" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="10.95" Top="27.21" Description="Input 1">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Input1" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="14.48" Top="27.21" Description="Input 2">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Input2" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="18.01" Top="27.21" Description="Input 3">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Input3" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed ImgPath=".\C-DIAS\C-DIAS Led rund.xaml" ClrForeground="1342242560" Width="2" Height="2" Left="21.54" Top="27.21" Description="Input 4">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="0" Value="0" />
+                  <Activator TypeId="3" DataString="VST012.Online" Value="1" />
+                  <Activator TypeId="3" DataString="VST012.Input4" Value="1" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+          </VisualLeds>
+          <VisualTexts>
+            <VisualText Angle="270" Text="VST012" FontFamily="ARIAL" FontSize="14" ClrForeground="4278190080" Width="17.06" Height="6.09" Left="2.67" Top="12.49" ClrBackground="16777215" />
+          </VisualTexts>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="VST012" Path="Drives;Digital">
+    <Uplink Name="VaranIn" BusType="VARAN" TransparentClient="Transparent" />
+    <Downlink Name="VaranOut_1" BusType="VARAN" Port="0" />
+    <!-- General Settings -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" />
+    <Property Name="Serial Number Validation" Channel="SerNoValidation" Type="Digital" Desc="This server shows the actual state of the respective digital input.&#xD;&#xA;&#xD;&#xA;0 .. input is inactive&#xD;&#xA;1 .. input is active" Editor="Combo:0=Serial number of varan client does not matter; 1=Serial number of varan client has to  be validated, to use the module" />
+    <Property Name="Transparent" Channel="Transparent" Desc="0=Object is used as VARAN client, 1=Object is not used as VARAN client" Editor="Combo:0=Object is used as VARAN client;1=Object is not used as VARAN client" />
+    <!-- <Property Name="TimeBase" Channel = "TimeBase" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the period of time during which the Isochrone Varan data objects are transferred over the bus. This time must be a mutiple of the Varan ManagerTime."/> -->
+    <!-- <Property Name="TimeBaseOffset" Channel="TimeBaseOffset" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the offset within the TimeBase."/> -->
+    <!-- General State -->
+    <IOState Name="Online" Channel="Online" Desc="Shows the online state of the class.&#xD;&#xA;0..Not Online.&#xD;&#xA;1..Online" EditorColor="0=B(255,0,0);0=T(255,255,255)" />
+    <IOState Name="State" Channel="State" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " />
+    <IOState Name="Release" Channel="Release" Format="V{5-12}.{1-4}" IsInfo="true" Type="Analog" Desc="FPGA - Version" />
+    <IOState Name="Device Address" Channel="DeviceAddress" IsInfo="true" Desc="Device address of hardware module" Type="Analog" />
+    <IOState Name="Vendor ID" Channel="VendorID" IsInfo="true" Desc="This server contains the vendor ID of the hardware module." Type="Analog" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="Analog" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="Analog" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Validate Serial Number" Channel="ValidateSerNo" Type="Analog" Desc="If the validation of the serial number is activated (SerNoValidation=1) &#xD;&#xA; The serial number of the actual module can be validated by writing to this server &#xD;&#xA;&#xD;&#xA; this server shows also the state of validation; &#xD;&#xA; -2, validation not activated &#xD;&#xA; -1.. no module validated on this position &#xD;&#xA; 0...module is not the validated one &#xD;&#xA; 1.. module is the validated one" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Type="Analog" Desc="Retry counter of varan module" />
+    <IOState Name="VARAN Protocol Version" Channel="ProtocolVersion" Format="V{13-16}{9-12}.{5-8}.{1-4}" IsInfo="true" Desc="Shows the VARAN Client Protocol version" />
+    <!-- Digital Inputs -->
+    <IOComment Name="---------------------- Digital Inputs ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Input 1" Channel="Input1" Type="Digital" Desc="First digital input" />
+    <Input Name="Input 1 Latched Rising" Channel="Input1LatchedRising" Type="Digital" Desc="Latched rising edge of first digital input&#xD;&#xA;signal will stay until read-method is called" />
+    <Input Name="Input 1 Latched Falling" Channel="Input1LatchedFalling" Type="Digital" Desc="Latched falling edge of first digital input&#xD;&#xA;signal will stay until read-method is called" />
+    <Input Name="Input 2" Channel="Input2" Type="Digital" Desc="Second digital input" />
+    <Input Name="Input 2 Latched Rising" Channel="Input2LatchedRising" Type="Digital" Desc="Latched rising edge of second digital input&#xD;&#xA;signal will stay until read-method is called" />
+    <Input Name="Input 2 Latched Falling" Channel="Input2LatchedFalling" Type="Digital" Desc="Latched falling edge of second digital input&#xD;&#xA;signal will stay until read-method is called" />
+    <Input Name="Input 3" Channel="Input3" Type="Digital" Desc="Third digital input" />
+    <Input Name="Input 4" Channel="Input4" Type="Digital" Desc="Fourth digital input" />
+    <IOComment Name="--------------------- Digital Outputs ----------------------" IsInfo="true" Desc=""/>
+    <Output Name="Output 1" Channel="Output1" Type="Digital" Desc="First digital output" />
+    <Output Name="Output 2" Channel="Output2" Type="Digital" Desc="Second digital output" />
+    <Output Name="Output 3" Channel="Output3" Type="Digital" Desc="Third digital output" />
+    <Output Name="Output 4" Channel="Output4" Type="Digital" Desc="Fourth digital output" />
+    <!-- Modul Propertys -->
+    <Property Name="Stall Current Reduction" Channel="StallCurrentReduction" Editor="EditNumber:Signed;Dec" Desc="Defaultvalue: 0 (no reduction in the stop position) Range: 0 - 1000 (0-100%). Value to reduce MaxCurrent for the Stop Position [0,1%]. Stop Position means, the value of the server SetFreqOut is lower than the StallCurrentWindow, which can be set via the method SetStallCurrentWindow and is 0 by default." />
+    <Property Name="Chopper off time" Channel="ChopperOffTime" Editor="EditNumber:Signed;Dec" Desc="[20ns steps], fixed off time of PWM" />
+    <Property Name="Blanking time" Channel="BlankingTime" Editor="EditNumber:Signed;Dec" Desc="[20ns steps], minimum on of PWM" />
+    <Property Name="Fast decay time" Channel="FastDecayTime" Editor="EditNumber:Signed;Dec" Desc="[20ns steps], Length of fast decay mode" />
+    <Property Name="Frequency limit fullstep" Channel="FrequencyLimit1" Editor="EditNumber:Signed;Dec" Desc="minimum frequency for fullstep mode, set to 16#FFFFFFFF to disable this mode" />
+    <Property Name="Frequency limit halfstep" Channel="FrequencyLimit2" Editor="EditNumber:Signed;Dec" Desc="minimum frequency for halfstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Property Name="Frequency limit 4 microstep mode" Channel="FrequencyLimit4" Editor="EditNumber:Signed;Dec" Desc="minimum frequency for 4-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Property Name="Frequency limit 8 microstep mode" Channel="FrequencyLimit8" Editor="EditNumber:Signed;Dec" Desc="minimum frequency for 8-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Property Name="Frequency limit 16 microstep mode" Channel="FrequencyLimit16" Editor="EditNumber:Signed;Dec" Desc="minimum frequency for 16-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Property Name="Frequency limit 32 microstep mode" Channel="FrequencyLimit32" Editor="EditNumber:Signed;Dec" Desc="minimum frequency for 32-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Property Name="HW Rampdown Delta Frequency" Channel="HWRampdownDeltaFrequency" Editor="EditNumber:Signed;Dec" Desc="If the enable-signal is lost the output frequency is decreased by HWRampdownDeltaFrequency every HWRampdownDeltaTime" />
+    <Property Name="HW Rampdown Delta Time" Channel="HWRampdownDeltaTime" Editor="EditNumber:Signed;Dec" Desc="[20ns steps], If the enable-signal is lost the output frequency is decreased by HWRampdownDeltaFrequency every HWRampdownDeltaTime" />
+    <Property Name="Time Base" Channel="TimeBase" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the period of time during which the       Isochrone Varan data objects are transferred over the bus. This time must be a mutiple of the Varan ManagerTime." />
+    <Property Name="Time Base Offset" Channel="TimeBaseOffset" Type="Analog" Editor="EditNumber:Unsigned;Dec" Desc="Defines the offset within the      TimeBase. " />
+
+    <IOComment Name="------------------------- Encoder --------------------------" IsInfo="true" Desc=""/>
+    <Input Name="Encoder position" Channel="EncoderPosition" IsConfig="true" Desc="Actual input position" Type="Analog" >
+      <Property Name="Invert encoder" Channel="InvertEncoder" Desc="0 .. Phase B non-inverted 1 .. Phase B inverted" Editor="Combo:0=Phase B non-inverted;1=Phase B inverted" />
+      <Property Name="Invert zero position" Channel="InvertZeroPosition" Desc="inverts server ZeroPosition (0..normal, 1..inverted)" Editor="Combo:0=normal;1=inverted" />
+      <Property Name="Encoder sampling" Channel="EncoderSampling" Desc="0 .. Encoder off; 1 .. 1-edge; 2 .. 2-edge; 3 .. 4-edge" Editor="Combo:0=Encoder off;1=1-edge;2=2-edge;3=4-edge" />
+      <Property Name="Latch type" Channel="LatchType" Desc="0 .. latch virtual counter&#xD;&#xA;1 .. latch incremental encoder" Editor="Combo:0=latch virtual counter;1=latch incremental encoder" />
+    </Input>
+    <Input Name="Zero pulse latched" Channel="ZeroPulse_latched" Desc="is 1 if incremental zero position is passed, a read resets the server" Type="Digital" />
+    <Input Name="Latched encoder position zero pulse" Channel="LatchPositionEncoderZeroPulse" Desc="Latched position of zero pulse" Type="Analog" />
+    <Input Name="Latched position rising edge input1" Channel="LatchPositionInput1Rising" Desc="Latched position of rising edge of input1" Type="Analog" />
+    <Input Name="Latched position falling edge input1" Channel="LatchPositionInput1Falling" Desc="Latched position of falling edge of input1" Type="Analog" />
+    <Input Name="Latched position rising edge input2" Channel="LatchPositionInput2Rising" Desc="Latched position of rising of edge input2" Type="Analog" />
+    <Input Name="Latched position falling edge input2" Channel="LatchPositionInput2Falling" Desc="Latched position of falling of edge input2" Type="Analog" />
+
+    <IOComment Name="---------------------- Stepper Motor -----------------------" IsInfo="true" Desc=""/>
+    <Output Name="Frequency output" Channel="SetFreqOut" Desc="motor frequency in Hz" Type="Analog" />
+    <Input Name="Actual position" Channel="ActPosition" Desc="Actual virtual position of stepper" Type="Analog" />
+    <Output Name="Maximum current" Channel="MaxCurrent" Desc="[mA] Maximum output current" Type="Analog" />
+    <Output Name="Stall Current Reduction" Channel="StallCurrentReduction" Desc="Defaultvalue: 0 (no reduction in the stop position) Range: 0 - 1000 (0-100%). Value to reduce MaxCurrent for the Stop Position [0,1%]. Stop Position means, the value of the server SetFreqOut is lower than the StallCurrentWindow, which can be set via the method SetStallCurrentWindow and is 0 by default." Type="Analog" />
+    <Output Name="Control word" Channel="ControlWord" Desc="Controlword of the steppermodule" Type="Analog" />
+    <Input Name="State word" Channel="StateWord" Desc="Statusword of the steppermodule" Type="Analog" />
+    <Output Name="Enable" Channel="Enable" Type="Digital" Desc="Turn on the output stage of the VST012" />
+    <Output Name="Current Increase" Channel="CurrentIncrease" Type="Digital" Desc="Allow current increase by sqrt(2) in halfstep mode" />
+    <IOState Name="Error" Channel="Error" Desc="Is set to 1 on error" />
+    <Output Name="Error Quit" Channel="ErrorQuit" Type="Digital" Desc="Quits error if server (Error) is set" />
+    <Output Name="Chopper off time" Channel="ChopperOffTime" Desc="[20ns steps], fixed off time of PWM" Type="Analog" />
+    <Output Name="Blanking time" Channel="BlankingTime" Desc="[20ns steps], minimum on of PWM" Type="Analog" />
+    <Output Name="Fast decay time" Channel="FastDecayTime" Desc="[20ns steps], Length of fast decay mode" Type="Analog" />
+    <Output Name="Frequency limit fullstep" Channel="FrequencyLimit1" Desc="minimum frequency for fullstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Output Name="Frequency limit halfstep" Channel="FrequencyLimit2" Desc="minimum frequency for halfstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Output Name="Frequency limit 4 microstep mode" Channel="FrequencyLimit4" Desc="minimum frequency for 4-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Output Name="Frequency limit 8 microstep mode" Channel="FrequencyLimit8" Desc="minimum frequency for 8-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Output Name="Frequency limit 16 microstep mode" Channel="FrequencyLimit16" Desc="minimum frequency for 16-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Output Name="Frequency limit 32 microstep mode" Channel="FrequencyLimit32" Desc="minimum frequency for 32-microstep mode, set to 16#FFFFFFFF to disable this mode" Type="Analog" />
+    <Output Name="HW Rampdown Delta Frequency" Channel="HWRampdownDeltaFrequency" Desc="If the enable-signal is lost the output frequency is decreased by HWRampdownDeltaFrequency every HWRampdownDeltaTime" Type="Analog" />
+    <Output Name="HW Rampdown Delta Time" Channel="HWRampdownDeltaTime" Desc="[20ns steps], If the enable-signal is lost the output frequency is decreased by HWRampdownDeltaFrequency every HWRampdownDeltaTime" Type="Analog" />
+    <Output Name="Frequency Bandwidth" Channel="FrequencyBandwidth" Desc="Band Width for the Frequency limits &#xD;&#xA; Example:&#xD;&#xA;Frequency limit = 8000&#xD;&#xA;Frequency band width = 100&#xD;&#xA;Frequency higher limit = 8050&#xD;&#xA;Frequency lower limit = 7950" Type="Analog" />
+    <IOState Name="External Enable" Channel="ExternalEnable" Type="Analog" Desc="State of the external enable input (0=Error)" />
+    <IOState Name="Hardware Error" Channel="HWError" Type="Analog" Desc="Hardwareerror state for CNC Class (1 =  Error)" />
+    <IOState Name="HW Enable Software Rampdown" Channel="HWEnableSoftwareRampdown" Type="Analog" Desc="0..HardwareRampdown&#xD;&#xD;1..SoftwareRampdown" />
+
+    <Script Name="VST012">
+      <Parameter DisplayName="Cyclic / Realtime" Name="CyRt" Type="Client" Channel="CyRt" Desc="" />
+      <Parameter DisplayName="Cable Length" Name="CableLength" Type="Variable" Channel="CableLength" Desc="Length of cable connected to &quot;VARAN In&quot; [m]&#13;&#10;Is used for time duration calculation&#13;&#10;Default length 1m."  Editor="Range:0..100" DefValue="1" />
+      <Parameter DisplayName="Transparent" Name="Transparent" Type="Client" Channel="Transparent" Desc="" />
+      <Code>
+
+def compPre_VST012(element, parameters):
+  element ['result']['optional'] = []
+
+def compPost_VST012(element, parameters):
+  def ChecktimeVarankwargs():
+    # Checks if kwargs is supported by the timeVaranx functions
+    import inspect
+    funcinfo = inspect.getcallargs(timeVaranRdDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+   
+    funcinfo = inspect.getcallargs(timeVaranWrDO, 1,2,3) # 1,2,3 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+    
+    funcinfo = inspect.getcallargs(timeVaranRdWrDO, 1,2,3,4) # 1,2,3,4 fixed parameters, values don't matter 
+    if funcinfo.has_key('kwargs') == False:
+      return False
+      
+    return True
+    
+  def lotimeVaranRdDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdDO(depth, bytes, cable, accessToCDIAS)
+  
+  def lotimeVaranWrDO(bkwargs, depth, bytes, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranWrDO(depth, bytes, cable, accessToCDIAS)
+      
+  def lotimeVaranRdWrDO(bkwargs, depth, bytesRd, bytesWr, cable, accessToCDIAS=False, **kwargs):
+    # local version of timeVaranRdDO to check for compatibility
+    if bkwargs == True:
+      return timeVaranRdWrDO(depth, bytesRd, bytesWr, cable, accessToCDIAS, **kwargs)
+    else:
+      return timeVaranRdWrDO(depth, bytesRd, bytesWr, cable, accessToCDIAS)
+  
+  bkwargs = ChecktimeVarankwargs()
+  
+  element['result'] = memVaranRdWrDO(4, 4, element, parameters, DoChangeAble=True)  # install default data object (ASY) (not always active)
+  element['result']['AsyTime'] += lotimeVaranRdWrDO(bkwargs, parameters['depth'], 4, 4, parameters['cable'], parameters = parameters)
+  
+  if parameters['SplitRdWr'] == 0:
+    element['result']['IsoTime'] += lotimeVaranRdWrDO(bkwargs, parameters['depth'], 6, 8, parameters['cable'], parameters = parameters)
+    element['result']['IsoTime'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 2, parameters['cable'], parameters = parameters)
+    
+    element['result'] = memVaranRdDO(2, element, parameters)       # install data object for latch-values (not always active)
+    element['result'] = memVaranRdWrDO(6, 8, element, parameters)  # install default data object (ISO)
+  else:
+    element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 6, parameters['cable'], parameters = parameters)
+    element['result']['IsoTimeWr'] += lotimeVaranWrDO(bkwargs, parameters['depth'], 8, parameters['cable'], parameters = parameters)
+    
+    element['result']['IsoTimeRd'] += lotimeVaranRdDO(bkwargs, parameters['depth'], 2, parameters['cable'], parameters = parameters)
+    
+    element['result'] = memVaranRdDO(2, element, parameters)  # install data object for latch-values (not always active)
+    element['result'] = memVaranRdDO(6, element, parameters)  # install default data object (ISO)
+    element['result'] = memVaranWrDO(8, element, parameters)  # install default data object (ISO)
+  
+</Code>
+    </Script>
+  </Class>
+</HWClassInfo>

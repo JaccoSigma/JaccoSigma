@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1062" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Digital Input Module" OrderNr="20-006-169">
+    <Types>
+      <Device Name="DI169" ClassName="DI169" DisplayGroup="Digital" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="43"/>
+        <Power Voltage="24000" Supply="0" Drain="56"/> 
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="DI 169" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="700" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" ClrBackground="16777215" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" FontWeight="400" />
+            <VisualText Text="1" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="17.99" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="2" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="21.17" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="3" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="24.34" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="4" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="27.52" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" FontWeight="400" />
+            <VisualText Text="5" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="33.34" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="6" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="36.51" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="7" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="39.69" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="8" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="42.86" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" FontWeight="400" />
+            <VisualText Text="9" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.32" Height="2.65" Left="0.26" Top="48.68" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="10" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="51.86" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="11" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="55.03" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="12" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="58.21" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" FontWeight="400" />
+            <VisualText Text="13" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="64.03" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="14" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="67.2" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="15" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="70.38" ClrBackground="16777215" FontWeight="400" />
+            <VisualText Text="16" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="73.55" ClrBackground="16777215" FontWeight="400" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="DI169.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="DI169.ClassState" Value="0" Negate="true" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="DI169.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="DI169.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="DI169.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="DI169.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <VisualLed Description="Digital input 1" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="19.31">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input1" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 2" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="22.49">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input2" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 3" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="25.66">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input3" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 4" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="28.84">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input4" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X2-->
+            <VisualLed Description="Digital input 5" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="34.66">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input5" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 6" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="37.84">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input6" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 7" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="41.01">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input7" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 8" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="44.19">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input8" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X3-->
+            <VisualLed Description="Digital input 9" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="50.01">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input9" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 10" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="53.18">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input10" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 11" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="56.36">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input11" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 12" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="59.53">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input12" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X4-->
+            <VisualLed Description="Digital input 13" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="65.35">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input13" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 14" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="68.53">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input14" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 15" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="71.7">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input15" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Digital input 16" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="74.88">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="DI169.Input16" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X5-->
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="DI169.Input1" Description="Digital Input 1" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input2" Description="Digital Input 2" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input3" Description="Digital Input 3" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input4" Description="Digital Input 4" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="DI169.Input5" Description="Digital Input 5" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input6" Description="Digital Input 6" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input7" Description="Digital Input 7" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input8" Description="Digital Input 8" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="DI169.Input9" Description="Digital Input 9" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input10" Description="Digital Input 10" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input11" Description="Digital Input 11" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input12" Description="Digital Input 12" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="DI169.Input13" Description="Digital Input 13" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input14" Description="Digital Input 14" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input15" Description="Digital Input 15" TypeId="1" />
+              <ConnectorPin DataString="DI169.Input16" Description="Digital Input 16" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector ImgPath=".\S-DIAS\S-DIAS Abdeckung.xaml" Width="7.94" Height="14.86" Left="3.66" Top="78.69" />
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="DI169">
+    <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+	<Downlink Name="ClassState" Port="0" BusType="Hardwarealarme" Desc="Hardwarealarme" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" />
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="This server shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+    <!-- Digital Inputs -->
+    <IOComment Name="--------------------- Digital Input 1 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 1" Channel="Input1" Type="Digital" Desc="Input 1 value" />
+    <Input Name="Digital Input 1 Latched" Channel="Input1Latched" IsConfig="true" Type="Digital" Desc="Input 1 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input1Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 1" Channel="Counter1" IsConfig="true" Type="Analog" Desc="Counter 1 value">
+      <Property Name="Counter Direction" Channel="CounterDirection1" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge1" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh1" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter1 &#xD;&#xA; Mode select: &#xD;&#xA; 0.. Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 2 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 2" Channel="Input2" Type="Digital" Desc="Input 2 value" />
+    <Input Name="Digital Input 2 Latched" Channel="Input2Latched" IsConfig="true" Type="Digital" Desc="Input 2 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input2Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 2" Channel="Counter2" IsConfig="true" Type="Analog" Desc="Counter 2 value">
+      <Property Name="Counter Direction" Channel="CounterDirection2" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge2" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 3 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 3" Channel="Input3" Type="Digital" Desc="Input 3 value" />
+    <Input Name="Digital Input 3 Latched" Channel="Input3Latched" IsConfig="true" Type="Digital" Desc="Input 3 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input3Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 3" Channel="Counter3" IsConfig="true" Type="Analog" Desc="Counter 3 value">
+      <Property Name="Counter Direction" Channel="CounterDirection3" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge3" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh2" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter3 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 4 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 4" Channel="Input4" Type="Digital" Desc="Input 4 value" />
+    <Input Name="Digital Input 4 Latched" Channel="Input4Latched" IsConfig="true" Type="Digital" Desc="Input 4 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input4Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 4" Channel="Counter4" IsConfig="true" Type="Analog" Desc="Counter 4 value">
+      <Property Name="Counter Direction" Channel="CounterDirection4" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge4" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 5 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 5" Channel="Input5" Type="Digital" Desc="Input 5 value" />
+    <Input Name="Digital Input 5 Latched" Channel="Input5Latched" IsConfig="true" Type="Digital" Desc="Input 5 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input5Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 5" Channel="Counter5" IsConfig="true" Type="Analog" Desc="Counter 5 value">
+      <Property Name="Counter Direction" Channel="CounterDirection5" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge5" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh3" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter5 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 6 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 6" Channel="Input6" Type="Digital" Desc="Input 6 value" />
+    <Input Name="Digital Input 6 Latched" Channel="Input6Latched" IsConfig="true" Type="Digital" Desc="Input 6 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input6Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 6" Channel="Counter6" IsConfig="true" Type="Analog" Desc="Counter 6 value">
+      <Property Name="Counter Direction" Channel="CounterDirection6" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge6" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 7 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 7" Channel="Input7" Type="Digital" Desc="Input 7 value" />
+    <Input Name="Digital Input 7 Latched" Channel="Input7Latched" IsConfig="true" Type="Digital" Desc="Input 7 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input7Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 7" Channel="Counter7" IsConfig="true" Type="Analog" Desc="Counter 7 value">
+      <Property Name="Counter Direction" Channel="CounterDirection7" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge7" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh4" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter7 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 8 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 8" Channel="Input8" Type="Digital" Desc="Input 8 value" />
+    <Input Name="Digital Input 8 Latched" Channel="Input8Latched" IsConfig="true" Type="Digital" Desc="Input 8 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input8Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 8" Channel="Counter8" IsConfig="true" Type="Analog" Desc="Counter 8 value">
+      <Property Name="Counter Direction" Channel="CounterDirection8" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge8" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 9 ----------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 9" Channel="Input9" Type="Digital" Desc="Input 9 value" />
+    <Input Name="Digital Input 9 Latched" Channel="Input9Latched" IsConfig="true" Type="Digital" Desc="Input 9 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input9Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 9" Channel="Counter9" IsConfig="true" Type="Analog" Desc="Counter 9 value">
+      <Property Name="Counter Direction" Channel="CounterDirection9" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge9" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh5" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter9 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 10 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 10" Channel="Input10" Type="Digital" Desc="Input 10 value" />
+    <Input Name="Digital Input 10 Latched" Channel="Input10Latched" IsConfig="true" Type="Digital" Desc="Input 10 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input10Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 10" Channel="Counter10" IsConfig="true" Type="Analog" Desc="Counter 10 value">
+      <Property Name="Counter Direction" Channel="CounterDirection10" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge10" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 11 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 11" Channel="Input11" Type="Digital" Desc="Input 11 value" />
+    <Input Name="Digital Input 11 Latched" Channel="Input11Latched" IsConfig="true" Type="Digital" Desc="Input 11 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input11Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 11" Channel="Counter11" IsConfig="true" Type="Analog" Desc="Counter 11 value">
+      <Property Name="Counter Direction" Channel="CounterDirection11" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge11" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh6" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter11 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 12 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 12" Channel="Input12" Type="Digital" Desc="Input 12 value" />
+    <Input Name="Digital Input 12 Latched" Channel="Input12Latched" IsConfig="true" Type="Digital" Desc="Input 12 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input12Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 12" Channel="Counter12" IsConfig="true" Type="Analog" Desc="Counter 12 value">
+      <Property Name="Counter Direction" Channel="CounterDirection12" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge12" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 13 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 13" Channel="Input13" Type="Digital" Desc="Input 13 value" />
+    <Input Name="Digital Input 13 Latched" Channel="Input13Latched" IsConfig="true" Type="Digital" Desc="Input 13 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input13Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 13" Channel="Counter13" IsConfig="true" Type="Analog" Desc="Counter 13 value">
+      <Property Name="Counter Direction" Channel="CounterDirection13" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge13" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh7" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter13 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 14 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 14" Channel="Input14" Type="Digital" Desc="Input 14 value" />
+    <Input Name="Digital Input 14 Latched" Channel="Input14Latched" IsConfig="true" Type="Digital" Desc="Input 14 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input14Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 14" Channel="Counter14" IsConfig="true" Type="Analog" Desc="Counter 14 value">
+      <Property Name="Counter Direction" Channel="CounterDirection14" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge14" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 15 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 15" Channel="Input15" Type="Digital" Desc="Input 15 value" />
+    <Input Name="Digital Input 15 Latched" Channel="Input15Latched" IsConfig="true" Type="Digital" Desc="Input 15 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input15Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 15" Channel="Counter15" IsConfig="true" Type="Analog" Desc="Counter 15 value">
+      <Property Name="Counter Direction" Channel="CounterDirection15" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge15" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+      <Property Name="Counter Mode" Channel="CounterModeCh8" Editor="Combo:0=Normal Counter Mode;1=Incremental Encoder 1 Edge;2=Incremental Encoder 4 Edges" Desc="The Result from the Incremental Encoder 2 and 4 Edges is shown on the Server Counter15 &#xD;&#xA; Mode select: &#xD;&#xA; 0..Selected channel is functioning as normal counter &#xD;&#xA; 1..Incremental encoder 1 edge &#xD;&#xA; 2..Incremental encoder 4 edges." />
+    </Input>
+    <IOComment Name="--------------------- Digital Input 16 ---------------------" IsInfo="true" Desc=""/>
+    <Input Name="Digital Input 16" Channel="Input16" Type="Digital" Desc="Input 16 value" />
+    <Input Name="Digital Input 16 Latched" Channel="Input16Latched" IsConfig="true" Type="Digital" Desc="Input 16 Latched value">
+      <Property Name="DigIn Input Latch configuration" Channel="Input16Latch" Desc="The digital input latches the incremental encoder value." Editor="Combo:0=Not active; 1=rising edge; 2=falling edge; 3=both edges" />
+    </Input>
+    <Input Name="Counter Input 16" Channel="Counter16" IsConfig="true" Type="Analog" Desc="Counter 16 value">
+      <Property Name="Counter Direction" Channel="CounterDirection16" Editor="Combo:0=Count up;1=Count down" Desc="Counter Direction" />
+      <Property Name="Counter Edge" Channel="CounterEdge16" Editor="Combo:0=No Edge;1=Rising Edge;2=Falling Edge;3=Both Edges" Desc="Select Counter Edges. Important: If CounterModeCh[x] is set to 1 or 2,&#xD;&#xA;CounterEdge must be set on a different value than 0!!!" />
+    </Input>
+    <Input Name="Inputs Word" Channel="InputWord" Type="Analog" Desc="Bit 0 to 15 ... Input 1 to 16" />
+    <Script Name="DI169">
+      <Code>
+def compPost_DI169(element, parameters):
+  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0x14,element)
+
+</Code>
+    </Script>
+  </Class>
+</HWClassInfo>
